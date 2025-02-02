@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import "./font.css";
-import Header from "@/app/components/layout/Header/header";
-import Footer from "@/app/components/layout/Footer/footer";
+import Header from "@/app/_components/layout/Header/header";
+import Footer from "@/app/_components/layout/Footer/footer";
 
 export const metadata: Metadata = {
   title: "Unique Caspian Caviar",
