@@ -1,6 +1,6 @@
 // components
 import NavigationBar from "./Navlinks/navlinks";
-import { ContactUsLink, HeaderLogo } from "./Components";
+import { ContactUsLink, HeaderLogo } from "./Component";
 
 const Header = () => {
   return (
