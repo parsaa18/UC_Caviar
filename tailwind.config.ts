@@ -9,8 +9,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
+        ucWhite: "#FAFAFA",
+        ucBlack: "#0D0A0B",
+        ucNavyBlue1: "#252D62",
+        ucNavyBlue2: "#4C5CC8",
         foreground: "var(--foreground)",
+      },
+      fontFamily: {
+        montreal: ['"NeueMontrealMedium"'],
+        montrealBook: ['"NeueMontrealBook"'],
+        montrealItalic: ['"NeueMontrealItalic"'],
+        montrealThin: ['"NeueMontrealThin"'],
+        montrealSemiBoldItalic: ['"NeueMontrealSemiBolditalic"'],
+        montrealBold: ['"NeueMontrealBold"'],
       },
     },
   },
