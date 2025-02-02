@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import "./font.css";
-import Header from "@/app/_components/layout/Header/header";
-import Footer from "@/app/_components/layout/Footer/footer";
+import Header from "@/components/layout/Header/header";
+import Footer from "@/components/layout/Footer/footer";
 
 export const metadata: Metadata = {
   title: "Unique Caspian Caviar",
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-ucWhite">
+      <body className="bg-ucWhite lg:m-4">
         <Header />
         {children}
         <Footer />
