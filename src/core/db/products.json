@@ -1,0 +1,102 @@
+{
+  "categories": [
+    {
+      "id": "caviar",
+      "name": "Caviar",
+      "picture": "/images/electronics.png",
+      "productsList": [
+        {
+          "id": 1,
+          "name": "Beluga Imperial",
+          "picture": [
+            "images/clothing.jpg",
+            "images/"
+          ],
+          "rate": 5,
+          "weight": 100,
+          "packing-type": "Desjardins"
+        }
+      ]
+    },
+    {
+      "id": "caviar-meet-can",
+      "name": "Caviar Meet Can",
+      "picture": "/images/clothing.jpg",
+      "productsList": [
+        {
+          "id": 2,
+          "name": "Beluga Imperial",
+          "picture": [
+            "images/clothing.jpg",
+            "images/"
+          ],
+          "rate": 5,
+          "weight": 100,
+          "packing-type": "Desjardins"
+        },
+        {
+          "id": 4,
+          "name": "Baerii",
+          "picture": [
+            "images/clothing.jpg",
+            "images/safasavvvacvas"
+          ],
+          "rate": 4.5,
+          "weight": 50,
+          "packing-type": "Desjardins",
+          "details": "A unique Korean flavor with a special sea taste, a silky smooth and velvety texture, and a distinctive salty taste",
+          "categoryId": "caviar-meet-can",
+          "color": "Dark Gray",
+          "size": "3.3 ≤ mm Up"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Beluga Imperial",
+      "picture": [
+        "images/clothing.jpg",
+        "images/"
+      ],
+      "rate": 5,
+      "weight": 100,
+      "packing-type": "Desjardins",
+      "details": "A unique Korean flavor with a special sea taste, a silky smooth and velvety texture, and a distinctive salty taste",
+      "categoryId": "caviar",
+      "color": "Dark Gray",
+      "size": "3.3 ≤ mm Up"
+    },
+    {
+      "id": 2,
+      "name": "Beluga Imperial",
+      "picture": [
+        "images/clothing.jpg",
+        "images/"
+      ],
+      "rate": 5,
+      "weight": 100,
+      "packing-type": "Desjardins",
+      "details": "A unique Korean flavor with a special sea taste, a silky smooth and velvety texture, and a distinctive salty taste",
+      "categoryId": "caviar",
+      "color": "Dark Gray",
+      "size": "3.3 ≤ mm Up"
+    },
+    {
+      "id": 4,
+      "name": "Baerii",
+      "picture": [
+        "images/clothing.jpg",
+        "images/safasavvvacvas"
+      ],
+      "rate": 4.5,
+      "weight": 50,
+      "packing-type": "Desjardins",
+      "details": "A unique Korean flavor with a special sea taste, a silky smooth and velvety texture, and a distinctive salty taste",
+      "categoryId": "caviar-meet-can",
+      "color": "Dark Gray",
+      "size": "3.3 ≤ mm Up"
+    }
+  ]
+}
