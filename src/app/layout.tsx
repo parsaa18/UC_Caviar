@@ -18,9 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-ucWhite lg:m-4">
-        <Header />
+        {/* <Header /> */}
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
