@@ -1,12 +1,10 @@
-import Image from "next/image";
-
-const page = () => {
+const Page = () => {
   return (
-    <>
+    <div className=" w-full min-h-screen">
       <div className=" flex flex-wrap justify-center font-medium text-[16px]/[19.2px] mt-[144px] opacity-50 ">
         About Us
       </div>
-      <div className="flex flex-wrap justify-center font-medium  mx-auto text-center mt-[16px] w-[851px] h-[136px] text-[28px]/[33.6px]">
+      <div className="flex flex-wrap justify-center font-medium mx-auto text-center mt-[16px] w-[851px] h-[136px] text-[28px]/[33.6px]">
         Our story dates back around eighty years, when our grandfather was
         engaged in the fishing profession in the Caspian Sea. He had a deep
         passion for this job and always strived to provide the best quality to
@@ -33,14 +31,14 @@ const page = () => {
           offer Iranian caviar at the highest quality.
         </div>
       </div>
-      <div className="flex justify-center ml-[244px] mt-[56px]">
+      <div className="flex justify-center mt-[56px]">
         <img
           src={"/images/image2.jpg"}
           alt="Logo"
           className=" object-cover w-[255px] h-[329px] rounded-[16px]"
         />
       </div>
-      <div className=" flex justify-center ml-[431px] mx-auto font-medium text-[20px]/[24px] w-[751px] h-[72px] mt-[56px]">
+      <div className=" flex justify-center mx-auto font-medium text-[20px]/[24px] w-[751px] h-[72px] mt-[56px]">
         At unique caspian caviar,we take pride in providing our valued customers
         with the finest caviar in terms of aroma, taste, and color, while
         remaining loyal to the heritage passed down through generations.
@@ -88,8 +86,8 @@ const page = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
-export default page;
+export default Page;
