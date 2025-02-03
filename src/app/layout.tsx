@@ -20,7 +20,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/images/logo-header.svg" />
       </head>
-      <body className="bg-ucWhite lg:m-4">
+      <body className="bg-ucWhite p-4">
         <Header />
         {children}
         <Footer />

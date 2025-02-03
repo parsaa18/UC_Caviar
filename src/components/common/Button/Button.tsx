@@ -1,7 +1,9 @@
 import { FunctionComponent } from "react";
+import { Zoop } from "../motion/Zoop";
 
 interface IProp {
   text: string;
+  fontWeight?: string;
   fontSize?: string;
   theme?: "navy" | "revertNavy" | "white";
 }
@@ -14,14 +16,15 @@ const colorTheme = {
 
 const UcButton1: FunctionComponent<IProp> = ({
   fontSize = "base",
+  fontWeight = "bold",
   text,
   theme = "navy",
 }) => {
   return (
     <div
-      className={`px-4 py-3 ${colorTheme[theme]}  rounded-3xl text-${fontSize}`}
+      className={`px-4 py-3 ${colorTheme[theme]}  font-${fontWeight} rounded-3xl text-${fontSize}`}
     >
-      {text}
+      <Zoop text={text} />
     </div>
   );
 };

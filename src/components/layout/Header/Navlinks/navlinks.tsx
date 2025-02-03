@@ -9,6 +9,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 // Interface
 import { INavLinkProp } from "@/core/types/header/header.interface";
+import { Zoop } from "@/components/common/motion/Zoop";
 
 // navigation links in header
 const links = [
@@ -38,7 +39,8 @@ const NavLink: FunctionComponent<INavLinkProp> = ({ link, name }) => {
   const pathname = usePathname();
   return (
     <Link href={link} className="relative">
-      {name}
+      <Zoop text={name} />
+
       <AnimatePresence mode="wait">
         {link === pathname && <ActiveDot />}
       </AnimatePresence>
@@ -47,7 +49,7 @@ const NavLink: FunctionComponent<INavLinkProp> = ({ link, name }) => {
 };
 const NavigationBar = () => {
   return (
-    <div className="bg-ucWhite rounded-3xl flex-1 px-6 py-3 flex-2 flex items-center gap-10">
+    <div className="bg-ucWhite rounded-3xl flex-1 px-6 py-3 flex-2 flex items-center justify-center gap-10">
       {links.map((link, idx) => (
         <NavLink link={link.link} name={link.name} key={idx} />
       ))}

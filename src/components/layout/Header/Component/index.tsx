@@ -40,6 +40,7 @@ const ContactUsLink = () => {
       <Link href={"."}>
         <UcButton1
           text="Contact Us"
+          fontSize="sm"
           theme={pathname.toLowerCase() === "/shipping" ? "revertNavy" : "navy"}
         />
       </Link>
