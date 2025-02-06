@@ -1,10 +1,10 @@
 const Page = () => {
   return (
-    <div className=" w-full min-h-screen">
-      <div className=" flex flex-wrap justify-center font-medium text-[16px]/[19.2px] mt-[144px] opacity-50 ">
+    <div className="w-full min-h-screen px-4">
+      <div className="flex flex-wrap justify-center font-medium text-[16px]/[19.2px] mt-[144px] opacity-50 text-center">
         About Us
       </div>
-      <div className="flex flex-wrap justify-center font-medium mx-auto text-center mt-[16px] w-[851px] h-[136px] text-[28px]/[33.6px]">
+      <div className="flex flex-wrap justify-center font-medium mx-auto text-center mt-[16px] max-w-[851px] text-[28px]/[33.6px] leading-relaxed">
         Our story dates back around eighty years, when our grandfather was
         engaged in the fishing profession in the Caspian Sea. He had a deep
         passion for this job and always strived to provide the best quality to
@@ -12,16 +12,16 @@ const Page = () => {
       </div>
       <div className="flex justify-center mt-[56px]">
         <img
-          src={"/images/main.jpg"}
+          src="/images/main.jpg"
           alt="Logo"
-          className=" object-cover w-[1238px] h-[652px] rounded-[36px]"
+          className="object-cover w-full max-w-[1238px] h-auto rounded-[36px]"
         />
       </div>
-      <div className="flex flex-wrap gap-[103px]">
-        <div className="font-medium text-[14px]/[16.8px] opacity-50 mt-[56px] ml-[258px] w-[70px] h-[17px]">
+      <div className="flex flex-wrap gap-[5px] px-4 justify-center">
+        <div className="font-medium text-[14px]/[16.8px] opacity-50 mt-[56px]  text-center sm:text-left ">
           Experience
         </div>
-        <div className="font-medium text-[20px]/[24px] w-[751px] h-[144px] mt-[46px]">
+        <div className="font-medium text-[20px]/[24px] max-w-[751px] leading-relaxed mx-auto mt-[56px]">
           The experience of tasting caviar in childhood and living in the
           northern part of the country alongside the Caspian Sea—one of the few
           natural habitats of sturgeon fish in the world—motivated us to enter
@@ -31,60 +31,40 @@ const Page = () => {
           offer Iranian caviar at the highest quality.
         </div>
       </div>
-      <div className="flex justify-center mt-[56px]">
+      <div className="flex justify-center mt-[56px] ">
         <img
-          src={"/images/image2.jpg"}
+          src="/images/image2.jpg"
           alt="Logo"
-          className=" object-cover w-[255px] h-[329px] rounded-[16px]"
+          className="object-cover w-full max-w-[255px] h-auto rounded-[16px]"
         />
       </div>
-      <div className=" flex justify-center mx-auto font-medium text-[20px]/[24px] w-[751px] h-[72px] mt-[56px]">
-        At unique caspian caviar,we take pride in providing our valued customers
-        with the finest caviar in terms of aroma, taste, and color, while
-        remaining loyal to the heritage passed down through generations.
+      <div className="flex justify-center mx-auto font-medium text-[20px]/[24px] max-w-[751px] text-left mt-[56px]">
+        At unique caspian caviar, we take pride in providing our valued
+        customers with the finest caviar in terms of aroma, taste, and color,
+        while remaining loyal to the heritage passed down through generations.
       </div>
-      <div className="font-medium text-[20px]/[24px] w-[40px] h-[24px] opacity-50 ml-[258px] mt-[80px]">
+      <div className="font-medium text-[20px]/[24px]  opacity-50 text-center sm:text-left mt-[80px]">
         Why
       </div>
-      <div className="font-montrealBold text-[24px]/[28.8px] w-[150px] h-[29px]  ml-[258px]">
+      <div className="font-montrealBold text-[24px]/[28.8px] text-center sm:text-left">
         Choose Us?
       </div>
-      <div className="flex flex-wrap justify-center gap-[20px] ml-[108px] mt-[24px]">
-        <div className="w-[295px] h-[250px] bg-[#F2F2F2] rounded-[24px]">
-          <div className="w-[56px] h-[56px] bg-[#FAFAFA] ml-[16px] mt-[16px] rounded-full"></div>
-          <div className="w-[263px] h-[48px] text-[20px]/[24px] font-medium mx-auto mt-[116px]">
-            a unique experience of taste and aroma caviar
+      <div className="flex flex-wrap justify-center mx-auto gap-[20px] mt-[24px] px-4">
+        {[
+          "A unique experience of taste and aroma caviar",
+          "Accurate processes and high standards of maintenance that ensure fresh and quality products reach the customer",
+          "Great relationship with Middle East and Europe countries",
+          "Private label, Bulk supplying solution",
+          "Customer service available 24/7 for you",
+        ].map((text, index) => (
+          <div
+            key={index}
+            className="w-full sm:w-[295px] h-auto bg-[#F2F2F2] rounded-[24px] p-4 text-center"
+          >
+            <div className="w-14 h-14 bg-[#FAFAFA] mx-auto rounded-full"></div>
+            <div className="mt-6 text-lg font-medium">{text}</div>
           </div>
-        </div>
-
-        <div className="w-[295px] h-[250px] bg-[#F2F2F2] rounded-[24px]">
-          <div className="w-[56px] h-[56px] bg-[#FAFAFA] ml-[16px] mt-[16px] rounded-full"></div>
-          <div className="w-[263px] h-[96px] text-[20px]/[24px] font-medium mx-auto mt-[66px]">
-            Accurate processes and high standards of maintenance that ensure
-            fresh and quality products reach the customer
-          </div>
-        </div>
-
-        <div className="w-[295px] h-[250px] bg-[#F2F2F2] rounded-[24px]">
-          <div className="w-[56px] h-[56px] bg-[#FAFAFA] ml-[16px] mt-[16px] rounded-full"></div>
-          <div className="w-[263px] h-[48px] text-[20px]/[24px] font-medium mx-auto mt-[116px]">
-            Great relationship with Middle east and Europe countries
-          </div>
-        </div>
-
-        <div className="w-[295px] h-[250px] bg-[#F2F2F2] rounded-[24px]">
-          <div className="w-[56px] h-[56px] bg-[#FAFAFA] ml-[16px] mt-[16px] rounded-full"></div>
-          <div className="w-[263px] h-[48px] text-[20px]/[24px] font-medium mx-auto mt-[116px]">
-            Private label,Bulk supplying solution
-          </div>
-        </div>
-
-        <div className="w-[295px] h-[250px] bg-[#F2F2F2] rounded-[24px]">
-          <div className="w-[56px] h-[56px] bg-[#FAFAFA] ml-[16px] mt-[16px] rounded-full"></div>
-          <div className="w-[263px] h-[48px] text-[20px]/[24px] font-medium mx-auto mt-[116px]">
-            Customer service available 24/7 for you
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
