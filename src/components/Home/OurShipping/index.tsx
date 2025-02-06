@@ -3,7 +3,7 @@ import OurShippingSVG from "./OurShippingSVG";
 import EarthComponent from "./Earth";
 const OurShipping = () => {
   return (
-    <div className="relative w-full rounded-[40px] flex flex-col gap-10 items-center py-14 pb-48 text-2xl font-bold font-montrealBold text-ucWhite from-ucNavyBlue1 to-ucNavyBlue2 bg-gradient-to-b">
+    <section className="relative w-full rounded-[40px] flex flex-col gap-10 items-center py-14 pb-48 text-2xl font-bold font-montrealBold text-ucWhite from-ucNavyBlue1 to-ucNavyBlue2 bg-gradient-to-b">
       <OurShippingSVG />
       <div className="max-w-[867px] flex flex-col gap-10">
         <p>
@@ -21,7 +21,7 @@ const OurShipping = () => {
         </p>
       </div>
       <EarthComponent />
-    </div>
+    </section>
   );
 };
 
