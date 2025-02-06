@@ -1,6 +1,6 @@
 // @ts-nocheck
 "use client";
-import React, { FunctionComponent, useEffect, useRef } from "react";
+import React, { FC, useEffect, useRef } from "react";
 import gsap from "gsap";
 
 const Magnetic = ({ children }) => {

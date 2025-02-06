@@ -1,5 +1,5 @@
 "use client";
-import { FunctionComponent, useRef } from "react";
+import { FC, useRef } from "react";
 
 // Third Party Library
 import { useScroll, motion, useTransform } from "framer-motion";
@@ -10,14 +10,11 @@ import {
   ISpanProps,
 } from "@/core/types/ParagraphScroll/paragraphScroll";
 
-const ParagraphOnScroll: FunctionComponent<IParagraphProps> = ({
-  text,
-  className,
-}) => {
+const ParagraphOnScroll: FC<IParagraphProps> = ({ text, className }) => {
   const element = useRef(null);
   const { scrollYProgress } = useScroll({
     target: element,
-    offset: ["start 0.95", "start 0.55"],
+    offset: ["start 0.85", "start 0.55"],
   });
   const words = text.split(" ");
   return (
@@ -43,7 +40,7 @@ const ParagraphOnScroll: FunctionComponent<IParagraphProps> = ({
   );
 };
 
-const WordSpan: FunctionComponent<ISpanProps> = ({ text, range, progress }) => {
+const WordSpan: FC<ISpanProps> = ({ text, range, progress }) => {
   const chars = text.split("");
   const amount = range[1] - range[0];
   const step = amount / text.length;
@@ -65,11 +62,7 @@ const WordSpan: FunctionComponent<ISpanProps> = ({ text, range, progress }) => {
   );
 };
 
-const CharacterSpan: FunctionComponent<ISpanProps> = ({
-  text,
-  range,
-  progress,
-}) => {
+const CharacterSpan: FC<ISpanProps> = ({ text, range, progress }) => {
   const opacity = useTransform(progress, range, [0, 1]);
   return (
     <span>

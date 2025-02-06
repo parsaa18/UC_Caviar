@@ -2,7 +2,7 @@ import ParagraphOnScroll from "@/components/common/motion/ParagraphScroll";
 
 const AboutUsSect = () => {
   return (
-    <div className="flex gap-28">
+    <section className="flex gap-28">
       <h4 className="text-black/50 text-sm text-nowrap">ABOUT US</h4>
       <ParagraphOnScroll
         className="text-2xl leading-6 font-bold w-[606px] text-justify"
@@ -11,7 +11,7 @@ const AboutUsSect = () => {
         habitats of sturgeon fish in the world—motivated us to enter the seafood
         market."
       />
-    </div>
+    </section>
   );
 };
 

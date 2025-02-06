@@ -13,7 +13,7 @@ export default {
         ucBlack: "#0D0A0B",
         ucNavyBlue1: "#252D62",
         ucNavyBlue2: "#4C5CC8",
-        foreground: "var(--foreground)",
+        ucGray: "#F2F2F2",
       },
       fontFamily: {
         montreal: ['"NeueMontrealMedium"'],

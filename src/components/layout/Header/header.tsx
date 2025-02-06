@@ -1,7 +1,6 @@
 // components
 import NavigationBar from "./Navlinks/navlinks";
 import { ContactUsLink, HeaderLogo } from "./Component";
-import { div } from "framer-motion/client";
 
 const Header = () => {
   return (

@@ -1,5 +1,5 @@
 import Dish01Icon from "@/components/icons/dish";
-import SignIcon from "../motion/Sign/Sign";
+import SignIcon from "../motion/Sign";
 import PackageOpenIcon from "@/components/icons/PackageOpen";
 import AccountSetting03Icon from "@/components/icons/AccountSetting";
 import Building03Icon from "@/components/icons/Buildings";
@@ -13,6 +13,7 @@ export const cardList = [
         a{" "}
         <span className="relative">
           <SignIcon
+            idx={0}
             className="absolute inset-0 -left-1 -top-1 opacity-80"
             width="70"
             height="36"
@@ -30,6 +31,7 @@ export const cardList = [
         Accurate processes and{" "}
         <span className="relative">
           <SignIcon
+            idx={1}
             className="absolute inset-0 -left-2 opacity-80"
             width="55"
             height="27"
@@ -47,6 +49,7 @@ export const cardList = [
       <p>
         <span className="relative">
           <SignIcon
+            idx={2}
             className="absolute inset-0 -left-1 -top-1 opacity-80"
             width="60"
             height="34"
@@ -63,6 +66,7 @@ export const cardList = [
       <p>
         <span className="relative">
           <SignIcon
+            idx={3}
             className="absolute inset-0 -left-2 -top-1 opacity-80"
             width="72"
             height="42"
@@ -80,6 +84,7 @@ export const cardList = [
         Customer service available <br />
         <span className="relative">
           <SignIcon
+            idx={4}
             className="absolute inset-0 -left-1 -top-1 opacity-80"
             width="48"
             height="34"

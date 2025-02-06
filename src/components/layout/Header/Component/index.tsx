@@ -1,8 +1,9 @@
 "use client";
-import UcButton1 from "@/components/common/Button/Button";
+import UcButton1 from "@/components/common/Button";
+import ContactUsModal from "@/components/ContactUsModal";
 import Image from "next/image";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 const HeaderLogo = () => {
   const pathname = usePathname();
@@ -35,16 +36,31 @@ const HeaderLogo = () => {
 
 const ContactUsLink = () => {
   const pathname = usePathname();
+  const [modalIsOpen, setModalOpen] = useState<boolean>(false);
   return (
-    <div className="flex-1 flex items-center justify-end">
-      <Link href={"."}>
-        <UcButton1
-          text="Contact Us"
-          fontSize="sm"
-          theme={pathname.toLowerCase() === "/shipping" ? "revertNavy" : "navy"}
+    <>
+      <div className="flex-1 flex items-center justify-end">
+        <div
+          onClick={() => {
+            setModalOpen(true);
+          }}
+        >
+          <UcButton1
+            text="Contact Us"
+            fontSize="sm"
+            theme={
+              pathname.toLowerCase() === "/shipping" ? "revertNavy" : "navy"
+            }
+          />
+        </div>
+        <ContactUsModal
+          modalIsOpen={modalIsOpen}
+          onClose={() => {
+            setModalOpen(false);
+          }}
         />
-      </Link>
-    </div>
+      </div>
+    </>
   );
 };
 export { HeaderLogo, ContactUsLink };

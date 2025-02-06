@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FunctionComponent } from "react";
+import { FC } from "react";
 
 // third party library
 import { AnimatePresence, motion } from "framer-motion";
@@ -22,7 +22,7 @@ const links = [
 // framer motion configuration
 const animationConfig = {
   initial: { width: 0, height: 0 },
-  animate: { width: "6px", height: "6px" },
+  animate: { width: "4px", height: "4px" },
   exit: { width: 0, height: 0 },
   transition: { duration: 0.2, ease: [0.68, -0.55, 0.27, 1.55] },
 };
@@ -35,15 +35,17 @@ const ActiveDot = () => {
   );
 };
 
-const NavLink: FunctionComponent<INavLinkProp> = ({ link, name }) => {
+const NavLink: FC<INavLinkProp> = ({ link, name }) => {
   const pathname = usePathname();
   return (
     <Link href={link} className="relative">
-      <Zoop text={name} />
+      <motion.div initial="initial" whileHover="hovered">
+        <Zoop text={name} />
 
-      <AnimatePresence mode="wait">
-        {link === pathname && <ActiveDot />}
-      </AnimatePresence>
+        <AnimatePresence mode="wait">
+          {link === pathname && <ActiveDot />}
+        </AnimatePresence>
+      </motion.div>
     </Link>
   );
 };

@@ -1,5 +1,7 @@
+"use client";
+
 import Link from "next/link";
-import React, { FunctionComponent } from "react";
+import React, { FC } from "react";
 
 // Components
 import DoubleBtn from "@/components/common/DoubleButton";
@@ -10,30 +12,35 @@ import VolumeHighIcon from "@/components/icons/Sound";
 import WhatsappIcon from "@/components/icons/Whatsapp";
 import Magnetic from "@/components/common/motion/Magnet";
 
-interface IProps {
-  links: string;
-  icons: React.JSX.Element;
-}
+// Third Party
+import { motion } from "framer-motion";
+import { ISMIconsProps } from "@/core/types/footer/footer.types";
+
 const socialMediaList = [
-  { name: "linkedin", link: ".", icon: <Linkedin01Icon /> },
-  { name: "whatsapp", link: ".", icon: <WhatsappIcon /> },
-  { name: "instagram", link: ".", icon: <InstagramIcon /> },
-  { name: "facebook", link: ".", icon: <Facebook01Icon /> },
+  { name: "linkedin", link: ".", icon: <Linkedin01Icon color="#fafafa" /> },
+  { name: "whatsapp", link: ".", icon: <WhatsappIcon color="#fafafa" /> },
+  { name: "instagram", link: ".", icon: <InstagramIcon color="#fafafa" /> },
+  { name: "facebook", link: ".", icon: <Facebook01Icon color="#fafafa" /> },
 ];
 
-const SocialMediaIcons: FunctionComponent<IProps> = ({ links, icons }) => {
+const SocialMediaIcons: FC<ISMIconsProps> = ({ links, icons }) => {
   return (
-    <Link
-      href={links}
-      className="p-2 border-white/10 rounded-full bg-white/20 backdrop-blur-sm"
-    >
-      {icons}
-    </Link>
+    <Magnetic>
+      <Link href={links}>
+        <motion.div
+          initial="initial"
+          whileHover="hovered"
+          className="p-2 border-white/10 rounded-full bg-white/20 backdrop-blur-sm"
+        >
+          {icons}
+        </motion.div>
+      </Link>
+    </Magnetic>
   );
 };
 const Hero = () => {
   return (
-    <div className="h-[calc(100dvh-32px)] max-h-[1080px] w-full  rounded-[32px]  relative pt-32">
+    <section className="h-[calc(100dvh-32px)] min-h-[640px] max-h-[720px] w-full  rounded-[32px]  relative pt-32">
       <div className="absolute top-0 left-0 bottom-0 right-0 -z-10">
         <img
           src="/images/Home_Hero_test.jpg"
@@ -43,7 +50,7 @@ const Hero = () => {
       </div>
       <div className="flex gap-16 mx-16">
         <div className="ml-4">
-          <h1 className="w-[477px] text-5xl text-white">
+          <h1 className="w-[490px] text-5xl text-white font-bold font-montrealBold">
             Caspian Caviar,
             <br /> the Taste of <br /> the Sea in Every Pearl.
           </h1>
@@ -64,10 +71,12 @@ const Hero = () => {
           <div className="flex flex-col gap-2">
             <h5 className="text-ucWhite">Social Media</h5>
             <div className="flex items-center gap-2">
-              {socialMediaList.map((sm) => (
-                <Magnetic key={sm.name}>
-                  <SocialMediaIcons icons={sm.icon} links={sm.link} />
-                </Magnetic>
+              {socialMediaList.map((sm, idx) => (
+                <SocialMediaIcons
+                  key={sm.name + idx}
+                  icons={sm.icon}
+                  links={sm.link}
+                />
               ))}
             </div>
           </div>
@@ -78,7 +87,7 @@ const Hero = () => {
           <VolumeHighIcon />
         </div>
       </Magnetic>
-    </div>
+    </section>
   );
 };
 

@@ -1,5 +1,6 @@
+"use client";
 import Link from "next/link";
-import { FunctionComponent } from "react";
+import { FC, useState } from "react";
 
 // Components
 import Magnetic from "@/components/common/motion/Magnet";
@@ -7,6 +8,10 @@ import Facebook01Icon from "@/components/icons/facebook";
 import InstagramIcon from "@/components/icons/Instagram";
 import Linkedin01Icon from "@/components/icons/Linkedin";
 import WhatsappIcon from "@/components/icons/Whatsapp";
+import DoubleBtn from "@/components/common/DoubleButton";
+
+// Third party
+import { motion } from "framer-motion";
 
 // Types
 import {
@@ -14,7 +19,7 @@ import {
   ISMIconsProps,
   linkType,
 } from "@/core/types/footer/footer.types";
-import DoubleBtn from "@/components/common/DoubleButton";
+import ContactUsModal from "@/components/ContactUsModal";
 
 // links and icons list
 const pagesLink: linkType[] = [
@@ -30,10 +35,26 @@ const legalLinks: linkType[] = [
   { link: "/", name: "Legal & Payment" },
 ];
 const socialMediaList = [
-  { name: "linkedin", link: ".", icon: <Linkedin01Icon /> },
-  { name: "whatsapp", link: ".", icon: <WhatsappIcon /> },
-  { name: "instagram", link: ".", icon: <InstagramIcon /> },
-  { name: "facebook", link: ".", icon: <Facebook01Icon /> },
+  {
+    name: "linkedin",
+    link: ".",
+    icon: <Linkedin01Icon color="#fafafa" />,
+  },
+  {
+    name: "whatsapp",
+    link: ".",
+    icon: <WhatsappIcon color="#fafafa" />,
+  },
+  {
+    name: "instagram",
+    link: ".",
+    icon: <InstagramIcon color="#fafafa" />,
+  },
+  {
+    name: "facebook",
+    link: ".",
+    icon: <Facebook01Icon color="#fafafa" />,
+  },
 ];
 
 // footer's first column
@@ -58,7 +79,7 @@ const FirstCol = () => {
   );
 };
 
-const FooterNav: FunctionComponent<INavProps> = ({ title, pages }) => {
+const FooterNav: FC<INavProps> = ({ title, pages }) => {
   return (
     <div className="flex flex-col gap-5">
       <h4 className="text-xl font-bold font-montrealBold">{title}</h4>
@@ -74,31 +95,31 @@ const FooterNav: FunctionComponent<INavProps> = ({ title, pages }) => {
     </div>
   );
 };
-
-const SocialMediaIcons: FunctionComponent<ISMIconsProps> = ({
-  links,
-  icons,
-}) => {
+const SocialMediaIcons: FC<ISMIconsProps> = ({ links, icons }) => {
   return (
-    <Link
-      href={links}
-      className="p-2 border-white/10 rounded-full bg-white/20 backdrop-blur-sm"
-    >
-      {icons}
-    </Link>
+    <Magnetic>
+      <Link href={links}>
+        <motion.div
+          initial="initial"
+          whileHover="hovered"
+          className="p-2 border-white/10 rounded-full bg-white/20 backdrop-blur-sm"
+        >
+          {icons}
+        </motion.div>
+      </Link>
+    </Magnetic>
   );
 };
-
 const LastCol = () => {
+  const [modalIsOpen, setModalOpen] = useState<boolean>(false);
+
   return (
     <div className="flex flex-col gap-8">
       <div className="flex flex-col gap-2">
         <h5 className="text-ucWhite">Social Media</h5>
         <div className="flex items-center gap-2">
           {socialMediaList.map((sm) => (
-            <Magnetic key={sm.name}>
-              <SocialMediaIcons icons={sm.icon} links={sm.link} />
-            </Magnetic>
+            <SocialMediaIcons key={sm.name} icons={sm.icon} links={sm.link} />
           ))}
         </div>
       </div>
@@ -106,7 +127,19 @@ const LastCol = () => {
         <h5 className="text-ucWhite text-xl font-montrealBold font-bold w-[140px]">
           Let's talk about our products...
         </h5>
-        <DoubleBtn text="Contact Us" theme="white" />
+        <div
+          onClick={() => {
+            setModalOpen(true);
+          }}
+        >
+          <DoubleBtn text="Contact Us" theme="white" />
+        </div>
+        <ContactUsModal
+          modalIsOpen={modalIsOpen}
+          onClose={() => {
+            setModalOpen(false);
+          }}
+        />
       </div>
     </div>
   );

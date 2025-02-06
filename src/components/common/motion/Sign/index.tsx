@@ -7,14 +7,15 @@ import {
   useInView,
   useScroll,
 } from "framer-motion";
-import { FunctionComponent, useEffect, useRef } from "react";
+import { FC, useEffect, useRef } from "react";
 
 interface IProps {
   className: string;
   width: string;
   height: string;
+  idx: number;
 }
-const SignIcon: FunctionComponent<IProps> = (props) => {
+const SignIcon: FC<IProps> = (props) => {
   const ref = useRef(null);
   const isInview = useInView(ref, { once: true });
   const controls = useAnimation();
@@ -43,8 +44,8 @@ const SignIcon: FunctionComponent<IProps> = (props) => {
         initial="hidden"
         animate={controls}
         transition={{
-          duration: 0.45,
-          delay: 0.25,
+          duration: 0.65,
+          delay: 0.35 * props.idx,
           ease: easeInOut,
         }}
         d="M24.7159 35.4021C24.7159 35.4021 70.7344 29.0944 71.3154 13.7794C71.7474 2.39192 49.4323 0.187517 29.7803 1.79582C14.8838 3.01495 1.28077 5.66715 0.610639 16.6704C-0.59321 36.4369 61.9619 31.0627 61.9619 31.0627"

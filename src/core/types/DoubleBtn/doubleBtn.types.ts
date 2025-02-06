@@ -1,10 +1,10 @@
-import { childrenType } from "../children.type";
+import React from "react";
 
 export interface IDoubleBtnProps {
   text: string;
   theme?: "white" | "glass";
 }
 export interface ISpanProp {
-  children: childrenType;
+  children: React.ReactNode;
   visible: boolean;
 }

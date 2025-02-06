@@ -1,5 +1,5 @@
 "use client";
-import { FunctionComponent } from "react";
+import { FC } from "react";
 
 // Third Party library
 import { motion } from "framer-motion";
@@ -14,7 +14,7 @@ interface IProps {
   visible?: boolean;
 }
 
-const AnimationSpan: FunctionComponent<IProps> = ({ text, visible }) => {
+const AnimationSpan: FC<IProps> = ({ text, visible }) => {
   return (
     <div className={visible ? "" : "absolute inset-0"}>
       {text.split("").map((letter: string, idx: number) =>
@@ -57,15 +57,11 @@ const AnimationSpan: FunctionComponent<IProps> = ({ text, visible }) => {
   );
 };
 
-export const Zoop: FunctionComponent<IProps> = ({ text }) => {
+export const Zoop: FC<IProps> = ({ text }) => {
   return (
-    <motion.div
-      initial="initial"
-      whileHover="hovered"
-      className="relative h-full overflow-hidden"
-    >
+    <div className="relative h-full overflow-hidden">
       <AnimationSpan text={text} visible={true} />
       <AnimationSpan text={text} visible={false} />
-    </motion.div>
+    </div>
   );
 };

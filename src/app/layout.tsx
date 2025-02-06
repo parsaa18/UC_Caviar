@@ -6,7 +6,7 @@ import Header from "@/components/layout/Header/header";
 import Footer from "@/components/layout/Footer/footer";
 
 export const metadata: Metadata = {
-  title: "Unique Caspian Caviar",
+  title: "UCC: Unique Caspian Caviar",
   description: "Unique Caspian Caviar created by sharp",
 };
 

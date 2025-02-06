@@ -3,15 +3,12 @@
     {
       "id": "caviar",
       "name": "Caviar",
-      "picture": "/images/electronics.png",
+      "picture": "https://media-hosting.imagekit.io//8ed178c4e6e94420/a726f2702c038cbabb68acf1b4696054.png?Expires=1833377098&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=i7eIIGvsEZQs4OeSPs7b-dzlh9C-mK39fXmQQZLHgRPmDOPvVRa3jjC0Jvf1HRK-hJlO~eqCyeWiLwDoJeJWFN-mM8JV7A0yAMkL4rbRk1uup12Fxfoj5nRO725E-bhN~Aqfkt2umCBukW6vKSZk3G-utB0EDA9mWyn5eJT8nmZwr4KPdfgTVp5wdrZcrVCEaWe3VLYPAaYYkG5eETY6v5fLkbDSNF4KTFDyvXVU0Orr2yUjfox3ZqmXX-vOhKyT-cVoacF-6pWf9chwYUwQvhIEJVdNg45E4ce79bR4fM6VU5P4WVY5fy4XhDAT~LY27ENX7RMdrBj2chypOl~3BA__",
       "productsList": [
         {
           "id": 1,
           "name": "Beluga Imperial",
-          "picture": [
-            "images/clothing.jpg",
-            "images/"
-          ],
+          "picture": ["images/clothing.jpg", "images/"],
           "rate": 5,
           "weight": 100,
           "packing-type": "Desjardins"
@@ -21,15 +18,12 @@
     {
       "id": "caviar-meet-can",
       "name": "Caviar Meet Can",
-      "picture": "/images/clothing.jpg",
+      "picture": "https://media-hosting.imagekit.io//f14f0773fbaf42d4/3d48f7b180765e1bc64d89afa9f190f4.png?Expires=1833377095&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=aZDAEi1Wbt9-JcdPVkP-C3MyK8SqQnScDqLjvrVKNcTIE34uSJ3rOULoEg7o97XN9rN8b7j6Aw4GSZMcGuZ2INbbsTkoXTp8UeUJUEGQRYsxs0rzvschsuzyqCdaWHwVSPYwANsyUQJI-l8SrJppnf8dU8zMjxIDDPlelXGSGvIRpTjbLA6F6YjES6JIMKmPaF1n6lLfS87OjLq9cQzMXOw2ZJv92hrfnmFMC-0Js4I9jeObPvu6WOM~MJ-3MIcx~-HKdT9vmgerXyS-5S7lomS6eG9aO9EUFTGWfSYeyjH~~vh8epdd3qoHE88~Fc3gw5QQZPVDe0S4xEKuDzXHqg__",
       "productsList": [
         {
           "id": 2,
           "name": "Beluga Imperial",
-          "picture": [
-            "images/clothing.jpg",
-            "images/"
-          ],
+          "picture": ["images/clothing.jpg", "images/"],
           "rate": 5,
           "weight": 100,
           "packing-type": "Desjardins"
@@ -37,10 +31,7 @@
         {
           "id": 4,
           "name": "Baerii",
-          "picture": [
-            "images/clothing.jpg",
-            "images/safasavvvacvas"
-          ],
+          "picture": ["images/clothing.jpg", "images/safasavvvacvas"],
           "rate": 4.5,
           "weight": 50,
           "packing-type": "Desjardins",
@@ -56,10 +47,7 @@
     {
       "id": 1,
       "name": "Beluga Imperial",
-      "picture": [
-        "images/clothing.jpg",
-        "images/"
-      ],
+      "picture": ["images/clothing.jpg", "images/"],
       "rate": 5,
       "weight": 100,
       "packing-type": "Desjardins",
@@ -71,10 +59,7 @@
     {
       "id": 2,
       "name": "Beluga Imperial",
-      "picture": [
-        "images/clothing.jpg",
-        "images/"
-      ],
+      "picture": ["images/clothing.jpg", "images/"],
       "rate": 5,
       "weight": 100,
       "packing-type": "Desjardins",
@@ -86,10 +71,7 @@
     {
       "id": 4,
       "name": "Baerii",
-      "picture": [
-        "images/clothing.jpg",
-        "images/safasavvvacvas"
-      ],
+      "picture": ["images/clothing.jpg", "images/safasavvvacvas"],
       "rate": 4.5,
       "weight": 50,
       "packing-type": "Desjardins",

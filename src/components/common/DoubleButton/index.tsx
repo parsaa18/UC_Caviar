@@ -1,5 +1,5 @@
 "use client";
-import { FunctionComponent } from "react";
+import { FC } from "react";
 
 // Components
 import ArrowUpRight03Icon from "@/components/icons/ArrowUpRight03";
@@ -12,12 +12,13 @@ import {
   IDoubleBtnProps,
   ISpanProp,
 } from "@/core/types/DoubleBtn/doubleBtn.types";
+import { Zoop } from "../motion/Zoop";
 
 // motion variables
 const DURATION = 0.25;
 const STAGGER = 0.025;
 
-const AnimationSpan: FunctionComponent<ISpanProp> = ({ children, visible }) => {
+const AnimationSpan: FC<ISpanProp> = ({ children, visible }) => {
   return (
     <div
       className={
@@ -74,21 +75,17 @@ const themes = {
     color: "#252D62",
   },
 };
-const DoubleBtn: FunctionComponent<IDoubleBtnProps> = ({
-  text,
-  theme = "glass",
-}) => {
+const DoubleBtn: FC<IDoubleBtnProps> = ({ text, theme = "glass" }) => {
   return (
     <motion.div
       initial="initial"
       whileHover="hovered"
-      className="flex items-center "
+      className="flex items-center cursor-pointer"
     >
       <div
         className={`rounded-3xl  px-4 py-2 relative overflow-hidden  ${themes[theme].className} `}
       >
-        <AnimationSpan visible={true}>{text}</AnimationSpan>
-        <AnimationSpan visible={false}>{text}</AnimationSpan>
+        <Zoop text={text} />
       </div>
       <div
         className={`rounded-full  p-2  relative overflow-hidden ${themes[theme].className}`}
