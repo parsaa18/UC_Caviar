@@ -1,3 +1,6 @@
+import DoubleBtn from "@/components/common/DoubleButton";
+import { Rating } from "@material-tailwind/react";
+import Link from "next/link";
 import React from "react";
 
 function page() {
@@ -26,6 +29,41 @@ function page() {
         />
         <div className="w-[105px] h-[24px] text-[20px] leading-[24px] text-[#0D0A0B] font-montrealBold mt-[-206px] ml-[332px] mr-[140px]">
           Order Now
+        </div>
+        <div className="ml-[322px] mt-[12px]">
+          {" "}
+          <DoubleBtn theme="blue" text="Contact Us" />
+        </div>
+        <div className="w-[177px] h-[19px] text-[16px] leading-[19.2px] text-[#0D0A0B]  mt-[24px] ml-[322px] ">
+          How we send products?
+        </div>
+        <div className="ml-[322px] mt-[12px]">
+          {" "}
+          <DoubleBtn theme="blue" text="Shipping" />
+        </div>
+        <div className="  flex justify-center gap-[48px] w-[180px] h-[29px] mt-[-171px] ml-[927px]">
+          <div className=" text-[16px] leading-[19.2px] w-[39px] h-[19px] text-[#000000] opacity-50">
+            Color
+          </div>
+          <div className=" w-[100px] h-[19px] text-[16px] leading-[19.2px] text-[#000000] ">
+            Dark Gray
+          </div>
+        </div>
+
+        <div className="  flex justify-center gap-[48px] w-[180px] h-[29px] mt-[16px] ml-[927px]">
+          <div className=" text-[16px] leading-[19.2px] w-[39px] h-[19px] text-[#000000] opacity-50">
+            Size
+          </div>
+          <div className=" w-[100px] h-[19px] text-[16px] leading-[19.2px] text-[#000000] ">
+            3.3 ≤ mm Up
+          </div>
+        </div>
+
+        <div className="  flex justify-center gap-[48px] w-[180px] h-[29px] mt-[16px] ml-[927px]">
+          <div className=" text-[16px] leading-[19.2px] w-[39px] h-[19px] text-[#000000] opacity-50">
+            Rate
+          </div>
+          <div className=" w-[100px] h-[19px] text-[16px] leading-[19.2px] text-[#000000] "></div>
         </div>
       </div>
     </>

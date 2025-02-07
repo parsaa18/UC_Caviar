@@ -74,6 +74,10 @@ const themes = {
     className: " bg-ucWhite text-ucNavyBlue1 ",
     color: "#252D62",
   },
+  blue: {
+    className: " bg-ucNavyBlue1 text-ucWhite ",
+    color: "#fafafa",
+  },
 };
 const DoubleBtn: FC<IDoubleBtnProps> = ({ text, theme = "glass" }) => {
   return (
