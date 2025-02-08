@@ -19,7 +19,7 @@ const CatalogSect = () => {
             Catalog
           </span>
         </h5>
-        <DoubleBtn text="Download" theme="navy" />
+        <DoubleBtn text="Download" theme="blue" />
       </div>
     </section>
   );
