@@ -1,3 +1,4 @@
+"use client";
 import Dish01Icon from "@/components/icons/dish";
 import SignIcon from "../motion/Sign";
 import PackageOpenIcon from "@/components/icons/PackageOpen";
@@ -29,7 +30,7 @@ export const cardList = [
     text: (
       <p>
         Accurate processes and{" "}
-        <span className="relative">
+        <span className="relative inline-flex">
           <SignIcon
             idx={1}
             className="absolute inset-0 -left-2 opacity-80"
@@ -47,7 +48,7 @@ export const cardList = [
     icon: <AccountSetting03Icon />,
     text: (
       <p>
-        <span className="relative">
+        <span className="relative ">
           <SignIcon
             idx={2}
             className="absolute inset-0 -left-1 -top-1 opacity-80"

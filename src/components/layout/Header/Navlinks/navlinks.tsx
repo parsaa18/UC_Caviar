@@ -14,10 +14,10 @@ import { Zoop } from "@/components/common/motion/Zoop";
 // navigation links in header
 const links = [
   { link: "/", name: "Home" },
-  { link: "/Products", name: "Products" },
-  { link: "/Blogs", name: "Blogs" },
-  { link: "/Shipping", name: "Shipping" },
-  { link: "/About-Us", name: "About Us" },
+  { link: "/products", name: "Products" },
+  { link: "/blogs", name: "Blogs" },
+  { link: "/shipping", name: "Shipping" },
+  { link: "/about-us", name: "About Us" },
 ];
 // framer motion configuration
 const animationConfig = {
@@ -38,7 +38,7 @@ const ActiveDot = () => {
 const NavLink: FC<INavLinkProp> = ({ link, name }) => {
   const pathname = usePathname();
   return (
-    <Link href={link} className="relative">
+    <Link href={link} className="relative text-nowrap">
       <motion.div initial="initial" whileHover="hovered">
         <Zoop text={name} />
 
@@ -51,7 +51,7 @@ const NavLink: FC<INavLinkProp> = ({ link, name }) => {
 };
 const NavigationBar = () => {
   return (
-    <div className="bg-ucWhite rounded-3xl flex-1 px-6 py-3 flex-2 flex items-center justify-center gap-10">
+    <div className="bg-ucWhite rounded-3xl xl:flex-1 px-6 py-3  hidden lg:flex items-center justify-center gap-10">
       {links.map((link, idx) => (
         <NavLink link={link.link} name={link.name} key={idx} />
       ))}

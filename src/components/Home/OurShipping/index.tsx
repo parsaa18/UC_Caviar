@@ -1,11 +1,12 @@
 import React from "react";
-import OurShippingSVG from "./OurShippingSVG";
 import EarthComponent from "./Earth";
 const OurShipping = () => {
   return (
-    <section className="relative w-full rounded-[40px] flex flex-col gap-10 items-center py-14 pb-48 text-2xl font-bold font-montrealBold text-ucWhite from-ucNavyBlue1 to-ucNavyBlue2 bg-gradient-to-b">
-      <OurShippingSVG />
-      <div className="max-w-[867px] flex flex-col gap-10">
+    <section className="relative w-full md:rounded-[40px] flex flex-col gap-10 px-6 items-center py-14 pb-48 text-xl md:text-2xl font-bold font-montrealBold text-ucWhite from-ucNavyBlue1 to-ucNavyBlue2 bg-gradient-to-b">
+      <div className="md:w-auto w-[268px]">
+        <img src="/images/ourshipping.svg" alt="OUR SHIPPING" />
+      </div>
+      <div className="max-w-[867px] flex flex-col gap-8 md:gap-10 ">
         <p>
           Seafood products, especially caviar, require meticulous care during
           storage and transportation due to their sensitivity to factors such as

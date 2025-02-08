@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "./font.css";
 import Header from "@/components/layout/Header/header";
-import Footer from "@/components/layout/Footer/footer";
 
 export const metadata: Metadata = {
   title: "UCC: Unique Caspian Caviar",
@@ -20,10 +19,9 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/images/logo-header.svg" />
       </head>
-      <body className="bg-ucWhite p-4">
+      <body className="bg-ucWhite md:p-4">
         <Header />
         {children}
-        <Footer />
       </body>
     </html>
   );

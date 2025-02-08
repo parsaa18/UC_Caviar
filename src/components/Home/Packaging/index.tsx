@@ -1,83 +1,82 @@
 "use client";
 
 import { SectionTitle1 } from "@/components/common/SectionTitles/SectionTitles";
-import React, { FC, ReactNode, useState } from "react";
+import React, { ReactNode, useState } from "react";
 
-type packType = { id: number; title: ReactNode; picture: string };
+type packType = { id: number; component: ReactNode };
 
 const packList = [
   {
     id: 1,
-    title: <h5>Packing</h5>,
-    picture: "/images/pack-img-1.jpg",
+    component: (
+      <div className="w-full h-full relative">
+        <img
+          src={"/images/pack-img-1.jpg"}
+          alt="packimg1"
+          className="object-cover w-full h-full rounded-[40px]"
+        />
+        <span className="absolute bottom-6 left-8 text-ucWhite  font-montrealBold font-bold">
+          <h5>Packing</h5>
+        </span>
+      </div>
+    ),
   },
   {
     id: 2,
-    title: (
-      <h5 className="text-ucBlack">
-        Repacking <br /> Jar with metal cap
-      </h5>
+    component: (
+      <div className="h-full w-full flex flex-col justify-between px-8 py-6 gap-3 ">
+        <div className="flex w-full  h-2/3">
+          <img
+            src={"/images/pack-img-2.png"}
+            alt={"img"}
+            className="w-full h-full object-contain"
+          />
+        </div>
+        <span className=" font-bold font-montrealBold ">
+          <h5 className="text-ucBlack">
+            Repacking <br /> Jar with metal cap
+          </h5>
+        </span>
+      </div>
     ),
-    picture: "/images/pack-img-2.png",
   },
   {
     id: 3,
-    title: (
-      <h5 className="text-ucBlack">
-        Repacking <br /> DESJARDIN
-      </h5>
+    component: (
+      <div className="h-full w-full flex flex-col justify-between px-8 py-6 gap-3 ">
+        <div className="flex w-full  h-2/3">
+          <img
+            src={"/images/pack-img-3.png"}
+            alt={"img"}
+            className="w-full h-full object-contain"
+          />
+        </div>
+        <span className=" font-bold font-montrealBold">
+          <h5 className="text-ucBlack">
+            Repacking <br /> DESJARDIN
+          </h5>
+        </span>
+      </div>
     ),
-    picture: "/images/pack-img-3.png",
   },
 ];
 
-const Cards: FC<packType> = ({ id, picture, title }) => {
-  return (
-    <>
-      <div className="h-[140px]">
-        <img
-          src={picture}
-          alt={"img"}
-          className="w-full h-full object-contain"
-        />
-      </div>
-      <span className="text-xl font-bold text-ucBlack">{title}</span>
-    </>
-  );
-};
-
-const FullCard: FC<packType> = ({ id, picture, title }) => {
-  return (
-    <>
-      <img
-        src={picture}
-        alt="packimg1"
-        className="object-cover w-full h-full rounded-[40px]"
-      />
-      <span className="absolute bottom-6 left-8 text-ucWhite text-[32px] font-montrealBold font-bold">
-        {title}
-      </span>
-    </>
-  );
-};
 const PackingSection = () => {
   const [activeCard, setactiveCard] = useState<number>(1);
 
   return (
-    <section className="flex flex-col gap-6">
+    <section className="lg:flex hidden flex-col gap-6 ">
       <SectionTitle1 titleStart="How do we" titleBold="Package Our Products?" />
       <div className="flex gap-8 h-[435px]">
         {packList
           .filter((pack) => pack.id === activeCard)
           .map((pack, idx) => {
             return (
-              <div className="w-full max-w-[540px] bg-ucGray rounded-[40px]  relative">
-                <FullCard
-                  id={pack.id}
-                  key={idx}
-                  picture={pack.picture}
-                  title={pack.title}
-                />
+              <div
+                key={idx}
+                className="w-full text-[32px] max-w-[540px] bg-ucGray rounded-[40px]  "
+              >
+                {pack.component}
               </div>
             );
           })}
@@ -92,14 +91,10 @@ const PackingSection = () => {
                     onClick={() => {
                       setactiveCard(pack.id);
                     }}
-                    className="bg-ucGray py-6 px-8 gap-3 w-full cursor-pointer flex flex-col rounded-[40px] max-h-[252px] "
+                    className="bg-ucGray text-xl  w-full cursor-pointer rounded-[40px] h-[252px] "
+                    key={idx}
                   >
-                    <Cards
-                      id={pack.id}
-                      key={idx}
-                      picture={pack.picture}
-                      title={pack.title}
-                    />
+                    {pack.component}
                   </div>
                 );
               })}

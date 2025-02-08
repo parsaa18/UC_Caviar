@@ -11,7 +11,7 @@ const HeaderLogo = () => {
   const title = pathname === "/" ? "UNIQUE CASPIAN CAVIAR" : "UNIQUE CASPIAN";
 
   return (
-    <div className="flex flex-1 items-center gap-3 font-bold font-montrealBold">
+    <div className="flex xl:flex-1 items-center gap-3 font-bold font-montrealBold">
       <div>
         <Image
           src={"/images/logo-header.svg"}
@@ -22,7 +22,7 @@ const HeaderLogo = () => {
         />
       </div>
       <h2
-        className={`${
+        className={`text-nowrap ${
           pathname === "/" || pathname.toLowerCase() === "/shipping"
             ? "text-ucWhite"
             : "text-ucBlack"
@@ -39,7 +39,7 @@ const ContactUsLink = () => {
   const [modalIsOpen, setModalOpen] = useState<boolean>(false);
   return (
     <>
-      <div className="flex-1 flex items-center justify-end">
+      <div className="xl:flex-1 flex items-center justify-end">
         <div
           onClick={() => {
             setModalOpen(true);

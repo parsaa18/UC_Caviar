@@ -34,26 +34,29 @@ const legalLinks: linkType[] = [
   { link: "/", name: "Legal & Payment" },
   { link: "/", name: "Legal & Payment" },
 ];
+
+const color = window.innerWidth > 768 ? "#fafafa" : "#0D0A0B";
+
 const socialMediaList = [
   {
     name: "linkedin",
     link: ".",
-    icon: <Linkedin01Icon color="#fafafa" />,
+    icon: <Linkedin01Icon color={color} />,
   },
   {
     name: "whatsapp",
     link: ".",
-    icon: <WhatsappIcon color="#fafafa" />,
+    icon: <WhatsappIcon color={color} />,
   },
   {
     name: "instagram",
     link: ".",
-    icon: <InstagramIcon color="#fafafa" />,
+    icon: <InstagramIcon color={color} />,
   },
   {
     name: "facebook",
     link: ".",
-    icon: <Facebook01Icon color="#fafafa" />,
+    icon: <Facebook01Icon color={color} />,
   },
 ];
 
@@ -61,19 +64,19 @@ const socialMediaList = [
 const FirstCol = () => {
   return (
     <div className="flex items-start flex-col gap-6 ">
-      <div className="flex items-center gap-6">
-        <div>
+      <div className="flex items-center gap-3 md:gap-6">
+        <div className="md:w-auto w-16">
           <img src={"images/logo-footer.svg"} alt="Logo-footer" />
         </div>
-        <h2 className="text-xl font-bold font-montrealBold">
+        <h2 className="text-lg sm:text-xl font-bold md:text-ucWhite text-ucNavyBlue1 text-nowrap font-montrealBold">
           UNIQUE CASPIAN CAVIAR
         </h2>
       </div>
-      <p className="w-[402px] leading-5 font-medium text-justify ">
-        Lorem ipsum dolor sit amet consectetur. Condimentum vitae sit placerat
-        suscipit. Bibendum quis facilisi ultrices elit tempus sit lectus tortor
-        enim. Elit congue amet at lorem lectus sagittis sollicitudin. Dolor elit
-        nunc nunc orci lectus erat nibh. Amet fringilla
+      <p className="max-w-[450px] leading-5 font-[500]  text-justify md:block hidden ">
+        Unique Caspian is a brand that supplies high-quality Iranian caviar in
+        bulk to restaurants, hotels, grocery stores, and wholesale buyers. The
+        company, through its representatives in Europe, ensures a reliable and
+        more satisfactory ordering, delivery, and customer service process.
       </p>
     </div>
   );
@@ -81,9 +84,11 @@ const FirstCol = () => {
 
 const FooterNav: FC<INavProps> = ({ title, pages }) => {
   return (
-    <div className="flex flex-col gap-5">
-      <h4 className="text-xl font-bold font-montrealBold">{title}</h4>
-      <ul className="flex flex-col gap-3">
+    <div className="flex flex-col md:items-start items-center gap-5 md:w-auto w-full">
+      <h4 className="text-xl font-bold font-montrealBold md:block hidden">
+        {title}
+      </h4>
+      <ul className="md:flex flex-col gap-3 w-full  justify-between grid grid-cols-3">
         {pages.map((page, idx) => {
           return (
             <Link href={page.link} key={idx}>
@@ -91,6 +96,9 @@ const FooterNav: FC<INavProps> = ({ title, pages }) => {
             </Link>
           );
         })}
+        <Link href={"/contact-us"} className="md:hidden">
+          Contact Us
+        </Link>
       </ul>
     </div>
   );
@@ -102,7 +110,7 @@ const SocialMediaIcons: FC<ISMIconsProps> = ({ links, icons }) => {
         <motion.div
           initial="initial"
           whileHover="hovered"
-          className="p-2 border-white/10 rounded-full bg-white/20 backdrop-blur-sm"
+          className="p-2 border-white/10 md:shadow-none shadow-sm shadow-black/30 rounded-full bg-white/20 backdrop-blur-sm"
         >
           {icons}
         </motion.div>
@@ -116,15 +124,15 @@ const LastCol = () => {
   return (
     <div className="flex flex-col gap-8">
       <div className="flex flex-col gap-2">
-        <h5 className="text-ucWhite">Social Media</h5>
-        <div className="flex items-center gap-2">
+        <h5 className="text-ucWhite md:block hidden">Social Media</h5>
+        <div className="flex items-center justify-between md:justify-normal gap-2">
           {socialMediaList.map((sm) => (
             <SocialMediaIcons key={sm.name} icons={sm.icon} links={sm.link} />
           ))}
         </div>
       </div>
-      <div className="flex flex-col gap-3">
-        <h5 className="text-ucWhite text-xl font-montrealBold font-bold w-[140px]">
+      <div className="hidden md:flex flex-col gap-3">
+        <h5 className="md:text-ucWhite text-xl font-montrealBold font-bold w-[140px]">
           Let's talk about our products...
         </h5>
         <div
@@ -146,11 +154,13 @@ const LastCol = () => {
 };
 const Footer = () => {
   return (
-    <footer className="flex bg-ucNavyBlue1 mx-[101px] text-ucWhite px-8 py-6 rounded-3xl pb-20 gap-32 mb-5">
+    <footer className="flex md:flex-row flex-col md:bg-ucNavyBlue1 justify-between lg:pr-20 xl:pr-32 xl:mx-[101px] md:text-ucWhite px-4 md:px-8 py-6 rounded-3xl pb-20 gap-10 md:gap-12 xl:gap-20 mb-5">
       <FirstCol />
-      <div className="mt-9 flex gap-20">
+      <div className="md:mt-9 flex md:flex-row flex-col px-3 gap-10 md:gap-12 xl:gap-20">
         <FooterNav pages={pagesLink} title="Pages" />
-        <FooterNav pages={legalLinks} title="Legal & Payment" />
+        {window.innerWidth > 1000 && (
+          <FooterNav pages={legalLinks} title="Legal & Payment" />
+        )}
         <LastCol />
       </div>
     </footer>

@@ -74,6 +74,10 @@ const themes = {
     className: " bg-ucWhite text-ucNavyBlue1 ",
     color: "#252D62",
   },
+  navy: {
+    className: "bg-ucNavyBlue1 text-ucWhite",
+    color: "#fafafa",
+  },
 };
 const DoubleBtn: FC<IDoubleBtnProps> = ({ text, theme = "glass" }) => {
   return (
@@ -83,12 +87,17 @@ const DoubleBtn: FC<IDoubleBtnProps> = ({ text, theme = "glass" }) => {
       className="flex items-center cursor-pointer"
     >
       <div
-        className={`rounded-3xl  px-4 py-2 relative overflow-hidden  ${themes[theme].className} `}
+        className={`rounded-[40px] md:rounded-3xl px-6 md:px-4 py-4 md:py-2 relative overflow-hidden  ${themes[theme].className} `}
       >
         <Zoop text={text} />
       </div>
       <div
-        className={`rounded-full  p-2  relative overflow-hidden ${themes[theme].className}`}
+        className={`rounded-full md:hidden p-4  relative overflow-hidden ${themes[theme].className}`}
+      >
+        <ArrowUpRight03Icon color={themes[theme].color} />
+      </div>
+      <div
+        className={`rounded-full hidden md:block p-2  relative overflow-hidden ${themes[theme].className}`}
       >
         <AnimationSpan visible={true}>
           <ArrowUpRight03Icon color={themes[theme].color} />

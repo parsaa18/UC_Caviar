@@ -1,6 +1,6 @@
 "use client";
 import { SectionTitle1 } from "@/components/common/SectionTitles/SectionTitles";
-import apiFetcher from "@/core/services/api/index.api";
+import apiFetcher from "@/core/services/api/fetcher.api";
 import { productCategoryType } from "@/core/types/product.type";
 import useSWR from "swr";
 import CatCards from "./Cards";
@@ -17,11 +17,10 @@ const ProductsCategory = () => {
     index: null,
   });
   const { data: categories, error } = useSWR("categories/", apiFetcher);
-  console.log(categories);
   return (
     <section className="flex flex-col gap-6">
       <SectionTitle1 titleStart="Products" titleBold="Category" />
-      <div className="flex items-center justify-center gap-5">
+      <div className="flex md:flex-row flex-col items-center justify-center gap-5">
         {categories?.map((cat: productCategoryType, idx: number) => {
           return (
             <ViewedCard
