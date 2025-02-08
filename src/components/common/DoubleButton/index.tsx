@@ -74,8 +74,8 @@ const themes = {
     className: " bg-ucWhite text-ucNavyBlue1 ",
     color: "#252D62",
   },
-  navy: {
-    className: "bg-ucNavyBlue1 text-ucWhite",
+  blue: {
+    className: " bg-ucNavyBlue1 text-ucWhite ",
     color: "#fafafa",
   },
 };
