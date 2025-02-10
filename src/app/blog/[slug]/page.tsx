@@ -3,58 +3,77 @@ import Image from "next/image";
 function page() {
   return (
     <>
-      <div className="w-[45px] h-[19px] text-[16px] leading-[19.2px] text-[#000000] opacity-50 mx-auto mt-[123px]">
-        Blog
-      </div>
-      <div className="flex justify-center space-x-[104px] mt-[2px] ml-[50px] ">
-        <div className=" flex  justify-center w-[57px] h-[22.63px] mt-[15px] gap-[2px] ">
+      <div className="flex items-center justify-center ml-[-70px] gap-[40px] mt-[123px] md:mt-[123px] ">
+        <button className="flex items-center space-x-1 text-gray-500 hover:text-gray-700 transition md:hidden">
           <Image
-            src={"/images/arrow-right.png"}
+            src="/images/arrow-right.png"
             alt="Arrow"
             width={26}
             height={26}
-            className="mt-[-4px]"
           />
-          <div className="w-[32px] h-[17px] text-[16px] leading-[16.8px] text-[#000000] opacity-50">
-            Back
-          </div>
-        </div>{" "}
-        <div className="w-[437px] h-[43px]  text-[36px] leading-[43.2px] text-[#0D0A0B] ">
-          How to take care of caviar ?
-        </div>{" "}
-        <div className=" flex  justify-center w-[120px] h-[20px] gap-[5px] mt-[15px] ">
+          <span className="text-[16px]">Back</span>
+        </button>
+
+        <div className="w-[45px] h-[19px] text-[16px] leading-[19.2px] text-[#000000] opacity-50 text-center">
+          Blog
+        </div>
+      </div>
+
+      <div className="flex flex-wrap items-center justify-center px-6 md:px-12 py-4 gap-[20px] md:gap-x-[103px]">
+        <button className="hidden md:flex items-center space-x-1 text-gray-500 hover:text-gray-700 transition">
           <Image
-            src={"/images/calendar-03.png"}
-            alt="calendar"
-            width={25}
-            height={10}
-            className="mt-[-4px]"
+            src="/images/arrow-right.png"
+            alt="Arrow"
+            width={26}
+            height={26}
           />
-          <div className=" w-[120px] h-full text-[16px] leading-[16.8px] text-[#000000] opacity-50">
-            Jan 7 , 2023
+          <span className="text-[16px]">Back</span>
+        </button>
+
+        <div className="flex flex-col md:flex-row items-center  justify-center md:justify-center gap-2 md:gap-[103px]">
+          <h1 className="text-[30px] md:text-[36px]  text-[#0D0A0B] text-center md:text-center">
+            How to take care of caviar?
+          </h1>
+
+          <div className="flex items-center space-x-2">
+            <Image
+              src="/images/calendar-03.png"
+              alt="calendar"
+              width={25}
+              height={25}
+            />
+            <span className="text-[14px] md:text-[16px] text-gray-500">
+              Jan 7, 2023
+            </span>
           </div>
         </div>
       </div>
-      <div className=" flex mx-auto mt-[56px]  text-[20px] leading-[24px] text-[#0D0A0B] w-[924px] h-[72px]">
+
+      <div
+        className="flex mx-auto mt-[56px] text-[20px] leading-[24px] text-[#0D0A0B] 
+  w-auto md:w-[924px] max-w-full h-auto px-4 md:px-0 text-center md:text-left"
+      >
         How to take care of caviar How to take care of caviar How to take care
         of caviar How to take care of caviar How to take care of caviar How to
         take care of caviar How to take care of caviar How to take care of
         caviar How to take care of caviar How to take care of caviar How to take
         care of caviar How to take care of caviar...
       </div>
-      <div className="w-[1238px] h-[621px] rounded-[32px] mt-[56px] mx-auto ">
+
+      <div className="w-full md:w-[1238px] h-auto rounded-[32px] mt-[56px] mx-auto">
         <Image
           src={"/images/Blog.png"}
           alt="main-blog"
           width={1238}
           height={621}
+          layout="responsive"
         />
       </div>
-      <div className="w-[437px] h-[43px] text-[36px] leading-[43.2px] mt-[56px] ml-[258px] text-[#0D0A0B]">
-        How to take care of caviar ?
-      </div>
 
-      <div className="w-[924px] h-[576px] text-[20px] leading-[24px] mt-[24px] ml-[258px] text-[#0D0A0B]">
+      <div className="w-full md:w-[437px] h-auto text-[24px] md:text-[36px] md:mt-[56px]  md:ml-[258px] ml-[100px] mt-[56px] leading-[43.2px]  text-[#0D0A0B]">
+        How to take care of caviar?
+      </div>
+      <div className="w-full md:w-[924px] h-auto text-[16px] md:text-[20px] leading-[24px] mt-[24px] ml-[20px] md:ml-[258px] text-[#0D0A0B]">
         Lorem ipsum dolor sit amet consectetur. Ante auctor neque iaculis
         habitasse facilisi etiam amet risus. Lacus sit pretium porta pulvinar at
         curabitur non nunc. Vulputate lacus integer rhoncus mollis sit amet
@@ -91,6 +110,7 @@ function page() {
         nisl at consectetur etiam. Ullamcorper nec tortor elementum nunc
         pellentesque vel. Vitae faucibus sed amet dignissim sagittis.
       </div>
+
       <div className="  flex  justify-center w-[120px] h-[22.63px] mt-[56px] mx-auto gap-[2px] ">
         <Image
           src={"/images/arrow-right.png"}
