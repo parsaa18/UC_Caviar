@@ -8,7 +8,7 @@ const Page = () => {
           className="object-cover w-[90%] max-w-[580.81px] h-auto"
         />
       </div>
-      <div className="flex justify-center text-center mx-auto font-montrealBold text-white max-w-[877px] text-lg sm:text-xl md:text-2xl leading-relaxed mt-[-200px] sm:mt-[-250px]">
+      <div className="flex justify-center text-center mx-auto font-montrealBold text-white max-w-[877px] text-lg sm:text-xl md:text-2xl leading-relaxed mt-[-350px] sm:mt-[-350px]">
         Seafood products, especially caviar, require meticulous care during
         storage and transportation due to their sensitivity to factors such as
         temperature and time. For this reason, we rely exclusively on air
@@ -31,7 +31,7 @@ const Page = () => {
           <img
             src="/images/plane.png"
             alt="Plane"
-            className="object-contain w-[30%] sm:w-[25%] h-auto absolute top-[-5%] left-[10%] sm:top-[-10%] sm:left-[5%]"
+            className="object-contain w-[70%] sm:w-[70%] h-auto absolute top-[-25%] left-[-20%] sm:top-[-25%] sm:left-[-20%]"
           />
         </div>
       </div>
