@@ -1,0 +1,10 @@
+.ant-select-selector {
+  @apply !bg-ucGray !rounded-3xl !border-none !outline-none !p-6 !flex items-center;
+  border-radius: 32px !important;
+}
+.ant-select-selector:focus {
+  @apply outline-none border-none;
+}
+.ant-select-arrow {
+  height: 100% !important;
+}

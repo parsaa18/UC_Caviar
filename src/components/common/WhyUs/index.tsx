@@ -4,7 +4,6 @@ import WhyUsCards from "./Cards";
 import { cardList } from "./CardsList";
 
 const WhyUsSect = () => {
-  console.log();
   return (
     <section className="flex flex-col gap-6 mt-10 ">
       <SectionTitle1 titleStart="Why" titleBold="Choose Us?" />

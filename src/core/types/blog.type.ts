@@ -4,4 +4,5 @@ export type blogType = {
   date: string;
   intro: string;
   description: string;
+  picture: string;
 };

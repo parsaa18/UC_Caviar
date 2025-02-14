@@ -5,6 +5,7 @@ import {
   IViewCardProps,
   IViewCursorProps,
 } from "@/core/types/CursorObj/cursorObj.type";
+import Magnetic from "../Magnet";
 
 const cursorClassName =
   "w-[90px] h-[90px] rounded-[50%] bg-ucNavyBlue2 text-ucWhite absolute z-40 flex items-center justify-center text-sm ";
@@ -71,8 +72,8 @@ export const ViewCursor: FC<IViewCursorProps> = ({ cursorObj }) => {
       ></motion.div>
       <motion.div
         ref={cursorLabel}
-        className={cursorClassName + "bg-transparent "}
-        style={{ pointerEvents: "none" }}
+        className={cursorClassName}
+        style={{ pointerEvents: "none", backgroundColor: "transparent" }}
         variants={scaleAnimation}
         initial="initial"
         animate={isActive ? "enter" : "closed"}
@@ -96,7 +97,7 @@ export const ViewedCard: FC<IViewCardProps> = ({
       onMouseLeave={() => {
         handleCursorObj({ isActive: false, index });
       }}
-      className="cursor-pointer"
+      className="cursor-pointer w-full h-full"
     >
       {children}
     </div>

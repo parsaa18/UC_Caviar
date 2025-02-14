@@ -67,7 +67,7 @@ const AnimationSpan: FC<ISpanProp> = ({ children, visible }) => {
 const themes = {
   glass: {
     className:
-      "border border-white/10 bg-white/20 backdrop-blur-sm text-ucWhite",
+      "border border-white/10 bg-white/20 backdrop-blur-lg text-ucWhite",
     color: "#fafafa",
   },
   white: {

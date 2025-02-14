@@ -1,6 +1,11 @@
 "use client";
 
+import {
+  ViewCursor,
+  ViewedCard,
+} from "@/components/common/motion/ViewMoreCursor";
 import { SectionTitle1 } from "@/components/common/SectionTitles/SectionTitles";
+import { cursorObjType } from "@/core/types/CursorObj/cursorObj.type";
 import React, { ReactNode, useState } from "react";
 
 type packType = { id: number; component: ReactNode };
@@ -63,10 +68,14 @@ const packList = [
 
 const PackingSection = () => {
   const [activeCard, setactiveCard] = useState<number>(1);
-
+  const [cursorObj, handleCursorObj] = useState<cursorObjType>({
+    isActive: false,
+    index: null,
+  });
   return (
     <section className="lg:flex hidden flex-col gap-6 ">
       <SectionTitle1 titleStart="How do we" titleBold="Package Our Products?" />
+      <ViewCursor cursorObj={cursorObj} />
       <div className="flex gap-8 h-[435px]">
         {packList
           .filter((pack) => pack.id === activeCard)
@@ -94,7 +103,9 @@ const PackingSection = () => {
                     className="bg-ucGray text-xl  w-full cursor-pointer rounded-[40px] h-[252px] "
                     key={idx}
                   >
-                    {pack.component}
+                    <ViewedCard index={idx} handleCursorObj={handleCursorObj}>
+                      {pack.component}
+                    </ViewedCard>
                   </div>
                 );
               })}

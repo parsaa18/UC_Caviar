@@ -20,17 +20,6 @@ const CategoryList: FC<IProps> = ({ data }) => {
           />
         );
       })}
-      {data?.map((cat, idx) => {
-        return (
-          <CategoryCards
-            key={idx}
-            picture={cat.picture}
-            title={cat.name}
-            link={cat.id}
-            totalItems={cat.productsList.length}
-          />
-        );
-      })}
     </>
   );
 };

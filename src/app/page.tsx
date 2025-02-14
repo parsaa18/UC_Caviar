@@ -16,6 +16,8 @@ export default function Home() {
           <AboutUsSect />
           <WhyUsSect />
           <ProductsCategory />
+        </div>
+        <div className="xl:px-[258px] md:px-6">
           <CatalogSect />
         </div>
         <div className="xl:px-[101px] lg:px-[80px] w-full flex flex-col gap-44 my-12">

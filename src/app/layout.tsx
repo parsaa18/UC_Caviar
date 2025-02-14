@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
 
+// styles
 import "./globals.css";
 import "./font.css";
+import "./scroller.css";
+
+// Layout component
 import Header from "@/components/layout/Header/header";
 
 export const metadata: Metadata = {
@@ -21,7 +26,7 @@ export default function RootLayout({
       </head>
       <body className="bg-ucWhite md:p-4">
         <Header />
-        {children}
+        <NuqsAdapter>{children}</NuqsAdapter>
       </body>
     </html>
   );

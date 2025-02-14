@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 
 // Components
 import DoubleBtn from "@/components/common/DoubleButton";
@@ -13,7 +13,7 @@ import WhatsappIcon from "@/components/icons/Whatsapp";
 import Magnetic from "@/components/common/motion/Magnet";
 
 // Third Party
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { ISMIconsProps } from "@/core/types/footer/footer.types";
 
 const color = window.innerWidth > 768 ? "#fafafa" : "#0D0A0B";
@@ -56,18 +56,27 @@ const SocialMediaIcons: FC<ISMIconsProps> = ({ links, icons }) => {
   );
 };
 const Hero = () => {
+  const [muted, setMuted] = useState(true);
   return (
     <section className="h-[calc(100dvh-32px)] min-h-[640px] max-h-[720px] w-full  md:rounded-[32px]  relative pt-32">
-      <div className="absolute top-0 left-0 bottom-0 right-0 -z-10">
-        <img
+      <div className="absolute top-0 left-0 bottom-0 right-0 -z-10 overflow-hidden md:rounded-[32px]">
+        {/* <img
           src="/images/Home_Hero_test.jpg"
           alt="Hero"
           className="rounded-[40px] w-full h-full object-cover "
-        />
+        /> */}
+        <video
+          src="/videos/hero-caviar.mp4"
+          autoPlay
+          muted={muted}
+          loop
+          controlsList="nodownload"
+          className=" h-full w-full object-cover"
+        ></video>
       </div>
       <div className="flex flex-col xl:flex-row gap-6 md:gap-10 lg:gap-16 mx-6 md:mx-16">
         <div className="xl:ml-4">
-          <h1 className="text-nowrap text-3xl md:text-4xl lg:text-5xl text-white font-bold font-montrealBold">
+          <h1 className="text-nowrap text-2xl xs:text-3xl md:text-4xl lg:text-5xl text-white font-bold font-montrealBold">
             Caspian Caviar,
             <br /> the Taste of <br /> the Sea in Every Pearl.
           </h1>
@@ -81,8 +90,8 @@ const Hero = () => {
               quality and tailored delivery methods. Contact us for orders and
               inquiries.
             </p>
-            <div className="flex items-center w-full justify-between">
-              <Link href={"/Products"}>
+            <div className="flex xs:flex-row flex-col xs:items-center gap-4 w-full justify-between">
+              <Link href={"/products"}>
                 <DoubleBtn text="Products" />
               </Link>
               <div className="flex md:hidden items-center gap-2">
@@ -103,8 +112,23 @@ const Hero = () => {
         </div>
       </div>
       <Magnetic>
-        <div className="p-3 absolute cursor-pointer bottom-6 left-6 bg-ucWhite rounded-full">
+        <div
+          onClick={() => {
+            setMuted(!muted);
+          }}
+          className="p-3 absolute cursor-pointer bottom-6 left-6 bg-ucWhite rounded-full"
+        >
           <VolumeHighIcon />
+          <AnimatePresence>
+            {muted && (
+              <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: "32px" }}
+                exit={{ width: 0 }}
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[1.7px] w-[32px] rotate-[-45deg] bg-ucBlack "
+              ></motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </Magnetic>
     </section>
