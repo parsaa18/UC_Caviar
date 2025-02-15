@@ -1,4 +1,5 @@
 import WhyUsSect from "@/components/common/WhyUs";
+import Footer from "@/components/layout/Footer/footer";
 
 const Page = () => {
   return (
@@ -48,6 +49,7 @@ const Page = () => {
       <div className="lg:px-[128px] px-6 items-center lg:items-start xl:px-[258px] my-32 flex flex-col  gap-32">
         <WhyUsSect />
       </div>
+      <Footer />
     </>
   );
 };

@@ -35,44 +35,42 @@ const legalLinks: linkType[] = [
   { link: "/", name: "Legal & Payment" },
 ];
 
-const color = window.innerWidth > 768 ? "#fafafa" : "#0D0A0B";
-
 const socialMediaList = [
   {
     name: "linkedin",
     link: ".",
-    icon: <Linkedin01Icon color={color} />,
+    icon: <Linkedin01Icon color="#fafafa" />,
   },
   {
     name: "whatsapp",
     link: ".",
-    icon: <WhatsappIcon color={color} />,
+    icon: <WhatsappIcon color="#fafafa" />,
   },
   {
     name: "instagram",
     link: ".",
-    icon: <InstagramIcon color={color} />,
+    icon: <InstagramIcon color="#fafafa" />,
   },
   {
     name: "facebook",
     link: ".",
-    icon: <Facebook01Icon color={color} />,
+    icon: <Facebook01Icon color="#fafafa" />,
   },
 ];
 
 // footer's first column
 const FirstCol = () => {
   return (
-    <div className="flex items-start flex-col gap-6 ">
+    <div className="flex items-start flex-col gap-6 lg:order-none order-2 ">
       <div className="flex items-center gap-3 md:gap-6">
-        <div className="md:w-auto w-16">
+        <div className="xl:w-[104px] lg:w-[80px] w-16">
           <img src={"images/logo-footer.svg"} alt="Logo-footer" />
         </div>
-        <h2 className="text-lg sm:text-xl font-bold md:text-ucWhite text-ucNavyBlue1 text-nowrap font-montrealBold">
+        <h2 className="text-lg sm:text-xl font-bold text-ucWhite  text-nowrap font-montrealBold">
           UNIQUE CASPIAN CAVIAR
         </h2>
       </div>
-      <p className="max-w-[450px] leading-5 font-[500]  text-justify md:block hidden ">
+      <p className="xl:max-w-[450px] max-w-full lg:max-w-[400px] leading-5 font-[500]  text-justify  ">
         Unique Caspian is a brand that supplies high-quality Iranian caviar in
         bulk to restaurants, hotels, grocery stores, and wholesale buyers. The
         company, through its representatives in Europe, ensures a reliable and
@@ -84,14 +82,14 @@ const FirstCol = () => {
 
 const FooterNav: FC<INavProps> = ({ title, pages }) => {
   return (
-    <div className="flex flex-col md:items-start items-center gap-5 md:w-auto w-full">
-      <h4 className="text-xl font-bold font-montrealBold md:block hidden">
+    <div className="flex flex-col items-start gap-5 ">
+      <h4 className="text-xl font-bold font-montrealBold text-nowrap">
         {title}
       </h4>
-      <ul className="md:flex flex-col gap-3 w-full  justify-between grid grid-cols-3">
+      <ul className="flex flex-col gap-3 w-full  justify-between ">
         {pages.map((page, idx) => {
           return (
-            <Link href={page.link} key={idx}>
+            <Link href={page.link} key={idx} className="text-nowrap">
               {page.name}
             </Link>
           );
@@ -124,7 +122,7 @@ const LastCol = () => {
   return (
     <div className="flex flex-col gap-8">
       <div className="flex flex-col gap-2">
-        <h5 className="text-ucWhite md:block hidden">Social Media</h5>
+        <h5 className="text-ucWhite hidden">Social Media</h5>
         <div className="flex items-center justify-between md:justify-normal gap-2">
           {socialMediaList.map((sm) => (
             <SocialMediaIcons key={sm.name} icons={sm.icon} links={sm.link} />
@@ -154,13 +152,14 @@ const LastCol = () => {
 };
 const Footer = () => {
   return (
-    <footer className="flex md:flex-row flex-col md:bg-ucNavyBlue1 justify-between lg:pr-20 xl:pr-32 xl:mx-[101px] md:text-ucWhite px-4 md:px-8 py-6 rounded-3xl pb-20 gap-10 md:gap-12 xl:gap-20 mb-5">
+    <footer className="flex lg:flex-row flex-col bg-ucNavyBlue1 justify-between lg:pr-20 xl:pr-32 xl:mx-[92px] mx-4 text-ucWhite px-4 md:px-8 py-6 rounded-3xl min-h-[320px] gap-10 md:gap-12 xl:gap-16 mb-5">
       <FirstCol />
-      <div className="md:mt-9 flex md:flex-row flex-col px-3 gap-10 md:gap-12 xl:gap-20">
-        <FooterNav pages={pagesLink} title="Pages" />
-        {window.innerWidth > 1000 && (
-          <FooterNav pages={legalLinks} title="Legal & Payment" />
-        )}
+      <div className="md:mt-9 lg:order-none order-1  flex lg:flex-row flex-col px-3  gap-10 md:gap-12 xl:gap-20">
+        <div className="flex flex-row gap-10 xs:gap-32 lg:gap-10 xl:gap-20">
+          <FooterNav pages={pagesLink} title="Pages" />
+          <FooterNav pages={legalLinks} title="Legal & Payments" />
+        </div>
+
         <LastCol />
       </div>
     </footer>
