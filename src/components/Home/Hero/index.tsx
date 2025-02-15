@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 
 // Components
 import DoubleBtn from "@/components/common/DoubleButton";
@@ -15,6 +15,7 @@ import Magnetic from "@/components/common/motion/Magnet";
 // Third Party
 import { AnimatePresence, motion } from "framer-motion";
 import { ISMIconsProps } from "@/core/types/footer/footer.types";
+import MouseScroll02Icon from "@/components/icons/MouseScroll";
 
 const color = window.innerWidth > 768 ? "#fafafa" : "#0D0A0B";
 
@@ -57,6 +58,19 @@ const SocialMediaIcons: FC<ISMIconsProps> = ({ links, icons }) => {
 };
 const Hero = () => {
   const [muted, setMuted] = useState(true);
+  const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <section className="h-[calc(100dvh-32px)] min-h-[640px] max-h-[720px] w-full  md:rounded-[32px]  relative pt-32">
       <div className="absolute top-0 left-0 bottom-0 right-0 -z-10 overflow-hidden md:rounded-[32px]">
@@ -131,6 +145,18 @@ const Hero = () => {
           </AnimatePresence>
         </div>
       </Magnetic>
+      <AnimatePresence mode="wait">
+        {!isScrolled && (
+          <motion.div
+            initial={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 10 }}
+            className="absolute bottom-6 right-6  flex items-center gap-1 text-sm bg-ucWhite rounded-full px-4 py-3 to-white/0"
+          >
+            Scroll down for more... <MouseScroll02Icon color="#0d0a0b" />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

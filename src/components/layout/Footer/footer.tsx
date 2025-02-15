@@ -27,7 +27,7 @@ const pagesLink: linkType[] = [
   { link: "/products", name: "Products" },
   { link: "/blogs", name: "Blogs" },
   { link: "/OurShipping", name: "Shipping" },
-  { link: "/About-Us", name: "About Us" },
+  { link: "/about-us", name: "About Us" },
 ];
 const legalLinks: linkType[] = [
   { link: "/", name: "Legal & Payment" },

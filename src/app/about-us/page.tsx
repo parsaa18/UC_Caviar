@@ -1,3 +1,5 @@
+import WhyUsSect from "@/components/common/WhyUs";
+
 const Page = () => {
   return (
     <>
@@ -43,30 +45,8 @@ const Page = () => {
         customers with the finest caviar in terms of aroma, taste, and color,
         while remaining loyal to the heritage passed down through generations.
       </div>
-      <div className="flex flex-col gap-[2px] justify-start md:justify-center ml-[24px] md:ml-[258px]">
-        <div className="font-medium text-[20px]/[24px]  opacity-50 text-left mt-[80px]">
-          Why
-        </div>
-        <div className="font-montrealBold text-[24px]/[28.8px]  text-left">
-          Choose Us?
-        </div>
-      </div>
-      <div className="  md:w-[1000px]  flex flex-col md:flex-row md:flex-wrap justify-center md:ml-[208px] gap-[20px] mt-[24px] px-4">
-        {[
-          "A unique experience of taste and aroma caviar",
-          "Accurate processes and high standards of maintenance that ensure fresh and quality products reach the customer",
-          "Great relationship with Middle East and Europe countries",
-          "Private label, Bulk supplying solution",
-          "Customer service available 24/7 for you",
-        ].map((text, index) => (
-          <div
-            key={index}
-            className="w-full sm:w-[295px] h-auto bg-[#F2F2F2] rounded-[24px] p-4 "
-          >
-            <div className="w-14 h-14 bg-[#FAFAFA]  rounded-full"></div>
-            <div className="mt-6 text-lg font-medium">{text}</div>
-          </div>
-        ))}
+      <div className="lg:px-[128px] px-6 items-center lg:items-start xl:px-[258px] my-32 flex flex-col  gap-32">
+        <WhyUsSect />
       </div>
     </>
   );
