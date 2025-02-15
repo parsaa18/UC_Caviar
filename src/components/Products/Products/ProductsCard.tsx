@@ -1,4 +1,5 @@
 import ArrowUpRight03Icon from "@/components/icons/ArrowUpRight03";
+import { Rate } from "antd";
 import Link from "next/link";
 import { FC } from "react";
 
@@ -47,7 +48,9 @@ const ProductsCard: FC<IProps> = ({
               </div>
             </div>
           </div>
-          <div className="min-h-6 ">{rate}</div>
+          <div className="min-h-6 ">
+            <Rate count={5} value={rate} />
+          </div>
         </div>
       </div>
       <div className=" flex items-center justify-center px-[64px] sm:px-[120px] md:px-[20px] xl:px-[26%]">
