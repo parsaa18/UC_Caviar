@@ -1,9 +1,9 @@
-//@ts-nocheck
 import BlogCard from "@/components/blogs/BlogCard";
 import BlogsList from "@/components/blogs/BlogsList";
 import ListTitle from "@/components/common/ListTitle";
 import HorizontalScrollingCarousel from "@/components/common/motion/HorizontalScroll";
 import apiFetcher from "@/core/services/api/fetcher.api";
+import { blogType } from "@/core/types/blog.type";
 import React from "react";
 
 const page = async () => {
@@ -16,7 +16,7 @@ const page = async () => {
         <BlogsList data={data} />
       </HorizontalScrollingCarousel>
       <div className="flex-col flex md:hidden gap-8 pb-8">
-        {data?.map((blog, idx) => {
+        {data?.map((blog: blogType, idx: number) => {
           return (
             <BlogCard
               key={idx}

@@ -1,4 +1,5 @@
 import AboutUsSect from "@/components/Home/AboutUs";
+import LandingBlogs from "@/components/Home/Blogs";
 import CatalogSect from "@/components/Home/Catalog";
 import Hero from "@/components/Home/Hero";
 import OurShipping from "@/components/Home/OurShipping";
@@ -23,6 +24,9 @@ export default function Home() {
         <div className="xl:px-[101px] lg:px-[80px] w-full flex flex-col gap-44 my-12">
           <PackingSection />
           <OurShipping />
+        </div>
+        <div className="lg:px-[128px] px-6 items-center lg:items-start xl:px-[258px] my-32 flex flex-col  gap-32">
+          <LandingBlogs />
         </div>
       </div>
       <Footer />
