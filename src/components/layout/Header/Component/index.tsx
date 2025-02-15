@@ -44,7 +44,7 @@ const variant = {
 const HeaderLogo = () => {
   const pathname = usePathname();
 
-  const title = pathname === "/" ? "UNIQUE CASPIAN CAVIAR" : "UNIQUE CASPIAN";
+  const title = "UNIQUE CASPIAN CAVIAR";
 
   return (
     <div className="flex xl:flex-1 items-center gap-3 font-bold font-montrealBold">

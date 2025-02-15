@@ -1,16 +1,31 @@
+"use client";
 import BlogCard from "@/components/blogs/BlogCard";
 import BlogsList from "@/components/blogs/BlogsList";
 import ListTitle from "@/components/common/ListTitle";
 import HorizontalScrollingCarousel from "@/components/common/motion/HorizontalScroll";
 import apiFetcher from "@/core/services/api/fetcher.api";
+import useScrollStore from "@/core/store/scroll.store";
 import { blogType } from "@/core/types/blog.type";
+import { handleWheel } from "@/core/utils/scroll.util";
 import React from "react";
+import useSWR from "swr";
 
-const page = async () => {
-  const data = await apiFetcher("blogs/");
+const page = () => {
+  const { data } = useSWR("blogs/", apiFetcher);
+  const { blogLeft: left, setblogLeft: setLeft } = useScrollStore(
+    (state) => state
+  );
   return (
-    <section className="pt-32 h-[calc(100vh-32px)] flex items-center flex-col gap-16 px-6 ">
-      <ListTitle title={"Blogs"} titleStart="Our" totalItems={2} />
+    <section
+      onWheel={(e) => {
+        handleWheel(e, left, setLeft, data?.length);
+      }}
+      onTouchMove={(e) => {
+        console.log(e);
+      }}
+      className="pt-32 h-[calc(100vh-32px)] flex items-center flex-col gap-16 px-6 "
+    >
+      <ListTitle title={"Blogs"} titleStart="Our" totalItems={data?.length} />
 
       <HorizontalScrollingCarousel totalItems={data?.length}>
         <BlogsList data={data} />

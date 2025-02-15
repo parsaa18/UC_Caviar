@@ -8,7 +8,9 @@ import ListBar from "@/components/Products/Products/ListBar";
 import ProductsCard from "@/components/Products/Products/ProductsCard";
 import ProductsList from "@/components/Products/Products/ProductsList";
 import apiFetcher from "@/core/services/api/fetcher.api";
+import useScrollStore from "@/core/store/scroll.store";
 import { productCategoryType } from "@/core/types/product.type";
+import { handleWheel } from "@/core/utils/scroll.util";
 import { a } from "framer-motion/client";
 import { useParams } from "next/navigation";
 import useSWR from "swr";
@@ -25,8 +27,18 @@ const ProductCategoryItems = () => {
   const cat = categories?.filter(
     (cat: productCategoryType) => cat.id === category
   )[0];
+
+  const { productLeft: left, setproductLeft: setLeft } = useScrollStore(
+    (state) => state
+  );
+
   return (
-    <div className="pt-32 h-[calc(100vh-32px)] flex items-center flex-col gap-6 px-6 ">
+    <div
+      onWheel={(e) => {
+        handleWheel(e, left, setLeft, data?.productsList?.length);
+      }}
+      className="pt-32 h-[calc(100vh-32px)] flex items-center flex-col gap-6 px-6 "
+    >
       <>
         <ListTitle
           title={cat?.name}
