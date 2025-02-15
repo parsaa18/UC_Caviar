@@ -3,17 +3,70 @@
     {
       "id": "caviar",
       "name": "Caviar",
-      "picture": "/images/electronics.png",
+      "picture": "https://media-hosting.imagekit.io//8ed178c4e6e94420/a726f2702c038cbabb68acf1b4696054.png?Expires=1833377098&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=i7eIIGvsEZQs4OeSPs7b-dzlh9C-mK39fXmQQZLHgRPmDOPvVRa3jjC0Jvf1HRK-hJlO~eqCyeWiLwDoJeJWFN-mM8JV7A0yAMkL4rbRk1uup12Fxfoj5nRO725E-bhN~Aqfkt2umCBukW6vKSZk3G-utB0EDA9mWyn5eJT8nmZwr4KPdfgTVp5wdrZcrVCEaWe3VLYPAaYYkG5eETY6v5fLkbDSNF4KTFDyvXVU0Orr2yUjfox3ZqmXX-vOhKyT-cVoacF-6pWf9chwYUwQvhIEJVdNg45E4ce79bR4fM6VU5P4WVY5fy4XhDAT~LY27ENX7RMdrBj2chypOl~3BA__",
       "productsList": [
         {
           "id": 1,
           "name": "Beluga Imperial",
           "picture": [
-            "images/clothing.jpg",
+            "https://media-hosting.imagekit.io//cad6ecc551cf4cb9/p-1.png?Expires=1833724088&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=TbggbTb3rPJhZPXeigZ9GehP8rfG7u~YQuXmV2oh29kA-7wupxruWCfZn7opaFjzS-9J~ocNF3RjP9gFiPxq3EJ5F1MxtHJ6vC~SHF50w06vtwoS9rKilw-5UHsiHupFQCyBaiMdL2xEOJDQjtBsqv3zGTqUwyNvnLOBtgdVrOCbY8GHK3I2DFdRb-aKkF8Hrfxbf6U9GfUx7ZFs0AbOib~ryiNAkVn7p4q4ipPzx9Mf52TK2rS9l-oNS6NdrgtDw1CqeKrRXfMMX1GYes4i0uPvfi19Rks1fDagtJOqxwhyI15L~6YOVq6AReFIm9cWNEpQ~H9OTqFSZKci6LqTrw__",
             "images/"
           ],
           "rate": 5,
           "weight": 100,
+          "packing-type": "Desjardins"
+        },
+        {
+          "id": 2,
+          "name": "Beluga Imperial Top",
+          "picture": [
+            "https://media-hosting.imagekit.io//0ecaf7995d1c4f29/p-2.png?Expires=1833724088&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=VEQdrUghjM700T1wA9DX9PkbzEhXffdSA0m3ipohGrCidezNjwMwL0jTu5YcLPrX~eVRDKhZ4QEeT79e8bnJdxB9~wQ0YThvYRGm07lAxqBJEe9HD3AXyW9aKYwUiaWE-wd-s~OX20OmklrvvTVNVL5zM2mk7L8UoWIvCU4QkNHobrEh12TJT~e2tldEhXfO5lr5ME~FsxgOYb7tkqcAAUm9Ewswoi8T9Tiyres-O9nIai-WVZGe-R8Vee2B21i3-cdNrJSD-wuAlsgdh0d4xkmEsQJL8eeSCsHW~5RN2-efD8v0NlJV-8EJ0f6H2LYLHIelHWYANz9kXxtvsYgh~g__"
+          ],
+          "rate": 5,
+          "weight": 100,
+          "packing-type": "Desjardins"
+        },
+        {
+          "id": 3,
+          "name": "Baerii",
+          "picture": [
+            "https://media-hosting.imagekit.io//86f1b15987924878/p-3.png?Expires=1833724088&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=t2pZVK967Lh6ithpbdGk07jTJObbeh9USJz6O7Z~e4s4en06cmy6nGAbuM9dRC2y61wRa-3OHQDOQmEm9Cb4UaLHODOGLO2w~3FK0nESdn55wSF-~77KvbrWP89Tb5Fc4eveM798dO5RtHT5VOT98BUAm3PNztRfK-8VKVvszEsi6xcMwpsHTW3--qdLCcp4BbthHgbeuaIi7wPJsdoGwQQfrTUXfKDxTqnIBat0qFVXbvPIguF7pznVmqWwqGSPp~pSH6SA9kWCxN1f-IN0GPmKqXPbzmgid-mGsAmx33qnpn28TfNBovbc4XLBfLN7JV1jujWvTWYSFG1SenjiTA__",
+            "images/safasavvvacvas"
+          ],
+          "rate": 4.5,
+          "weight": 50,
+          "packing-type": "Desjardins"
+        },
+        {
+          "id": 1,
+          "name": "Beluga Imperial",
+          "picture": [
+            "https://media-hosting.imagekit.io//cad6ecc551cf4cb9/p-1.png?Expires=1833724088&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=TbggbTb3rPJhZPXeigZ9GehP8rfG7u~YQuXmV2oh29kA-7wupxruWCfZn7opaFjzS-9J~ocNF3RjP9gFiPxq3EJ5F1MxtHJ6vC~SHF50w06vtwoS9rKilw-5UHsiHupFQCyBaiMdL2xEOJDQjtBsqv3zGTqUwyNvnLOBtgdVrOCbY8GHK3I2DFdRb-aKkF8Hrfxbf6U9GfUx7ZFs0AbOib~ryiNAkVn7p4q4ipPzx9Mf52TK2rS9l-oNS6NdrgtDw1CqeKrRXfMMX1GYes4i0uPvfi19Rks1fDagtJOqxwhyI15L~6YOVq6AReFIm9cWNEpQ~H9OTqFSZKci6LqTrw__",
+            "images/"
+          ],
+          "rate": 5,
+          "weight": 100,
+          "packing-type": "Desjardins"
+        },
+        {
+          "id": 2,
+          "name": "Beluga Imperial Top",
+          "picture": [
+            "https://media-hosting.imagekit.io//0ecaf7995d1c4f29/p-2.png?Expires=1833724088&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=VEQdrUghjM700T1wA9DX9PkbzEhXffdSA0m3ipohGrCidezNjwMwL0jTu5YcLPrX~eVRDKhZ4QEeT79e8bnJdxB9~wQ0YThvYRGm07lAxqBJEe9HD3AXyW9aKYwUiaWE-wd-s~OX20OmklrvvTVNVL5zM2mk7L8UoWIvCU4QkNHobrEh12TJT~e2tldEhXfO5lr5ME~FsxgOYb7tkqcAAUm9Ewswoi8T9Tiyres-O9nIai-WVZGe-R8Vee2B21i3-cdNrJSD-wuAlsgdh0d4xkmEsQJL8eeSCsHW~5RN2-efD8v0NlJV-8EJ0f6H2LYLHIelHWYANz9kXxtvsYgh~g__"
+          ],
+          "rate": 5,
+          "weight": 100,
+          "packing-type": "Desjardins"
+        },
+        {
+          "id": 3,
+          "name": "Baerii",
+          "picture": [
+            "https://media-hosting.imagekit.io//86f1b15987924878/p-3.png?Expires=1833724088&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=t2pZVK967Lh6ithpbdGk07jTJObbeh9USJz6O7Z~e4s4en06cmy6nGAbuM9dRC2y61wRa-3OHQDOQmEm9Cb4UaLHODOGLO2w~3FK0nESdn55wSF-~77KvbrWP89Tb5Fc4eveM798dO5RtHT5VOT98BUAm3PNztRfK-8VKVvszEsi6xcMwpsHTW3--qdLCcp4BbthHgbeuaIi7wPJsdoGwQQfrTUXfKDxTqnIBat0qFVXbvPIguF7pznVmqWwqGSPp~pSH6SA9kWCxN1f-IN0GPmKqXPbzmgid-mGsAmx33qnpn28TfNBovbc4XLBfLN7JV1jujWvTWYSFG1SenjiTA__",
+            "images/safasavvvacvas"
+          ],
+          "rate": 4.5,
+          "weight": 50,
           "packing-type": "Desjardins"
         }
       ]
@@ -21,15 +74,12 @@
     {
       "id": "caviar-meet-can",
       "name": "Caviar Meet Can",
-      "picture": "/images/clothing.jpg",
+      "picture": "https://media-hosting.imagekit.io//f14f0773fbaf42d4/3d48f7b180765e1bc64d89afa9f190f4.png?Expires=1833377095&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=aZDAEi1Wbt9-JcdPVkP-C3MyK8SqQnScDqLjvrVKNcTIE34uSJ3rOULoEg7o97XN9rN8b7j6Aw4GSZMcGuZ2INbbsTkoXTp8UeUJUEGQRYsxs0rzvschsuzyqCdaWHwVSPYwANsyUQJI-l8SrJppnf8dU8zMjxIDDPlelXGSGvIRpTjbLA6F6YjES6JIMKmPaF1n6lLfS87OjLq9cQzMXOw2ZJv92hrfnmFMC-0Js4I9jeObPvu6WOM~MJ-3MIcx~-HKdT9vmgerXyS-5S7lomS6eG9aO9EUFTGWfSYeyjH~~vh8epdd3qoHE88~Fc3gw5QQZPVDe0S4xEKuDzXHqg__",
       "productsList": [
         {
           "id": 2,
           "name": "Beluga Imperial",
-          "picture": [
-            "images/clothing.jpg",
-            "images/"
-          ],
+          "picture": ["images/clothing.jpg", "images/"],
           "rate": 5,
           "weight": 100,
           "packing-type": "Desjardins"
@@ -38,7 +88,7 @@
           "id": 4,
           "name": "Baerii",
           "picture": [
-            "images/clothing.jpg",
+            "https://media-hosting.imagekit.io//86f1b15987924878/p-3.png?Expires=1833724088&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=t2pZVK967Lh6ithpbdGk07jTJObbeh9USJz6O7Z~e4s4en06cmy6nGAbuM9dRC2y61wRa-3OHQDOQmEm9Cb4UaLHODOGLO2w~3FK0nESdn55wSF-~77KvbrWP89Tb5Fc4eveM798dO5RtHT5VOT98BUAm3PNztRfK-8VKVvszEsi6xcMwpsHTW3--qdLCcp4BbthHgbeuaIi7wPJsdoGwQQfrTUXfKDxTqnIBat0qFVXbvPIguF7pznVmqWwqGSPp~pSH6SA9kWCxN1f-IN0GPmKqXPbzmgid-mGsAmx33qnpn28TfNBovbc4XLBfLN7JV1jujWvTWYSFG1SenjiTA__",
             "images/safasavvvacvas"
           ],
           "rate": 4.5,
@@ -57,7 +107,7 @@
       "id": 1,
       "name": "Beluga Imperial",
       "picture": [
-        "images/clothing.jpg",
+        "https://media-hosting.imagekit.io//cad6ecc551cf4cb9/p-1.png?Expires=1833724088&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=TbggbTb3rPJhZPXeigZ9GehP8rfG7u~YQuXmV2oh29kA-7wupxruWCfZn7opaFjzS-9J~ocNF3RjP9gFiPxq3EJ5F1MxtHJ6vC~SHF50w06vtwoS9rKilw-5UHsiHupFQCyBaiMdL2xEOJDQjtBsqv3zGTqUwyNvnLOBtgdVrOCbY8GHK3I2DFdRb-aKkF8Hrfxbf6U9GfUx7ZFs0AbOib~ryiNAkVn7p4q4ipPzx9Mf52TK2rS9l-oNS6NdrgtDw1CqeKrRXfMMX1GYes4i0uPvfi19Rks1fDagtJOqxwhyI15L~6YOVq6AReFIm9cWNEpQ~H9OTqFSZKci6LqTrw__",
         "images/"
       ],
       "rate": 5,
@@ -70,10 +120,9 @@
     },
     {
       "id": 2,
-      "name": "Beluga Imperial",
+      "name": "Beluga Imperial Top",
       "picture": [
-        "images/clothing.jpg",
-        "images/"
+        "https://media-hosting.imagekit.io//0ecaf7995d1c4f29/p-2.png?Expires=1833724088&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=VEQdrUghjM700T1wA9DX9PkbzEhXffdSA0m3ipohGrCidezNjwMwL0jTu5YcLPrX~eVRDKhZ4QEeT79e8bnJdxB9~wQ0YThvYRGm07lAxqBJEe9HD3AXyW9aKYwUiaWE-wd-s~OX20OmklrvvTVNVL5zM2mk7L8UoWIvCU4QkNHobrEh12TJT~e2tldEhXfO5lr5ME~FsxgOYb7tkqcAAUm9Ewswoi8T9Tiyres-O9nIai-WVZGe-R8Vee2B21i3-cdNrJSD-wuAlsgdh0d4xkmEsQJL8eeSCsHW~5RN2-efD8v0NlJV-8EJ0f6H2LYLHIelHWYANz9kXxtvsYgh~g__"
       ],
       "rate": 5,
       "weight": 100,
@@ -84,10 +133,10 @@
       "size": "3.3 ≤ mm Up"
     },
     {
-      "id": 4,
+      "id": 3,
       "name": "Baerii",
       "picture": [
-        "images/clothing.jpg",
+        "https://media-hosting.imagekit.io//86f1b15987924878/p-3.png?Expires=1833724088&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=t2pZVK967Lh6ithpbdGk07jTJObbeh9USJz6O7Z~e4s4en06cmy6nGAbuM9dRC2y61wRa-3OHQDOQmEm9Cb4UaLHODOGLO2w~3FK0nESdn55wSF-~77KvbrWP89Tb5Fc4eveM798dO5RtHT5VOT98BUAm3PNztRfK-8VKVvszEsi6xcMwpsHTW3--qdLCcp4BbthHgbeuaIi7wPJsdoGwQQfrTUXfKDxTqnIBat0qFVXbvPIguF7pznVmqWwqGSPp~pSH6SA9kWCxN1f-IN0GPmKqXPbzmgid-mGsAmx33qnpn28TfNBovbc4XLBfLN7JV1jujWvTWYSFG1SenjiTA__",
         "images/safasavvvacvas"
       ],
       "rate": 4.5,

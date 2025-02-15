@@ -15,7 +15,6 @@ export const GET = async (
   _request: Request,
   { params }: { params: paramsType }
 ) => {
-  console.log(params);
   const { id } = params;
   const jsonData = fs.readFileSync(dataFilePath, "utf8");
   const data = JSON.parse(jsonData);

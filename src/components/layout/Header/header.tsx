@@ -1,33 +1,16 @@
-import Image from "next/image";
-import Link from "next/link";
+// components
+import NavigationBar from "./Navlinks/navlinks";
+import { ContactUsLink, HeaderLogo } from "./Component";
 
-const HeaderLogo = () => {
-  return (
-    <div className="flex items-center gap-3 text-ucBlack font-bold font-montrealBold">
-      <div>
-        <Image
-          src={"/images/logo-header.svg"}
-          alt="Logo"
-          width={56}
-          height={56}
-          className="object-cover"
-        />
-      </div>
-      <h2>UNIQUE CASPIAN CAVIAR</h2>
-    </div>
-  );
-};
-
-const ContactUsLink = () => {
-  return <Link href={"."}></Link>;
-};
 const Header = () => {
   return (
-    <header className=" w-full flex items-center fixed top-9">
-      <HeaderLogo />
-      <div></div>
-      <ContactUsLink />
-    </header>
+    <div className="w-full maw-w-[1920px] absolute top-0 left-0 right-0 z-30">
+      <header className=" flex items-center max-w-[1820px] justify-between absolute top-9 md:left-10 md:right-10 left-6 right-6 m-auto">
+        <HeaderLogo />
+        <NavigationBar />
+        <ContactUsLink />
+      </header>
+    </div>
   );
 };
 
