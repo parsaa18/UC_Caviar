@@ -21,7 +21,7 @@ export default function Home() {
         <div className="xl:px-[258px] md:px-6">
           <CatalogSect />
         </div>
-        <div className="xl:px-[101px] lg:px-[80px] w-full flex flex-col gap-44 my-12">
+        <div className="xl:px-[92px] lg:px-[80px] w-full flex flex-col gap-44 my-12">
           <PackingSection />
           <OurShipping />
         </div>
