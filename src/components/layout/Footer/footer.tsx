@@ -24,9 +24,9 @@ import ContactUsModal from "@/components/ContactUsModal";
 // links and icons list
 const pagesLink: linkType[] = [
   { link: "/", name: "Home" },
-  { link: "/Products", name: "Products" },
-  { link: "/Blogs", name: "Blogs" },
-  { link: "/Shipping", name: "Shipping" },
+  { link: "/products", name: "Products" },
+  { link: "/blogs", name: "Blogs" },
+  { link: "/OurShipping", name: "Shipping" },
   { link: "/About-Us", name: "About Us" },
 ];
 const legalLinks: linkType[] = [

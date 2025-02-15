@@ -18,7 +18,7 @@ const links = [
   { link: "/", name: "Home" },
   { link: "/products", name: "Products" },
   { link: "/blogs", name: "Blogs" },
-  { link: "/shipping", name: "Shipping" },
+  { link: "/OurShipping", name: "Shipping" },
   { link: "/about-us", name: "About Us" },
 ];
 
@@ -59,7 +59,7 @@ const HeaderLogo = () => {
       </div>
       <h2
         className={`text-nowrap ${
-          pathname === "/" || pathname.toLowerCase() === "/shipping"
+          pathname === "/" || pathname.toLowerCase() === "/ourshipping"
             ? "text-ucWhite"
             : "text-ucBlack"
         } xs:block hidden `}
@@ -115,7 +115,7 @@ const ContactUsLink = () => {
   const [modalIsOpen, setModalOpen] = useState<boolean>(false);
   const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
   const color =
-    pathname.toLowerCase() === "/shipping" || pathname.toLowerCase() === "/"
+    pathname.toLowerCase() === "/ourshipping" || pathname.toLowerCase() === "/"
       ? "#fafafa"
       : "#000000";
   return (
@@ -131,7 +131,7 @@ const ContactUsLink = () => {
             text="Contact Us"
             fontSize="sm"
             theme={
-              pathname.toLowerCase() === "/shipping" ? "revertNavy" : "navy"
+              pathname.toLowerCase() === "/ourshipping" ? "revertNavy" : "navy"
             }
           />
         </div>
@@ -150,7 +150,7 @@ const ContactUsLink = () => {
         <NavMenu
           isActive={menuIsOpen}
           bg={
-            pathname.toLowerCase() === "/shipping" ||
+            pathname.toLowerCase() === "/ourshipping" ||
             pathname.toLowerCase() === "/"
               ? "bg-ucWhite/45"
               : "bg-ucBlack/45"

@@ -16,7 +16,7 @@ const links = [
   { link: "/", name: "Home" },
   { link: "/products", name: "Products" },
   { link: "/blogs", name: "Blogs" },
-  { link: "/shipping", name: "Shipping" },
+  { link: "/OurShipping", name: "Shipping" },
   { link: "/about-us", name: "About Us" },
 ];
 // framer motion configuration
