@@ -21,6 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+
       <head>
         <link rel="icon" href="/images/logo-header.svg" />
       </head>
