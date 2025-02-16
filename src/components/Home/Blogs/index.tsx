@@ -14,6 +14,10 @@ import apiFetcher from "@/core/services/api/fetcher.api";
 import BlogCard from "@/components/blogs/BlogCard";
 import { blogType } from "@/core/types/blog.type";
 
+const Skeleton = () => {
+  return <div className="w-full min-h-[450px] bg-ucGray rounded-[40px]"></div>;
+};
+
 const LandingBlogs = () => {
   const { data: blogs, isLoading } = useSWR("blogs/", apiFetcher);
   return (
@@ -36,10 +40,10 @@ const LandingBlogs = () => {
       <div className="grid md:grid-cols-2 gap-8">
         {isLoading ? (
           <>
-            <div className="w-full min-h-[450px] bg-ucGray rounded-[40px]"></div>
-            <div className="w-full min-h-[450px] bg-ucGray rounded-[40px]"></div>
-            <div className="w-full min-h-[450px] bg-ucGray rounded-[40px]"></div>
-            <div className="w-full min-h-[450px] bg-ucGray rounded-[40px]"></div>
+            <Skeleton />
+            <Skeleton />
+            <Skeleton />
+            <Skeleton />
           </>
         ) : (
           blogs?.slice(0, 4).map((blog: blogType, idx: number) => {

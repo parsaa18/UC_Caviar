@@ -46,7 +46,8 @@ const ContactUsModal: FC<IProps> = ({ modalIsOpen, onClose }) => {
         <h5>Click on the desired language</h5>
         <div className="gap-4 flex flex-col w-full">
           <h6 className="opacity-50">
-            Contact to <span> “ CEO ”</span>
+            Contact to{" "}
+            <span className="font-bold font-montrealBold"> “ CEO ”</span>
           </h6>
           <Contact
             languages={contacts.ceo.languages}
@@ -56,7 +57,10 @@ const ContactUsModal: FC<IProps> = ({ modalIsOpen, onClose }) => {
         </div>
         <div className="gap-4 flex flex-col w-full">
           <h6 className="opacity-50">
-            Contact to <span>“ Contact Person ”</span>{" "}
+            Contact to{" "}
+            <span className="font-bold font-montrealBold">
+              “ Contact Person ”
+            </span>{" "}
           </h6>
           {contacts.contactPerson.map((contact, idx) => {
             return (

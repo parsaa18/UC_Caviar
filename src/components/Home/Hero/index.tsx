@@ -90,7 +90,7 @@ const Hero = () => {
       </div>
       <div className="flex flex-col xl:flex-row gap-6 md:gap-10 lg:gap-16 mx-6 md:mx-16">
         <div className="xl:ml-4">
-          <h1 className="text-nowrap text-2xl xs:text-3xl md:text-4xl lg:text-5xl text-white font-bold font-montrealBold">
+          <h1 className="text-nowrap text-2xl sm:text-3xl md:text-4xl lg:text-5xl  text-white font-bold font-montrealBold">
             Caspian Caviar,
             <br /> the Taste of <br /> the Sea in Every Pearl.
           </h1>

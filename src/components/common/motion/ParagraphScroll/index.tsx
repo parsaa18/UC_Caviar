@@ -14,14 +14,14 @@ const ParagraphOnScroll: FC<IParagraphProps> = ({ text, className }) => {
   const element = useRef(null);
   const { scrollYProgress } = useScroll({
     target: element,
-    offset: ["start 0.85", "start 0.55"],
+    offset: ["start 0.75", "start 0.55"],
   });
   const words = text.split(" ");
   return (
     <motion.p
       ref={element}
       className={className + " flex flex-wrap"}
-      // style={{ opacity: scrollYProgress }}
+      style={{ opacity: scrollYProgress }}
     >
       {words.map((word, idx) => {
         const start = idx / words.length;
