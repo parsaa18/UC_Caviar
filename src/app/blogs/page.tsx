@@ -6,7 +6,7 @@ import HorizontalScrollingCarousel from "@/components/common/motion/HorizontalSc
 import apiFetcher from "@/core/services/api/fetcher.api";
 import useScrollStore from "@/core/store/scroll.store";
 import { blogType } from "@/core/types/blog.type";
-import { handleWheel } from "@/core/utils/scroll.util";
+import { useThrottle } from "@/core/utils/scroll.util";
 import React from "react";
 import useSWR from "swr";
 
@@ -15,10 +15,24 @@ const page = () => {
   const { blogLeft: left, setblogLeft: setLeft } = useScrollStore(
     (state) => state
   );
+
+  const handleWheelThrottled = useThrottle((e: React.WheelEvent) => {
+    e.preventDefault();
+    const size = window.innerWidth > 1024 ? 3 : 2;
+    const windowSize = window.innerWidth;
+    const newLeft = left + e.deltaY;
+    if (
+      newLeft >= 0 &&
+      newLeft <= (data?.length - size) * (windowSize / size + 32)
+    ) {
+      setLeft(newLeft);
+    }
+  }, 16);
+
   return (
     <section
       onWheel={(e) => {
-        handleWheel(e, left, setLeft, data?.length);
+        handleWheelThrottled(e);
       }}
       onTouchMove={(e) => {
         console.log(e);

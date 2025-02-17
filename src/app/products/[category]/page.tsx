@@ -1,17 +1,14 @@
-// @ts-nocheck
 "use client";
 
 import ListTitle from "@/components/common/ListTitle";
 import HorizontalScrollingCarousel from "@/components/common/motion/HorizontalScroll";
-import CategoryList from "@/components/Products/CategoryList";
 import ListBar from "@/components/Products/Products/ListBar";
 import ProductsCard from "@/components/Products/Products/ProductsCard";
 import ProductsList from "@/components/Products/Products/ProductsList";
 import apiFetcher from "@/core/services/api/fetcher.api";
 import useScrollStore from "@/core/store/scroll.store";
 import { productCategoryType } from "@/core/types/product.type";
-import { handleWheel } from "@/core/utils/scroll.util";
-import { a } from "framer-motion/client";
+import { useThrottle } from "@/core/utils/scroll.util";
 import { useParams } from "next/navigation";
 import useSWR from "swr";
 
@@ -32,10 +29,23 @@ const ProductCategoryItems = () => {
     (state) => state
   );
 
+  const handleWheelThrottled = useThrottle((e: React.WheelEvent) => {
+    e.preventDefault();
+    const size = window.innerWidth > 1024 ? 3 : 2;
+    const windowSize = window.innerWidth;
+    const newLeft = left + e.deltaY;
+    if (
+      newLeft >= 0 &&
+      newLeft <= (data?.productsList?.length - size) * (windowSize / size + 32)
+    ) {
+      setLeft(newLeft);
+    }
+  }, 16);
+
   return (
     <div
       onWheel={(e) => {
-        handleWheel(e, left, setLeft, data?.productsList?.length);
+        handleWheelThrottled(e);
       }}
       className="pt-32 h-[calc(100vh-32px)] flex items-center flex-col gap-6 px-6 "
     >
