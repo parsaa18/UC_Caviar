@@ -2,17 +2,22 @@ import { FC } from "react";
 import ArrowUpRight03Icon from "../icons/ArrowUpRight03";
 import Calendar03Icon from "../icons/date";
 import dateFormatter from "@/core/utils/date.util";
+import Link from "next/link";
 
 interface IProps {
   picture: string;
   shortDesc: string;
   date: string;
   title: string;
+  id: number;
 }
 
-const BlogCard: FC<IProps> = ({ date, picture, shortDesc, title }) => {
+const BlogCard: FC<IProps> = ({ date, picture, shortDesc, title, id }) => {
   return (
-    <div className="flex-col justify-between flex w-full bg-ucGray h-full max-h-full rounded-[40px]">
+    <Link
+      href={"/blogs/" + id}
+      className="flex-col justify-between flex w-full bg-ucGray h-full max-h-full rounded-[40px]"
+    >
       <div className="flex flex-col  gap-4 p-8 ">
         <div className="flex justify-between items-center w-full">
           <h4 className="font-bold font-montrealBold text-xl">{title}</h4>
@@ -40,7 +45,7 @@ const BlogCard: FC<IProps> = ({ date, picture, shortDesc, title }) => {
           className=" flex w-full h-[30vh] object-cover"
         />
       </div>
-    </div>
+    </Link>
   );
 };
 

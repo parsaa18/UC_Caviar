@@ -49,6 +49,7 @@ const LandingBlogs = () => {
           blogs?.slice(0, 4).map((blog: blogType, idx: number) => {
             return (
               <BlogCard
+                id={blog.id}
                 key={idx}
                 date={blog.date}
                 picture={blog.picture}

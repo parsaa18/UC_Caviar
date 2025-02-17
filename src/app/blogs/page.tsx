@@ -53,6 +53,7 @@ const page = () => {
               picture={blog.picture}
               shortDesc={blog.intro}
               title={blog.title}
+              id={blog.id}
             />
           );
         })}
