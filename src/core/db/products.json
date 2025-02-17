@@ -114,9 +114,11 @@
       "weight": 100,
       "packing-type": "Desjardins",
       "details": "A unique Korean flavor with a special sea taste, a silky smooth and velvety texture, and a distinctive salty taste",
-      "categoryId": "caviar",
-      "color": "Dark Gray",
-      "size": "3.3 ≤ mm Up"
+      "feature": [
+        { "title": "color", "value": "Dark Gray" },
+        { "title": "size", "value": "3.3 ≤ mm Up" }
+      ],
+      "categoryId": "caviar"
     },
     {
       "id": 2,
@@ -129,8 +131,10 @@
       "packing-type": "Desjardins",
       "details": "A unique Korean flavor with a special sea taste, a silky smooth and velvety texture, and a distinctive salty taste",
       "categoryId": "caviar",
-      "color": "Dark Gray",
-      "size": "3.3 ≤ mm Up"
+      "feature": [
+        { "title": "color", "value": "Dark Gray" },
+        { "title": "size", "value": "3.3 ≤ mm Up" }
+      ]
     },
     {
       "id": 3,
@@ -144,8 +148,10 @@
       "packing-type": "Desjardins",
       "details": "A unique Korean flavor with a special sea taste, a silky smooth and velvety texture, and a distinctive salty taste",
       "categoryId": "caviar-meet-can",
-      "color": "Dark Gray",
-      "size": "3.3 ≤ mm Up"
+      "feature": [
+        { "title": "color", "value": "Dark Gray" },
+        { "title": "size", "value": "3.3 ≤ mm Up" }
+      ]
     }
   ]
 }

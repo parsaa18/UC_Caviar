@@ -7,6 +7,10 @@ export type productType = {
   "packing-type": string;
 };
 
+type featuretype = {
+  title: string;
+  value: string;
+};
 export type productDetailType = {
   id: number;
   name: string;
@@ -17,8 +21,7 @@ export type productDetailType = {
   details: string;
 
   categoryId: string;
-  color: string;
-  size: string;
+  feature: featuretype[];
 };
 
 export type productCategoryType = {
