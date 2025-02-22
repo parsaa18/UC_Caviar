@@ -35,14 +35,14 @@ const ProductsCard: FC<IProps> = ({
           <div className="flex flex-col gap-2 w-full">
             <div className="w-full flex justify-between gap-8 items-center">
               <h6 className="text-ucBlack/50 w-full text-nowrap">
-                Packaging Type :
+                Packaging Type
               </h6>
               <div className="flex items-center justify-start w-full">
                 <p>{packType}</p>
               </div>
             </div>
             <div className="w-full flex justify-between gap-8 items-center">
-              <h6 className="text-ucBlack/50 w-full text-nowrap">Weight :</h6>
+              <h6 className="text-ucBlack/50 w-full text-nowrap">Weight </h6>
               <div className="flex items-center justify-start w-full">
                 <p>{weight}g</p>
               </div>
@@ -53,8 +53,12 @@ const ProductsCard: FC<IProps> = ({
           </div>
         </div>
       </div>
-      <div className=" flex items-center justify-center px-[64px] sm:px-[120px] md:px-[20px] xl:px-[26%]">
-        <img src={picture} alt={title} className="object-cover w-full h-full" />
+      <div className="w-full flex items-center justify-center px-[64px] sm:px-[120px] md:px-[20px] xl:px-[26%]">
+        <img
+          src={picture}
+          alt={title}
+          className="object-cover w-full h-full max-w-[160px]"
+        />
       </div>
     </Link>
   );

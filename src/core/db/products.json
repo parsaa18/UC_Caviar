@@ -9,31 +9,34 @@
           "id": 1,
           "name": "Baerii",
           "picture": [
-            "https://ircln03.ihglobaldns.com:2083/cpsess2488211388/download?skipencode=1&file=%2fhome%2fcaviaruccom%2fBAERII-01.png",
-            "https://ircln03.ihglobaldns.com:2083/cpsess2488211388/download?skipencode=1&file=%2fhome%2fcaviaruccom%2fBAERII-02.png"
+            "https://uccaviar.com/BAERII-01.png",
+            "https://uccaviar.com/BAERII-02.png"
           ],
           "rate": 5,
-          "weight": 100
+          "weight": 100,
+          "packing-type": "Desjardins"
         },
         {
           "id": 2,
           "name": "Beluga Imperial",
           "picture": [
-            "https://ircln03.ihglobaldns.com:2083/cpsess2488211388/download?skipencode=1&file=%2fhome%2fcaviaruccom%2fBeluga-Imperial-01.png",
-            "https://ircln03.ihglobaldns.com:2083/cpsess2488211388/download?skipencode=1&file=%2fhome%2fcaviaruccom%2fBeluga-Imperial-02.png"
+            "https://uccaviar.com/Beluga-Imperial-01.png",
+            "https://uccaviar.com/Beluga-Imperial-02.png"
           ],
           "rate": 5,
-          "weight": 100
+          "weight": 100,
+          "packing-type": "Desjardins"
         },
         {
           "id": 3,
           "name": "Beluga Imperial Top",
           "picture": [
-            "https://ircln03.ihglobaldns.com:2083/cpsess0389644658/download?skipencode=1&file=%2fhome%2fcaviaruccom%2fBeluga-Imperial-Top-01.png",
-            "https://ircln03.ihglobaldns.com:2083/cpsess0389644658/download?skipencode=1&file=%2fhome%2fcaviaruccom%2fBeluga-Imperial-Top-02.png"
+            "https://uccaviar.com/Beluga-Imperial-Top-01.png",
+            "https://uccaviar.com/Beluga-Imperial-Top-02.png"
           ],
           "rate": 4.5,
-          "weight": 50
+          "weight": 50,
+          "packing-type": "Desjardins"
         }
       ]
     },
@@ -46,41 +49,45 @@
           "id": 4,
           "name": "Simple Flavor with Sunflower Oil",
           "picture": [
-            "https://ircln03.ihglobaldns.com:2083/cpsess0389644658/download?skipencode=1&file=%2fhome%2fcaviaruccom%2fSimpleFlavorwithSunflowerOil-01.png",
-            "https://ircln03.ihglobaldns.com:2083/cpsess0389644658/download?skipencode=1&file=%2fhome%2fcaviaruccom%2fSimpleFlavorwithSunflowerOil-02.png"
+            "https://uccaviar.com/SimpleFlavorwithSunflowerOil-01.png",
+            "https://uccaviar.com/SimpleFlavorwithSunflowerOil-02.png"
           ],
           "rate": 4.5,
-          "weight": 180
+          "weight": 180,
+          "packing-type": "Desjardins"
         },
         {
           "id": 5,
           "name": "Pepper Flavor with Sunflower Oil",
           "picture": [
-            "https://ircln03.ihglobaldns.com:2083/cpsess0389644658/download?skipencode=1&file=%2fhome%2fcaviaruccom%2fPepperFlavorwithSunflowerOil-01.png",
-            "https://ircln03.ihglobaldns.com:2083/cpsess0389644658/download?skipencode=1&file=%2fhome%2fcaviaruccom%2fPepperFlavorwithSunflowerOil-02.png"
+            "https://uccaviar.com/PepperFlavorwithSunflowerOil-01.png",
+            "https://uccaviar.com/PepperFlavorwithSunflowerOil-02.png"
           ],
           "rate": 4.5,
-          "weight": 180
+          "weight": 180,
+          "packing-type": "Desjardins"
         },
         {
           "id": 6,
           "name": "Dill Flavor with Sunflower Oil",
           "picture": [
-            "https://ircln03.ihglobaldns.com:2083/cpsess0389644658/download?skipencode=1&file=%2fhome%2fcaviaruccom%2fDillFlavorwithSunflowerOil-01.png",
-            "https://ircln03.ihglobaldns.com:2083/cpsess0389644658/download?skipencode=1&file=%2fhome%2fcaviaruccom%2fDillFlavorwithSunflowerOil-02.png"
+            "https://uccaviar.com/DillFlavorwithSunflowerOil-01.png",
+            "https://uccaviar.com/DillFlavorwithSunflowerOil-02.png"
           ],
           "rate": 4.5,
-          "weight": 180
+          "weight": 180,
+          "packing-type": "Desjardins"
         },
         {
           "id": 7,
           "name": "Refined Olive Oil Flavor",
           "picture": [
-            "https://ircln03.ihglobaldns.com:2083/cpsess0389644658/download?skipencode=1&file=%2fhome%2fcaviaruccom%2fRefinedOliveOilFlavor-01.png",
-            "https://ircln03.ihglobaldns.com:2083/cpsess0389644658/download?skipencode=1&file=%2fhome%2fcaviaruccom%2fRefinedOliveOilFlavor-02.png"
+            "https://uccaviar.com/RefinedOliveOilFlavor-01.png",
+            "https://uccaviar.com/RefinedOliveOilFlavor-02.png"
           ],
           "rate": 4.5,
-          "weight": 180
+          "weight": 180,
+          "packing-type": "Desjardins"
         }
       ]
     }
@@ -90,8 +97,8 @@
       "id": 1,
       "name": "Baerii",
       "picture": [
-        "https://ircln03.ihglobaldns.com:2083/cpsess2488211388/download?skipencode=1&file=%2fhome%2fcaviaruccom%2fBAERII-01.png",
-        "https://ircln03.ihglobaldns.com:2083/cpsess2488211388/download?skipencode=1&file=%2fhome%2fcaviaruccom%2fBAERII-02.png"
+        "https://uccaviar.com/BAERII-01.png",
+        "https://uccaviar.com/BAERII-02.png"
       ],
       "rate": 5,
       "weight": 100,
@@ -107,8 +114,8 @@
       "id": 2,
       "name": "Beluga Imperial",
       "picture": [
-        "https://ircln03.ihglobaldns.com:2083/cpsess2488211388/download?skipencode=1&file=%2fhome%2fcaviaruccom%2fBeluga-Imperial-01.png",
-        "https://ircln03.ihglobaldns.com:2083/cpsess2488211388/download?skipencode=1&file=%2fhome%2fcaviaruccom%2fBeluga-Imperial-02.png"
+        "https://uccaviar.com/Beluga-Imperial-01.png",
+        "https://uccaviar.com/Beluga-Imperial-02.png"
       ],
       "rate": 5,
       "weight": 100,
@@ -124,8 +131,8 @@
       "id": 3,
       "name": "Beluga Imperial Top",
       "picture": [
-        "https://ircln03.ihglobaldns.com:2083/cpsess0389644658/download?skipencode=1&file=%2fhome%2fcaviaruccom%2fBeluga-Imperial-Top-01.png",
-        "https://ircln03.ihglobaldns.com:2083/cpsess0389644658/download?skipencode=1&file=%2fhome%2fcaviaruccom%2fBeluga-Imperial-Top-02.png"
+        "https://uccaviar.com/Beluga-Imperial-Top-01.png",
+        "https://uccaviar.com/Beluga-Imperial-Top-02.png"
       ],
       "rate": 4.5,
       "weight": 50,
@@ -141,8 +148,8 @@
       "id": 4,
       "name": "Simple Flavor with Sunflower Oil",
       "picture": [
-        "https://ircln03.ihglobaldns.com:2083/cpsess0389644658/download?skipencode=1&file=%2fhome%2fcaviaruccom%2fSimpleFlavorwithSunflowerOil-01.png",
-        "https://ircln03.ihglobaldns.com:2083/cpsess0389644658/download?skipencode=1&file=%2fhome%2fcaviaruccom%2fSimpleFlavorwithSunflowerOil-02.png"
+        "https://uccaviar.com/SimpleFlavorwithSunflowerOil-01.png",
+        "https://uccaviar.com/SimpleFlavorwithSunflowerOil-02.png"
       ],
       "rate": 4.5,
       "weight": 180,
@@ -155,8 +162,8 @@
       "id": 5,
       "name": "Pepper Flavor with Sunflower Oil",
       "picture": [
-        "https://ircln03.ihglobaldns.com:2083/cpsess0389644658/download?skipencode=1&file=%2fhome%2fcaviaruccom%2fPepperFlavorwithSunflowerOil-01.png",
-        "https://ircln03.ihglobaldns.com:2083/cpsess0389644658/download?skipencode=1&file=%2fhome%2fcaviaruccom%2fPepperFlavorwithSunflowerOil-02.png"
+        "https://uccaviar.com/PepperFlavorwithSunflowerOil-01.png",
+        "https://uccaviar.com/PepperFlavorwithSunflowerOil-02.png"
       ],
       "rate": 4.5,
       "weight": 180,
@@ -169,8 +176,8 @@
       "id": 6,
       "name": "Dill Flavor with Sunflower Oil",
       "picture": [
-        "https://ircln03.ihglobaldns.com:2083/cpsess0389644658/download?skipencode=1&file=%2fhome%2fcaviaruccom%2fDillFlavorwithSunflowerOil-01.png",
-        "https://ircln03.ihglobaldns.com:2083/cpsess0389644658/download?skipencode=1&file=%2fhome%2fcaviaruccom%2fDillFlavorwithSunflowerOil-02.png"
+        "https://uccaviar.com/DillFlavorwithSunflowerOil-01.png",
+        "https://uccaviar.com/DillFlavorwithSunflowerOil-02.png"
       ],
       "rate": 4.5,
       "weight": 180,
@@ -183,8 +190,8 @@
       "id": 7,
       "name": "Refined Olive Oil Flavor",
       "picture": [
-        "https://ircln03.ihglobaldns.com:2083/cpsess0389644658/download?skipencode=1&file=%2fhome%2fcaviaruccom%2fRefinedOliveOilFlavor-01.png",
-        "https://ircln03.ihglobaldns.com:2083/cpsess0389644658/download?skipencode=1&file=%2fhome%2fcaviaruccom%2fRefinedOliveOilFlavor-02.png"
+        "https://uccaviar.com/RefinedOliveOilFlavor-01.png",
+        "https://uccaviar.com/RefinedOliveOilFlavor-02.png"
       ],
       "rate": 4.5,
       "weight": 180,
