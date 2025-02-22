@@ -20,11 +20,11 @@ const Page = () => {
           className="object-cover w-[652px] h-[430px]  md:w-full md:max-w-[1238px] md:h-auto rounded-[36px]"
         />
       </div>
-      <div className=" flex flex-col md:flex-row gap-[6px]  md:gap-[103px] justify-center mx-auto w-[400px] md:w-[1000px] ">
+      <div className=" flex flex-col md:flex-row gap-[0px]  md:gap-[103px] justify-center mx-auto w-[400px] md:w-[1000px] ">
         <div className="font-medium text-[14px]/[16.8px] opacity-50 mt-[56px] md:ml-0 ml-[24px]   ">
           Experience
         </div>
-        <div className="text-[20px]/[24px] w-[352px] md:w-[751px]  mx-auto mt-[56px]">
+        <div className="text-[20px]/[24px] w-[352px] md:w-[751px] md:mt-[56px]   mx-auto mt-[26px]">
           The experience of tasting caviar in childhood and living in the
           northern part of the country alongside the Caspian Sea—one of the few
           natural habitats of sturgeon fish in the world—motivated us to enter

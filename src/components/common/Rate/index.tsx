@@ -1,19 +1,13 @@
 "use client";
-// pages/index.tsx
-import { Rating } from "@mui/material";
+import Rating from "@mui/material/Rating";
 import { useState } from "react";
 
-const Rate = () => {
-  const [value, setValue] = useState<number | null>(2);
+interface RatingProps {
+  initialRating?: number;
+}
 
-  const handleChange = (
-    event: React.ChangeEvent<{}>,
-    newValue: number | null
-  ) => {
-    setValue(newValue);
-  };
-
-  return <Rating value={value} onChange={handleChange} precision={1} />;
+const Rate: React.FC<RatingProps> = ({ initialRating }) => {
+  return <Rating name="rating" value={initialRating} max={5} readOnly />;
 };
 
 export default Rate;

@@ -1,6 +1,6 @@
 const Page = () => {
   return (
-    <div className="w-full min-h-screen bg-gradient-to-b from-[#252D62] via-[#343F89] to-[#4C5CC8] px-4">
+    <div className="overflow-hidden w-full min-h-screen bg-gradient-to-b from-[#252D62] via-[#343F89] to-[#4C5CC8] ">
       <div className="relative flex justify-center items-center min-h-screen top-[-144px]">
         <img
           src="/images/Our Shipping.png"

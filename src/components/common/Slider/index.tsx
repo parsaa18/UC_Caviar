@@ -3,67 +3,90 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { useParams } from "next/navigation";
+import apiFetcher from "@/core/services/api/fetcher.api";
 
-const images = [
-  "/images/pack-img-2.png", // جایگزین کن با مسیر درست عکس کنسرو
-  "/images/pack-img-2.png",
-  "/images/pack-img-2.png",
-];
+interface ProductDetails {
+  picture: [];
+}
 
-export default function Slider() {
+const Slider = () => {
+  const product = useParams();
+
+  const [details, setDetails] = useState<ProductDetails | null>(null);
   const [index, setIndex] = useState(0);
-  const [progressSteps, setProgressSteps] = useState([0, 0, 0]);
-  const [colors, setColors] = useState([
-    "bg-[#252D62]",
-    "bg-[#252D62]",
-    "bg-[#252D62]",
-  ]); // رنگ اولیه آبی
-  const [resetting, setResetting] = useState(false); // برای مشخص کردن اینکه باید پراگرس بارها ریست شوند
+  const [progressSteps, setProgressSteps] = useState<number[]>([]);
+  const [colors, setColors] = useState<string[]>([]);
+  const [resetting, setResetting] = useState(false);
+
+  const GetData = async () => {
+    if (!product.id) return;
+    try {
+      const data: ProductDetails = await apiFetcher(`/products/${product.id}`);
+      setDetails(data);
+    } catch (error) {
+      console.error("Error fetching product details:", error);
+    }
+  };
 
   useEffect(() => {
-    // افزایش تدریجی مقدار پراگرس بار
+    if (product.id) {
+      GetData();
+    }
+  }, [product.id]);
+
+  useEffect(() => {
+    console.log(details?.picture); // لاگ بعد از آپدیت
+  }, [details]);
+
+  useEffect(() => {
+    if (details?.picture) {
+      setProgressSteps(new Array(details.picture.length).fill(0));
+      setColors(new Array(details.picture.length).fill("bg-[#252D62]"));
+    }
+  }, [details]);
+
+  useEffect(() => {
+    if (!details || !details.picture.length) return;
+
     const updateProgress = () => {
-      if (resetting) return; // وقتی که در حال ریست هستیم، هیچ کاری انجام نده
+      if (resetting) return;
 
       setProgressSteps((prevSteps) => {
         const newSteps = [...prevSteps];
         if (newSteps[index] < 1) {
-          newSteps[index] = Math.min(newSteps[index] + 0.33, 1); // افزایش تدریجی
+          newSteps[index] = Math.min(newSteps[index] + 0.33, 1);
         }
         return newSteps;
       });
 
-      // وقتی پراگرس بار یک بخش کامل شد، به تصویر بعدی برو
       if (progressSteps[index] >= 1) {
-        // تغییر رنگ به طوسی پس از پر شدن پراگرس بار
         setColors((prevColors) => {
           const newColors = [...prevColors];
-          newColors[index] = "bg-[#F2F2F2]"; // رنگ پراگرس بار را به طوسی تغییر می‌دهیم
+          newColors[index] = "bg-[#F2F2F2]";
           return newColors;
         });
 
-        // پس از تکمیل هر پراگرس بار، به تصویر بعدی برو
         setIndex((prevIndex) => {
-          // وقتی به آخرین تصویر رسیدیم، روند را ریست می‌کنیم
-          if (index === images.length - 1) {
-            setResetting(true); // حالت ریست فعال می‌شود
-            setProgressSteps([0, 0, 0]); // پراگرس بارها را به صفر برمی‌گردانیم
-            setColors(["bg-[#252D62]", "bg-[#252D62]", "bg-[#252D62]"]); // رنگ‌ها را به آبی برمی‌گردانیم
+          if (index === details.picture.length - 1) {
+            setResetting(true);
+            setProgressSteps(new Array(details.picture.length).fill(0));
+            setColors(new Array(details.picture.length).fill("bg-[#252D62]"));
 
-            // بعد از مدت کوتاهی پراگرس بارها را دوباره پر می‌کنیم
             setTimeout(() => {
-              setResetting(false); // حالت ریست غیرفعال می‌شود
-            }, 500); // مدت زمان کوتاه برای ریست
+              setResetting(false);
+            }, 500);
           }
-          return (prevIndex + 1) % images.length; // رفتن به تصویر بعدی
+          return (prevIndex + 1) % details.picture.length;
         });
       }
     };
 
-    const interval = setInterval(updateProgress, 600); // هر ثانیه یکبار پراگرس بارها آپدیت می‌شود
+    const interval = setInterval(updateProgress, 900);
+    return () => clearInterval(interval);
+  }, [index, progressSteps, resetting, details]);
 
-    return () => clearInterval(interval); // پاک کردن interval هنگام ترک کامپوننت
-  }, [index, progressSteps, resetting]);
+  if (!details || !details.picture.length) return null;
 
   return (
     <div className="relative w-full max-w-md mx-auto overflow-hidden">
@@ -77,20 +100,19 @@ export default function Slider() {
             transition={{ duration: 0.5 }}
             className="absolute w-full h-full flex justify-center items-center"
           >
-            <Image
-              src={images[index]}
-              alt="Canned Product"
+            <img
+              src={details.picture[index]}
+              alt="Product Image"
               width={300}
               height={300}
-              className=""
+              className="object-cover"
             />
           </motion.div>
         </AnimatePresence>
       </div>
 
-      {/* پراگرس بارها */}
-      <div className="relative w-full mt-4 flex justify-center gap-[5px]">
-        {images.map((_, stepIndex) => (
+      <div className="relative w-full mt-[40px] flex justify-center gap-[5px]">
+        {details.picture.map((_, stepIndex) => (
           <div
             key={stepIndex}
             className="w-[92px] h-[9px] bg-[#F2F2F2] rounded-full overflow-hidden"
@@ -106,4 +128,6 @@ export default function Slider() {
       </div>
     </div>
   );
-}
+};
+
+export default Slider;
