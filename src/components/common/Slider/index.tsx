@@ -60,7 +60,7 @@ export default function Slider() {
       }
     };
 
-    const interval = setInterval(updateProgress, 600); // هر ثانیه یکبار پراگرس بارها آپدیت می‌شود
+    const interval = setInterval(updateProgress, 900); // هر ثانیه یکبار پراگرس بارها آپدیت می‌شود
 
     return () => clearInterval(interval); // پاک کردن interval هنگام ترک کامپوننت
   }, [index, progressSteps, resetting]);
@@ -80,7 +80,7 @@ export default function Slider() {
             <Image
               src={images[index]}
               alt="Canned Product"
-              width={300}
+              width={310}
               height={300}
               className=""
             />
@@ -89,7 +89,7 @@ export default function Slider() {
       </div>
 
       {/* پراگرس بارها */}
-      <div className="relative w-full mt-4 flex justify-center gap-[5px]">
+      <div className="relative w-full mt-[40px] flex justify-center gap-[5px]">
         {images.map((_, stepIndex) => (
           <div
             key={stepIndex}
