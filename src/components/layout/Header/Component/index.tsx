@@ -59,7 +59,9 @@ const HeaderLogo = () => {
       </div>
       <h2
         className={`text-nowrap ${
-          pathname === "/" || pathname.toLowerCase() === "/ourshipping"
+          pathname === "/" ||
+          pathname.toLowerCase() === "/ourshipping" ||
+          pathname.toLowerCase().includes("payment")
             ? "text-ucWhite"
             : "text-ucBlack"
         } xs:block hidden `}
@@ -115,7 +117,9 @@ const ContactUsLink = () => {
   const [modalIsOpen, setModalOpen] = useState<boolean>(false);
   const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
   const color =
-    pathname.toLowerCase() === "/ourshipping" || pathname.toLowerCase() === "/"
+    pathname.toLowerCase() === "/ourshipping" ||
+    pathname.toLowerCase().includes("payment") ||
+    pathname.toLowerCase() === "/"
       ? "#fafafa"
       : "#000000";
   return (
@@ -131,7 +135,10 @@ const ContactUsLink = () => {
             text="Contact Us"
             fontSize="sm"
             theme={
-              pathname.toLowerCase() === "/ourshipping" ? "revertNavy" : "navy"
+              pathname.toLowerCase().includes("payment") ||
+              pathname.toLowerCase() === "/ourshipping"
+                ? "revertNavy"
+                : "navy"
             }
           />
         </div>

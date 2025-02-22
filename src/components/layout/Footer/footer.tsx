@@ -30,7 +30,7 @@ const pagesLink: linkType[] = [
   { link: "/about-us", name: "About Us" },
 ];
 const legalLinks: linkType[] = [
-  { link: "/", name: "Legal & Payment" },
+  { link: "/Payment#legal-section", name: "Legal & Payment" },
   { link: "/", name: "Legal & Payment" },
   { link: "/", name: "Legal & Payment" },
 ];

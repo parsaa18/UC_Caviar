@@ -11,7 +11,7 @@ import Footer from "@/components/layout/Footer/footer";
 export default function Home() {
   return (
     <>
-      <div className="w-full">
+      <div className="w-full md:p-4">
         <Hero />
         <div className="lg:px-[128px] px-6 items-center lg:items-start xl:px-[258px] my-32 flex flex-col  gap-32">
           <AboutUsSect />

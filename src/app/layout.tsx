@@ -11,7 +11,7 @@ import Header from "@/components/layout/Header/header";
 
 export const metadata: Metadata = {
   title: "UCC: Unique Caspian Caviar",
-  description: "Unique Caspian Caviar created by sharp",
+  description: "Unique Caspian Caviar / uccaviar / caviaruc ",
 };
 
 export default function RootLayout({
@@ -21,11 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-
       <head>
         <link rel="icon" href="/images/logo-header.svg" />
       </head>
-      <body className="bg-ucWhite md:p-4">
+      <body className="bg-ucWhite ">
         <Header />
         <NuqsAdapter>{children}</NuqsAdapter>
       </body>
