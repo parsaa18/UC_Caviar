@@ -10,8 +10,6 @@ import {
 } from "@/components/common/motion/ViewMoreCursor";
 import { useState } from "react";
 import { cursorObjType } from "@/core/types/CursorObj/cursorObj.type";
-import { div } from "framer-motion/client";
-import { Skeleton } from "antd";
 
 const ProductsCategory = () => {
   const [cursorObj, handleCursorObj] = useState<cursorObjType>({
@@ -19,7 +17,6 @@ const ProductsCategory = () => {
     index: null,
   });
   const { data: categories, isLoading } = useSWR("categories/", apiFetcher);
-  console.log();
 
   return (
     <section className="flex flex-col gap-6 w-full">

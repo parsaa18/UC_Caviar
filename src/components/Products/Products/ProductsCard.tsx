@@ -49,7 +49,7 @@ const ProductsCard: FC<IProps> = ({
             </div>
           </div>
           <div className="min-h-6 ">
-            <Rate count={5} value={rate} />
+            <Rate count={5} value={rate} disabled />
           </div>
         </div>
       </div>

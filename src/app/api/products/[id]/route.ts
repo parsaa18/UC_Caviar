@@ -17,9 +17,10 @@ type paramsType = { id: string };
 
 export const GET = async (
   _request: Request,
-  { params }: { params: paramsType }
+  { params }: { params: Promise<paramsType> }
 ) => {
-  const { id } = params;
+  const id = (await params).id;
+
   const jsonData = fs.readFileSync(dataFilePath, "utf8");
   const data = JSON.parse(jsonData);
   const product = data.products.find(
@@ -39,10 +40,11 @@ export const GET = async (
 
 export const PUT = async (
   request: Request,
-  { params }: { params: paramsType }
+  { params }: { params: Promise<paramsType> }
 ) => {
   try {
-    const { id } = params;
+    const id = (await params).id;
+
     const updatedProduct = await request.json();
     const jsonData = fs.readFileSync(dataFilePath, "utf8");
     const data = JSON.parse(jsonData);
@@ -57,14 +59,10 @@ export const PUT = async (
       });
     }
 
-    // Save the old product to compare categories.
     const oldProduct = data.products[prodIndex];
 
-    // Update the product globally.
     data.products[prodIndex] = updatedProduct;
 
-    // --- Update categories ---
-    // Remove product from its old category's products list.
     const oldCategory = data.categories.find(
       (cat: productCategoryType) => cat.id === oldProduct.categoryId
     );
@@ -74,16 +72,13 @@ export const PUT = async (
       );
     }
 
-    // Add the updated product to its (possibly new) category.
     const newCategory = data.categories.find(
       (cat: productCategoryType) => cat.id === updatedProduct.categoryId
     );
     if (newCategory) {
       newCategory.productsList.push(updatedProduct);
     } else {
-      // Optionally handle missing new category.
     }
-    // --- End update categories ---
 
     fs.writeFileSync(dataFilePath, JSON.stringify(data, null, 2));
 
@@ -104,14 +99,14 @@ export const PUT = async (
 
 export const DELETE = async (
   _request: Request,
-  { params }: { params: paramsType }
+  { params }: { params: Promise<paramsType> }
 ) => {
   try {
-    const { id } = params;
+    const id = (await params).id;
+
     const jsonData = fs.readFileSync(dataFilePath, "utf8");
     const data = JSON.parse(jsonData);
 
-    // Find product index.
     const prodIndex = data.products.findIndex(
       (prod: productDetailType) => prod.id === parseInt(id)
     );
@@ -122,13 +117,9 @@ export const DELETE = async (
       });
     }
 
-    // Get the product to know its category.
     const productToDelete = data.products[prodIndex];
 
-    // Remove from global products list.
     data.products.splice(prodIndex, 1);
-
-    // Remove the product from its category's products list.
     const category = data.categories.find(
       (cat: productCategoryType) => cat.id === productToDelete.categoryId
     );

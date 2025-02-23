@@ -17,30 +17,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ISMIconsProps } from "@/core/types/footer/footer.types";
 import MouseScroll02Icon from "@/components/icons/MouseScroll";
 
-const color = window.innerWidth > 768 ? "#fafafa" : "#0D0A0B";
-
-const socialMediaList = [
-  {
-    name: "linkedin",
-    link: ".",
-    icon: <Linkedin01Icon color={color} />,
-  },
-  {
-    name: "whatsapp",
-    link: ".",
-    icon: <WhatsappIcon color={color} />,
-  },
-  {
-    name: "instagram",
-    link: ".",
-    icon: <InstagramIcon color={color} />,
-  },
-  {
-    name: "facebook",
-    link: ".",
-    icon: <Facebook01Icon color={color} />,
-  },
-];
 const SocialMediaIcons: FC<ISMIconsProps> = ({ links, icons }) => {
   return (
     <Magnetic>
@@ -57,17 +33,42 @@ const SocialMediaIcons: FC<ISMIconsProps> = ({ links, icons }) => {
   );
 };
 const Hero = () => {
+  const [color, setColor] = useState<string>("#fafafa");
+
+  const socialMediaList = [
+    {
+      name: "linkedin",
+      link: ".",
+      icon: <Linkedin01Icon color={color} />,
+    },
+    {
+      name: "whatsapp",
+      link: ".",
+      icon: <WhatsappIcon color={color} />,
+    },
+    {
+      name: "instagram",
+      link: ".",
+      icon: <InstagramIcon color={color} />,
+    },
+    {
+      name: "facebook",
+      link: ".",
+      icon: <Facebook01Icon color={color} />,
+    },
+  ];
   const [muted, setMuted] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
+    window?.innerWidth > 768 ? setColor("#fafafa") : setColor("#0D0A0B");
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window?.scrollY > 50) {
         setIsScrolled(true);
       }
     };
-    window.addEventListener("scroll", handleScroll);
+    window?.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window?.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -109,7 +110,7 @@ const Hero = () => {
                 <DoubleBtn text="Products" />
               </Link>
               <div className="flex md:hidden items-center gap-2">
-                {socialMediaList.map((sm, idx) => (
+                {socialMediaList?.map((sm, idx) => (
                   <SocialMediaIcons key={idx} icons={sm.icon} links={sm.link} />
                 ))}
               </div>
@@ -118,7 +119,7 @@ const Hero = () => {
           <div className="md:flex hidden flex-col gap-2">
             <h5 className="text-ucWhite ">Social Media</h5>
             <div className="flex items-center gap-2">
-              {socialMediaList.map((sm, idx) => (
+              {socialMediaList?.map((sm, idx) => (
                 <SocialMediaIcons key={idx} icons={sm.icon} links={sm.link} />
               ))}
             </div>

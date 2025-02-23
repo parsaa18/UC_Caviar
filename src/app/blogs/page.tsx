@@ -1,4 +1,5 @@
 "use client";
+
 import BlogCard from "@/components/blogs/BlogCard";
 import BlogsList from "@/components/blogs/BlogsList";
 import ListTitle from "@/components/common/ListTitle";
@@ -7,7 +8,7 @@ import apiFetcher from "@/core/services/api/fetcher.api";
 import useScrollStore from "@/core/store/scroll.store";
 import { blogType } from "@/core/types/blog.type";
 import { useThrottle } from "@/core/utils/scroll.util";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import useSWR from "swr";
 
 const page = () => {
@@ -15,11 +16,13 @@ const page = () => {
   const { blogLeft: left, setblogLeft: setLeft } = useScrollStore(
     (state) => state
   );
-
+  const [windowSize, setWindowSize] = useState<number>(0);
+  useEffect(() => {
+    setWindowSize(window.innerWidth);
+  }, []);
   const handleWheelThrottled = useThrottle((e: React.WheelEvent) => {
     e.preventDefault();
-    const size = window.innerWidth > 1024 ? 3 : 2;
-    const windowSize = window.innerWidth;
+    const size = windowSize > 1024 ? 3 : 2;
     const newLeft = left + e.deltaY;
     if (
       newLeft >= 0 &&
@@ -33,9 +36,6 @@ const page = () => {
     <section
       onWheel={(e) => {
         handleWheelThrottled(e);
-      }}
-      onTouchMove={(e) => {
-        console.log(e);
       }}
       className="pt-32 h-[calc(100vh-32px)] flex items-center flex-col gap-16 px-6 "
     >

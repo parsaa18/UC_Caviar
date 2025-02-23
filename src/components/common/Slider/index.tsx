@@ -36,10 +36,6 @@ const Slider = () => {
   }, [product.id]);
 
   useEffect(() => {
-    console.log(details?.picture); // لاگ بعد از آپدیت
-  }, [details]);
-
-  useEffect(() => {
     if (details?.picture) {
       setProgressSteps(new Array(details.picture.length).fill(0));
       setColors(new Array(details.picture.length).fill("bg-[#252D62]"));

@@ -7,9 +7,10 @@ import ProductsCard from "@/components/Products/Products/ProductsCard";
 import ProductsList from "@/components/Products/Products/ProductsList";
 import apiFetcher from "@/core/services/api/fetcher.api";
 import useScrollStore from "@/core/store/scroll.store";
-import { productCategoryType } from "@/core/types/product.type";
+import { productCategoryType, productType } from "@/core/types/product.type";
 import { useThrottle } from "@/core/utils/scroll.util";
 import { useParams } from "next/navigation";
+import { useEffect, useState } from "react";
 import useSWR from "swr";
 
 const ProductCategoryItems = () => {
@@ -28,11 +29,14 @@ const ProductCategoryItems = () => {
   const { productLeft: left, setproductLeft: setLeft } = useScrollStore(
     (state) => state
   );
-
+  const [windowSize, setWindowSize] = useState<number>(0);
+  useEffect(() => {
+    setWindowSize(window.innerWidth);
+  }, []);
   const handleWheelThrottled = useThrottle((e: React.WheelEvent) => {
     e.preventDefault();
-    const size = window.innerWidth > 1024 ? 3 : 2;
-    const windowSize = window.innerWidth;
+
+    const size = windowSize > 1024 ? 3 : 2;
     const newLeft = left + e.deltaY;
     if (
       newLeft >= 0 &&
@@ -61,7 +65,7 @@ const ProductCategoryItems = () => {
           <ProductsList data={data?.productsList} />
         </HorizontalScrollingCarousel>
         <div className="flex-col flex md:hidden gap-8 pb-8">
-          {data?.productsList?.map((product, idx) => {
+          {data?.productsList?.map((product: productType, idx: number) => {
             const {
               "packing-type": packType,
               picture,

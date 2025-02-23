@@ -13,12 +13,11 @@ const dataFilePath = path.join(
 type paramsType = { id: string };
 export const GET = async (
   _request: Request,
-  { params }: { params: paramsType }
+  { params }: { params: Promise<paramsType> }
 ) => {
-  const { id } = params;
   const jsonData = fs.readFileSync(dataFilePath, "utf8");
   const data = JSON.parse(jsonData);
-
+  const id = (await params).id;
   const category = data.categories.find(
     (cat: productCategoryType) => cat.id === id
   );
@@ -36,10 +35,11 @@ export const GET = async (
 
 export const PUT = async (
   request: Request,
-  { params }: { params: paramsType }
+  { params }: { params: Promise<paramsType> }
 ) => {
   try {
-    const { id } = params;
+    const id = (await params).id;
+
     const updatedCategory = await request.json();
     const jsonData = fs.readFileSync(dataFilePath, "utf8");
     const data = JSON.parse(jsonData);
@@ -74,10 +74,11 @@ export const PUT = async (
 
 export const DELETE = async (
   _request: Request,
-  { params }: { params: paramsType }
+  { params }: { params: Promise<paramsType> }
 ) => {
   try {
-    const { id } = params;
+    const id = (await params).id;
+
     const jsonData = fs.readFileSync(dataFilePath, "utf8");
     const data = JSON.parse(jsonData);
 

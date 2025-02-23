@@ -24,7 +24,6 @@ function page() {
   const GetData = async () => {
     try {
       const data: BlogDetails = await apiFetcher(`/blogs/${blog.slug}`);
-      console.log(data);
 
       setDetails(data);
     } catch (error) {

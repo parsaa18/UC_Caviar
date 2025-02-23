@@ -1,7 +1,7 @@
 "use client";
 
 import { productDetailType } from "@/core/types/product.type";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import ProductsCard from "./ProductsCard";
 import { useQueryState } from "nuqs";
 
@@ -17,7 +17,11 @@ const chunkArray = (array: productDetailType[], size: number) => {
 };
 
 const ProductsList: FC<IProps> = ({ data }) => {
-  const size = window.innerWidth > 1024 ? 3 : 2;
+  const [windowSize, setWindowSize] = useState<number>(0);
+  useEffect(() => {
+    setWindowSize(window.innerWidth);
+  }, []);
+  const size = windowSize > 1024 ? 3 : 2;
 
   const chunkedData = chunkArray(data, size);
 

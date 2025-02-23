@@ -1,30 +1,13 @@
 "use client";
+
 // Component
 import Menu03Icon from "@/components/icons/Menu";
 import Cancel01Icon from "@/components/icons/X";
 
 // Third Party
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
-import { Dispatch, FC, SetStateAction, useState } from "react";
+import { Dispatch, FC, SetStateAction, useEffect, useState } from "react";
 import { NavLink } from "../Navlinks/navlinks";
-
-const variant = {
-  open: {
-    width:
-      window.innerWidth > 740
-        ? "720px"
-        : window.innerWidth > 520
-        ? "500px"
-        : "320px",
-    height: "98px",
-    background: " rgb(13 10 11 / 0.35)",
-  },
-  closed: {
-    width: "162px",
-    background: " rgb(13 10 11 / 0.02)",
-    height: "54px",
-  },
-};
 
 // navigation links in header
 const links = [
@@ -34,7 +17,18 @@ const links = [
   { link: "/OurShipping", name: "Shipping" },
   { link: "/about-us", name: "About Us" },
 ];
-
+const variant = {
+  open: {
+    width: "92vw",
+    height: "98px",
+    background: " rgb(13 10 11 / 0.35)",
+  },
+  closed: {
+    width: "162px",
+    background: " rgb(13 10 11 / 0.02)",
+    height: "54px",
+  },
+};
 const HeaderMenu: FC<{ setContactUs: Dispatch<SetStateAction<boolean>> }> = ({
   setContactUs,
 }) => {
@@ -58,7 +52,7 @@ const HeaderMenu: FC<{ setContactUs: Dispatch<SetStateAction<boolean>> }> = ({
         transition={{ duration: 0.35, ease: [0.35, 1, 0.4, 0.99] }}
         className={`${
           menuIsOpen && "backdrop-blur-2xl bg-ucBlack/35"
-        } absolute top-0 z-20  flex items-end justify-end p-3 flex-col origin-center rounded-[32px] `}
+        } absolute top-0 z-20  flex items-end justify-end p-3 flex-col origin-center rounded-[32px] max-w-[700px]`}
       >
         <div
           className={`p-1 flex absolute top-0 right-1/2 translate-x-1/2 items-center z-30  text-ucWhite rounded-full ${
@@ -98,7 +92,7 @@ const HeaderMenu: FC<{ setContactUs: Dispatch<SetStateAction<boolean>> }> = ({
           )}
         </div>
         {menuIsOpen && (
-          <motion.div className="flex w-full items-center justify-evenly sm:text-base text-xs text-ucWhite flex-wrap">
+          <motion.div className="flex w-full items-center justify-evenly sm:text-base text-xs text-ucWhite flex-wrap gap-x-4 gap-y-2">
             {links.map((link, idx) => (
               <NavLink
                 link={link.link}

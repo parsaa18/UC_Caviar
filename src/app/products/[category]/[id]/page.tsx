@@ -1,9 +1,9 @@
 "use client";
 import { BackButton1, BackButton2 } from "@/components/BackButton";
 import DoubleBtn from "@/components/common/DoubleButton";
-import Rate from "@/components/common/Rate";
 import Slider from "@/components/common/Slider";
 import apiFetcher from "@/core/services/api/fetcher.api";
+import { Rate } from "antd";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
@@ -82,14 +82,12 @@ function page() {
           <div className="md:mt-[0] mt-[62px] md:ml-0 ml-[32px] justify-start flex flex-wrap gap-[145px] md:gap-[48px]">
             <div className="flex flex-col md:gap-[16px] gap-[8px]">
               {details?.feature?.map((feature, index) => (
-                <>
-                  <div
-                    key={index}
-                    className="text-[16px] leading-[19.2px] w-[39px] h-[19px] text-[#000000] opacity-50"
-                  >
-                    {feature.title}
-                  </div>
-                </>
+                <div
+                  key={index}
+                  className="text-[16px] leading-[19.2px] w-[39px] h-[19px] text-[#000000] opacity-50"
+                >
+                  {feature.title}
+                </div>
               ))}
 
               <div className="text-[16px] leading-[19.2px] w-[39px] h-[19px] text-[#000000] opacity-50">
@@ -98,15 +96,16 @@ function page() {
             </div>
             <div className="flex flex-col md:gap-[16px] gap-[8px]">
               {details?.feature?.map((feature, index) => (
-                <>
-                  <div className="w-[100px] h-[19px] text-[16px] leading-[19.2px] text-[#000000]">
-                    {feature.value}
-                  </div>
-                </>
+                <div
+                  key={index}
+                  className="w-[100px] h-[19px] text-[16px] leading-[19.2px] text-[#000000]"
+                >
+                  {feature.value}
+                </div>
               ))}
 
-              <div className="w-[100px] h-[19px] text-[16px] leading-[19.2px] text-[#000000]">
-                <Rate initialRating={details?.rate} />
+              <div className="h-[19px] text-[16px] leading-[19.2px] text-[#000000]">
+                <Rate value={details?.rate} count={5} disabled />
               </div>
             </div>
           </div>

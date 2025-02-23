@@ -1,3 +1,4 @@
+"use client";
 import { useRef, useEffect, FC } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
@@ -50,8 +51,7 @@ export const ViewCursor: FC<IViewCursorProps> = ({ cursorObj }) => {
       duration: 0.45,
       ease: "power3",
     });
-
-    window.addEventListener("mousemove", (e) => {
+    window?.addEventListener("mousemove", (e) => {
       const { pageX, pageY } = e;
       xMoveCursor(pageX);
       yMoveCursor(pageY);

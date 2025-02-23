@@ -1,15 +1,21 @@
 "use client";
+
 import useScrollStore from "@/core/store/scroll.store";
 import { usePathname } from "next/navigation";
-import { FC, ReactNode } from "react";
+import { FC, ReactNode, useEffect, useState } from "react";
 
 interface IProps {
   children: ReactNode;
   totalItems: number;
 }
 const HorizontalScrollingCarousel: FC<IProps> = ({ children, totalItems }) => {
-  const size = window.innerWidth > 1024 ? 3 : 2;
-  const windowSize = window.innerWidth;
+  const [windowSize, setWindowSize] = useState<number>(0);
+  useEffect(() => {
+    setWindowSize(window.innerWidth);
+  }, []);
+
+  const size = windowSize > 1024 ? 3 : 2;
+
   const path = usePathname();
   const { productLeft, blogLeft } = useScrollStore((state) => state);
   const left = path.toLowerCase().includes("products") ? productLeft : blogLeft;

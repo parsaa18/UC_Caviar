@@ -1,6 +1,6 @@
 "use client";
 
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { blogType } from "@/core/types/blog.type";
 import BlogCard from "./BlogCard";
 
@@ -16,7 +16,12 @@ const chunkArray = (array: blogType[], size: number) => {
 };
 
 const BlogsList: FC<IProps> = ({ data }) => {
-  const size = window.innerWidth > 1024 ? 3 : 2;
+  const [windowSize, setWindowSize] = useState<number>(0);
+  useEffect(() => {
+    setWindowSize(window.innerWidth);
+  }, []);
+
+  const size = windowSize > 1024 ? 3 : 2;
   const chunkedData = chunkArray(data, size);
   return (
     <>

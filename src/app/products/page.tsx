@@ -2,10 +2,14 @@ import ListTitle from "@/components/common/ListTitle";
 import CategoryList from "@/components/Products/CategoryList";
 
 import apiFetcher from "@/core/services/api/fetcher.api";
-import useScrollStore from "@/core/store/scroll.store";
 
 const ProductsCategory = async () => {
-  const data = await apiFetcher("categories/");
+  let data = null;
+  try {
+    data = await apiFetcher("categories/");
+  } catch (error) {
+    console.error("Failed to fetch categories:", error);
+  }
 
   return (
     <div className="pt-32 h-[calc(100vh-32px)] flex items-center flex-col gap-16 p-6">

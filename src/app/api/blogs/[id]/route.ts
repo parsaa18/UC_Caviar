@@ -10,13 +10,19 @@ const dataFilePath = path.join(
   "blogs.json"
 );
 
+interface IParams {
+  id: string;
+}
+
 export const GET = async (
   _request: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<IParams> }
 ) => {
   const jsonData = fs.readFileSync(dataFilePath).toString();
   const { blogs } = JSON.parse(jsonData);
-  const blog = blogs.find((blg: blogType) => blg.id == parseInt(params.id));
+  const id = (await params).id;
+
+  const blog = blogs.find((blg: blogType) => blg.id == parseInt(id));
   if (blog) {
     return new Response(JSON.stringify(blog), {
       headers: { "Content-Type": "application/json" },
@@ -31,16 +37,15 @@ export const GET = async (
 };
 export const PUT = async (
   request: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<IParams> }
 ) => {
   const requestBody = await request.json();
 
   const jsonData = fs.readFileSync(dataFilePath).toString();
   const { blogs } = JSON.parse(jsonData);
+  const id = (await params).id;
 
-  const index = blogs.findIndex(
-    (blg: blogType) => blg.id === parseInt(params.id)
-  );
+  const index = blogs.findIndex((blg: blogType) => blg.id === parseInt(id));
 
   if (index === -1) {
     return new Response(JSON.stringify({ message: "blog not found" }), {
@@ -61,14 +66,12 @@ export const PUT = async (
 
 export const DELETE = async (
   _request: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<IParams> }
 ) => {
   const jsonData = fs.readFileSync(dataFilePath).toString();
   const { blogs } = JSON.parse(jsonData);
-
-  const updatedblogs = blogs.filter(
-    (blg: blogType) => blg.id !== parseInt(params.id)
-  );
+  const id = (await params).id;
+  const updatedblogs = blogs.filter((blg: blogType) => blg.id !== parseInt(id));
 
   if (updatedblogs.length === blogs.length) {
     return new Response(JSON.stringify({ message: "blog not found" }), {
