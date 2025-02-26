@@ -17,7 +17,7 @@ const ProductsCategory = () => {
     index: null,
   });
   const { data: categories, isLoading } = useSWR("categories/", apiFetcher);
-
+  console.log(categories);
   return (
     <section className="flex flex-col gap-6 w-full">
       <SectionTitle1 titleStart="Products" titleBold="Category" />
@@ -37,6 +37,7 @@ const ProductsCategory = () => {
               >
                 <CatCards
                   title={cat.name}
+                  id={cat.id}
                   picture={cat.picture}
                   totalItems={cat.productsList.length}
                 />

@@ -38,7 +38,7 @@ const FilterModal: FC<IProps> = ({ onClose }) => {
           setState={setPackType}
           value={packType}
           shortname="Type"
-          inputs={[{ label: "DSEJApokap", value: "DSEJApokap" }]}
+          inputs={[{ label: "DESJARDIN", value: "DESJARDIN" }]}
         />
         <FilterSelect
           filterName="Weight"

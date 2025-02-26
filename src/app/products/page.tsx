@@ -1,16 +1,13 @@
+"use client";
+
 import ListTitle from "@/components/common/ListTitle";
 import CategoryList from "@/components/Products/CategoryList";
 
 import apiFetcher from "@/core/services/api/fetcher.api";
+import useSWR from "swr";
 
-const ProductsCategory = async () => {
-  let data = null;
-  try {
-    data = await apiFetcher("categories/");
-  } catch (error) {
-    console.error("Failed to fetch categories:", error);
-  }
-
+const ProductsCategory = () => {
+  const { data } = useSWR("categories", apiFetcher);
   return (
     <div className="pt-32 h-[calc(100vh-32px)] flex items-center flex-col gap-16 p-6">
       <ListTitle title="Products" titleStart="Our" totalItems={data?.length} />

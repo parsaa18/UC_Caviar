@@ -19,12 +19,12 @@ const links = [
 ];
 const variant = {
   open: {
-    width: "85vw",
+    maxWidth: "720px",
     height: "98px",
     background: " rgb(13 10 11 / 0.35)",
   },
   closed: {
-    width: "162px",
+    maxWidth: "162px",
     background: " rgb(13 10 11 / 0.02)",
     height: "54px",
   },
@@ -52,7 +52,7 @@ const HeaderMenu: FC<{ setContactUs: Dispatch<SetStateAction<boolean>> }> = ({
         transition={{ duration: 0.35, ease: [0.35, 1, 0.4, 0.99] }}
         className={`${
           menuIsOpen && "backdrop-blur-2xl bg-ucBlack/35"
-        } absolute top-0 z-20  flex items-end justify-end p-3 flex-col origin-center rounded-[32px] max-w-[720px]`}
+        } absolute top-0 z-20  flex items-end justify-end p-3 flex-col origin-center rounded-[32px] w-[85vw]`}
       >
         <div
           className={`p-1 flex absolute top-0 right-1/2 translate-x-1/2 items-center z-30  text-ucWhite rounded-full ${

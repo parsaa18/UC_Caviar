@@ -11,7 +11,8 @@ import Header from "@/components/layout/Header/header";
 
 export const metadata: Metadata = {
   title: "UCC: Unique Caspian Caviar",
-  description: "Unique Caspian Caviar / uccaviar / caviaruc / uc caviar ",
+  description:
+    "We are a leading company specializing in the export of premium caviar and canned goods, offering a wide range of packaging options. Our products are shipped worldwide with guaranteed quality and tailored delivery methods. Contact us for orders and inquiries. Unique Caspian Caviar | UcCaviar | CaviarUC  ",
 };
 
 export default function RootLayout({
@@ -24,7 +25,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/images/logo-header.svg" />
       </head>
-      <body className="bg-ucWhite ">
+      <body className="bg-ucWhite " suppressHydrationWarning>
         <Header />
         <NuqsAdapter>{children}</NuqsAdapter>
       </body>

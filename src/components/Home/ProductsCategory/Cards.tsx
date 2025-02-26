@@ -1,15 +1,20 @@
 import ArrowUpRight03Icon from "@/components/icons/ArrowUpRight03";
+import Link from "next/link";
 import { FC } from "react";
 
 interface IProps {
   picture: string;
+  id: string;
   title: string;
   totalItems: number;
 }
 
-const CatCards: FC<IProps> = ({ picture, title, totalItems }) => {
+const CatCards: FC<IProps> = ({ picture, title, totalItems, id }) => {
   return (
-    <div className="w-full bg-ucGray py-6 px-8 rounded-[40px] flex flex-col gap-10 justify-between md:min-h-[310px]">
+    <Link
+      href={"/products/" + id}
+      className="w-full bg-ucGray py-6 px-8 rounded-[40px] flex flex-col gap-10 justify-between md:min-h-[310px]"
+    >
       <div className="flex items-center justify-between">
         <h5 className=" sm:text-2xl font-bold ">{title}</h5>
         <div className="flex items-center gap-1 sm:text-base text-xs">
@@ -22,7 +27,7 @@ const CatCards: FC<IProps> = ({ picture, title, totalItems }) => {
       <div className=" flex items-center justify-center">
         <img src={picture} alt={title + "picture"} className="object-cover" />
       </div>
-    </div>
+    </Link>
   );
 };
 
