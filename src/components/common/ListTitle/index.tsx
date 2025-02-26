@@ -30,7 +30,7 @@ const ListTitle: FC<IProps> = ({ title, titleStart, totalItems, back }) => {
             </Link>
           )}
         </div>
-        <h1 className="text-5xl text-ucBlack ">{title}</h1>
+        <h2 className="text-5xl text-ucBlack ">{title}</h2>
         <span className="text-black/50 w-0  text-nowrap text-sm">
           ( {totalItems} Items )
         </span>

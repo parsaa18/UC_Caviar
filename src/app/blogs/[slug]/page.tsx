@@ -48,9 +48,9 @@ function page() {
         <BackButton1 />
 
         <div className="flex flex-col md:flex-row items-center  justify-center md:justify-center gap-2 md:gap-[103px]">
-          <h1 className="text-[30px] md:text-[36px]  text-[#0D0A0B] text-center md:text-center">
+          <h2 className="text-[30px] md:text-[36px]  text-[#0D0A0B] text-center md:text-center">
             {details?.title}
-          </h1>
+          </h2>
 
           <div className="flex items-center space-x-2">
             <Image

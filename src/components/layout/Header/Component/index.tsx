@@ -57,7 +57,7 @@ const HeaderLogo = () => {
           className="object-cover"
         />
       </div>
-      <h2
+      <h1
         className={`text-nowrap ${
           pathname === "/" ||
           pathname.toLowerCase() === "/ourshipping" ||
@@ -67,7 +67,7 @@ const HeaderLogo = () => {
         } xs:block hidden `}
       >
         {title}
-      </h2>
+      </h1>
     </div>
   );
 };

@@ -8,10 +8,9 @@ import DoubleBtn from "@/components/common/DoubleButton";
 import Facebook01Icon from "@/components/icons/facebook";
 import InstagramIcon from "@/components/icons/Instagram";
 import Linkedin01Icon from "@/components/icons/Linkedin";
-import VolumeHighIcon from "@/components/icons/Sound";
 import WhatsappIcon from "@/components/icons/Whatsapp";
 import Magnetic from "@/components/common/motion/Magnet";
-
+import HeroVideo from "./video";
 // Third Party
 import { AnimatePresence, motion } from "framer-motion";
 import { ISMIconsProps } from "@/core/types/footer/footer.types";
@@ -57,7 +56,6 @@ const Hero = () => {
       icon: <Facebook01Icon color={color} />,
     },
   ];
-  const [muted, setMuted] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
     window?.innerWidth > 768 ? setColor("#fafafa") : setColor("#0D0A0B");
@@ -74,21 +72,7 @@ const Hero = () => {
 
   return (
     <section className="h-[calc(100dvh-32px)] min-h-[640px] max-h-[720px] w-full  md:rounded-[32px]  relative pt-32">
-      <div className="absolute top-0 left-0 bottom-0 right-0 -z-10 overflow-hidden md:rounded-[32px]">
-        {/* <img
-          src="/images/Home_Hero_test.jpg"
-          alt="Hero"
-          className="rounded-[40px] w-full h-full object-cover "
-        /> */}
-        <video
-          src="/videos/hero-caviar.mp4"
-          autoPlay
-          muted={muted}
-          loop
-          controlsList="nodownload"
-          className=" h-full w-full object-cover"
-        ></video>
-      </div>
+      <HeroVideo />
       <div className="flex flex-col xl:flex-row gap-6 md:gap-10 lg:gap-16 mx-6 md:mx-16">
         <div className="xl:ml-4">
           <h1 className="text-nowrap text-2xl sm:text-3xl md:text-4xl lg:text-5xl  text-white font-bold font-montrealBold">
@@ -126,26 +110,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <Magnetic>
-        <div
-          onClick={() => {
-            setMuted(!muted);
-          }}
-          className="p-3 absolute cursor-pointer bottom-6 left-6 bg-ucWhite rounded-full"
-        >
-          <VolumeHighIcon />
-          <AnimatePresence>
-            {muted && (
-              <motion.div
-                initial={{ width: 0 }}
-                animate={{ width: "32px" }}
-                exit={{ width: 0 }}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[1.7px] w-[32px] rotate-[-45deg] bg-ucBlack "
-              ></motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-      </Magnetic>
+
       <AnimatePresence mode="wait">
         {!isScrolled && (
           <motion.div

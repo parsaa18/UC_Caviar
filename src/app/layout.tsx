@@ -11,7 +11,7 @@ import Header from "@/components/layout/Header/header";
 
 export const metadata: Metadata = {
   title: "UCC: Unique Caspian Caviar",
-  description: "Unique Caspian Caviar / uccaviar / caviaruc ",
+  description: "Unique Caspian Caviar / uccaviar / caviaruc / uc caviar ",
 };
 
 export default function RootLayout({
