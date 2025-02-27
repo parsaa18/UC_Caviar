@@ -154,7 +154,7 @@ const Footer = () => {
   return (
     <footer className="flex lg:flex-row flex-col bg-ucNavyBlue1 justify-between lg:pr-20 xl:pr-32 xl:mx-[92px] mx-4 text-ucWhite px-4 md:px-8 py-6 rounded-3xl min-h-[320px] gap-10 md:gap-12 xl:gap-16 mb-5">
       <FirstCol />
-      <div className="md:mt-9 lg:order-none order-1  flex lg:flex-row flex-col px-3  gap-10 md:gap-12 xl:gap-20">
+      <div className="md:mt-9 lg:order-none order-3  flex lg:flex-row flex-col px-3  gap-10 md:gap-12 xl:gap-20">
         <div className="flex flex-row gap-10 xs:gap-32 lg:gap-10 xl:gap-20">
           <FooterNav pages={pagesLink} title="Pages" />
           <FooterNav pages={legalLinks} title="Legal & Payments" />

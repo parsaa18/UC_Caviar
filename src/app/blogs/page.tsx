@@ -37,7 +37,7 @@ const page = () => {
       onWheel={(e) => {
         handleWheelThrottled(e);
       }}
-      className="pt-32 h-[calc(100vh-32px)] flex items-center flex-col gap-16 px-6 "
+      className="pt-32 h-[calc(100vh-32px)] flex items-center flex-col gap-16 px-10 "
     >
       <ListTitle title={"Blogs"} titleStart="Our" totalItems={data?.length} />
 

@@ -23,7 +23,7 @@ const SocialMediaIcons: FC<ISMIconsProps> = ({ links, icons }) => {
         <motion.div
           initial="initial"
           whileHover="hovered"
-          className="p-2 border-white/10 rounded-full bg-ucWhite md:bg-white/20 backdrop-blur-sm"
+          className="p-2 border-white/10 rounded-full bg-white/20 backdrop-blur-sm"
         >
           {icons}
         </motion.div>
@@ -32,33 +32,30 @@ const SocialMediaIcons: FC<ISMIconsProps> = ({ links, icons }) => {
   );
 };
 const Hero = () => {
-  const [color, setColor] = useState<string>("#fafafa");
-
   const socialMediaList = [
     {
       name: "linkedin",
       link: ".",
-      icon: <Linkedin01Icon color={color} />,
+      icon: <Linkedin01Icon color={"#fafafa"} />,
     },
     {
       name: "whatsapp",
       link: ".",
-      icon: <WhatsappIcon color={color} />,
+      icon: <WhatsappIcon color={"#fafafa"} />,
     },
     {
       name: "instagram",
       link: ".",
-      icon: <InstagramIcon color={color} />,
+      icon: <InstagramIcon color={"#fafafa"} />,
     },
     {
       name: "facebook",
       link: ".",
-      icon: <Facebook01Icon color={color} />,
+      icon: <Facebook01Icon color={"#fafafa"} />,
     },
   ];
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
-    window?.innerWidth > 768 ? setColor("#fafafa") : setColor("#0D0A0B");
     const handleScroll = () => {
       if (window?.scrollY > 50) {
         setIsScrolled(true);
