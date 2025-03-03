@@ -8,12 +8,13 @@ import FranceFlag from "@/components/icons/Flags/France.flag";
 import GermanyFlag from "@/components/icons/Flags/Germany.flag";
 import SpainFlag from "@/components/icons/Flags/Spain.flag";
 import UKFlag from "@/components/icons/Flags/UK.flag";
+import IranFlag from "../icons/Flags/Iran.flag";
 
 const contacts = {
   ceo: {
     phone: "+98 9355051917",
     whatsappLink: "+989355051917",
-    languages: [<EmarartFlag />],
+    languages: [<EmarartFlag />, <IranFlag />],
   },
   contactPerson: [
     {

@@ -30,9 +30,11 @@ const pagesLink: linkType[] = [
   { link: "/about-us", name: "About Us" },
 ];
 const legalLinks: linkType[] = [
-  { link: "/Payment#legal-section", name: "Legal & Payment" },
-  { link: "/", name: "Legal & Payment" },
-  { link: "/", name: "Legal & Payment" },
+  { link: "/Payment#payment", name: "Payment" },
+  { link: "/Payment#legal-point1", name: "Legal Point 1" },
+  { link: "/Payment#legal-point2", name: "Legal Point 2" },
+  { link: "/Payment#legal-point3", name: "Legal Point 3" },
+  { link: "/Payment#legal-point4", name: "Legal Point 4" },
 ];
 
 const socialMediaList = [
@@ -63,8 +65,8 @@ const FirstCol = () => {
   return (
     <div className="flex items-start flex-col gap-6 lg:order-none order-2 ">
       <div className="flex items-center gap-3 md:gap-6">
-        <div className="xl:w-[104px] lg:w-[80px] w-16">
-          <img src={"images/logo-footer.svg"} alt="Logo-footer" />
+        <div className="xl:w-[100px] lg:w-[78px] w-16">
+          <img src={"images/logo-footer.png"} alt="Logo-footer" />
         </div>
         <h2 className="text-lg sm:text-xl font-bold text-ucWhite  text-nowrap font-montrealBold">
           UNIQUE CASPIAN CAVIAR
@@ -94,9 +96,6 @@ const FooterNav: FC<INavProps> = ({ title, pages }) => {
             </Link>
           );
         })}
-        <Link href={"/contact-us"} className="md:hidden">
-          Contact Us
-        </Link>
       </ul>
     </div>
   );
@@ -155,7 +154,7 @@ const Footer = () => {
     <footer className="flex lg:flex-row flex-col bg-ucNavyBlue1 justify-between lg:pr-20 xl:pr-32 xl:mx-[92px] mx-4 text-ucWhite px-4 md:px-8 py-6 rounded-3xl min-h-[320px] gap-10 md:gap-12 xl:gap-16 mb-5">
       <FirstCol />
       <div className="md:mt-9 lg:order-none order-3  flex lg:flex-row flex-col px-3  gap-10 md:gap-12 xl:gap-20">
-        <div className="flex flex-row gap-10 xs:gap-32 lg:gap-10 xl:gap-20">
+        <div className="flex flex-row gap-10 sm:gap-32 md:gap-8 lg:gap-10 xl:gap-20">
           <FooterNav pages={pagesLink} title="Pages" />
           <FooterNav pages={legalLinks} title="Legal & Payments" />
         </div>

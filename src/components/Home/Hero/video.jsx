@@ -10,7 +10,7 @@ const HeroVideo = () => {
 
   return (
     <>
-      <div className="absolute top-0 left-0 bottom-0 right-0 -z-10 overflow-hidden md:rounded-[32px]">
+      <div className="absolute top-0 left-0 bottom-0 bg-ucBlack/40 right-0 -z-10 overflow-hidden md:rounded-[32px]">
         {/* <img
     src="/images/Home_Hero_test.jpg"
     alt="Hero"

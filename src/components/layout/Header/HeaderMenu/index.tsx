@@ -85,7 +85,7 @@ const HeaderMenu: FC<{ setContactUs: Dispatch<SetStateAction<boolean>> }> = ({
               onClick={() => {
                 setContactUs(true);
               }}
-              className="rounded-full cursor-pointer flex items-center justify-center px-4 py-3 !backdrop-blur-2xl bg-ucNavyBlue1 text-nowrap"
+              className="rounded-full cursor-pointer flex items-center justify-center px-4 py-3 !backdrop-blur-2xl bg-ucNavyBlue2 text-nowrap"
             >
               Contact Us
             </div>

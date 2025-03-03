@@ -23,7 +23,7 @@ const SocialMediaIcons: FC<ISMIconsProps> = ({ links, icons }) => {
         <motion.div
           initial="initial"
           whileHover="hovered"
-          className="p-2 border-white/10 rounded-full bg-white/20 backdrop-blur-sm"
+          className="p-2 border-white/10 rounded-full bg-black/40 sm:bg-white/20 backdrop-blur-md"
         >
           {icons}
         </motion.div>

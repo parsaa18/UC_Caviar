@@ -25,6 +25,8 @@ const packList = [
         </span>
       </div>
     ),
+    description:
+      "We can package your premium and popular caviar in luxurious glass and metal (DESJARDIN) containers.",
   },
   {
     id: 2,
@@ -44,6 +46,8 @@ const packList = [
         </span>
       </div>
     ),
+    description:
+      "Glass containers are the most common type of packaging for caviar. These transparent containers allow customers to clearly see the quality and color of the caviar. Glass containers are available in sizes of 50 grams, 100 grams, and 250 grams. This packaging can be considered one of the best types of caviar packaging.",
   },
   {
     id: 3,
@@ -63,6 +67,8 @@ const packList = [
         </span>
       </div>
     ),
+    description:
+      "Metal Containers: Metal containers (DESJARDIN) are a durable and lightweight alternative to glass containers. These containers can be fully vacuum-sealed, which helps preserve the freshness and flavor of the caviar for a longer period. Metal containers are available in various sizes: 10 grams, 15 grams, 20 grams, 25 grams, 30 grams, 50 grams, 100 grams, 125 grams, and 250 grams.",
   },
 ];
 
@@ -111,10 +117,9 @@ const PackingSection = () => {
               })}
           </div>
           <p className="text-xl leading-6  w-[616px] font-montrealBook font-light">
-            Our packaging method adheres to international standards, utilizing
-            the highest quality plastic containers. This type of packaging is
-            exclusively for customers who wish to purchase in bulk from us.
-            Available weights include 500g, 1kg, and 2kg.
+            {packList
+              .filter((pack) => pack.id === activeCard)
+              .map((p) => p.description)}
           </p>
         </div>
       </div>

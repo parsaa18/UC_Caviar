@@ -10,7 +10,7 @@ const Page = () => {
       </div>
       <div className="  flex flex-col  md:flex-row mt-[-270px]  md:mt-[-370px] ">
         <div
-          id="payment-section"
+          id="payment"
           className="relative top-[-150px] md:top-0 md:left-[90px] mt-0  md:mt-[-120px] text-[14] leading-[16.8] w-[54px] h-[17px] text-ucWhite"
         >
           Payment
@@ -32,26 +32,32 @@ const Page = () => {
         be shipped to the customer.
       </div>
 
-      <div
-        id="legal-section"
-        className="  flex flex-col md:flex-row  mt-[200px] md:mt-[88px]"
-      >
+      <div className="  flex flex-col md:flex-row  mt-[200px] md:mt-[88px]">
         <div className="relative md:top-0 top-[-150px] left-0 md:left-[90px]   mt-[-120px] text-[14] leading-[16.8] w-[54px] h-[17px] text-ucWhite">
           Legal
         </div>
-        <div className=" flex flex-col gap-[16.8px] mx-auto  max-w-[877px] ">
+        <div
+          id="lega-point1"
+          className=" flex flex-col gap-[16.8px] mx-auto  max-w-[877px] "
+        >
           <div className=" font-montrealBold text-white text-lg sm:text-xl md:text-2xl leading-relaxed  sm:">
             {" "}
             Point 1: Delivery method CPT & Incoterms of DDP are possible under
             certain conditions.
           </div>
-          <div className=" font-montrealBold text-white text-lg sm:text-xl md:text-2xl leading-relaxed  sm:">
+          <div
+            id="legal-point2"
+            className=" font-montrealBold text-white text-lg sm:text-xl md:text-2xl leading-relaxed  sm:"
+          >
             {" "}
             Point 2: It is necessary for the buyer to check the terms and
             conditions of importing the requested goods in the destination
             country and announce the result to the seller.
           </div>
-          <div className=" font-montrealBold text-white text-lg sm:text-xl md:text-2xl leading-relaxed  sm:">
+          <div
+            id="legal-point3"
+            className=" font-montrealBold text-white text-lg sm:text-xl md:text-2xl leading-relaxed  sm:"
+          >
             {" "}
             point3: The minimum order is 5 kg. For orders less than 5 kg, the
             pricing is as follows: orders between 3 kg and 5 kg are priced at
@@ -59,7 +65,10 @@ const Page = () => {
             prices may vary in different countries. (Please inquire) For
             purchases over 20 kilograms, the price is negotiable.
           </div>
-          <div className=" font-montrealBold text-white text-lg sm:text-xl md:text-2xl leading-relaxed  sm:">
+          <div
+            id="legal-point4"
+            className=" font-montrealBold text-white text-lg sm:text-xl md:text-2xl leading-relaxed  sm:"
+          >
             {" "}
             Point 4: Please check the product inventory, product price, customs
             cost (Incoterms 2020)and export conditions to the destination
