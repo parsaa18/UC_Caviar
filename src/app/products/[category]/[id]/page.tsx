@@ -2,9 +2,11 @@
 import { BackButton1, BackButton2 } from "@/components/BackButton";
 import DoubleBtn from "@/components/common/DoubleButton";
 import Slider from "@/components/common/Slider";
+import ContactUsModal from "@/components/ContactUsModal";
 import apiFetcher from "@/core/services/api/fetcher.api";
 import { Rate } from "antd";
 import Image from "next/image";
+import Link from "next/link";
 import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
@@ -23,7 +25,7 @@ interface ProductDetails {
 
 function page() {
   const product = useParams();
-
+  const [modalIsOpen, setModalOpen] = useState<boolean>(false);
   const [details, setDetails] = useState<ProductDetails | null>(null);
 
   const GetData = async () => {
@@ -62,17 +64,27 @@ function page() {
             <div className="w-[105px] h-[24px] text-[20px] leading-[24px] text-[#0D0A0B] font-montrealBold">
               Order Now
             </div>
-            <div>
+            <div
+              onClick={() => {
+                setModalOpen(true);
+              }}
+            >
               <DoubleBtn theme="blue" text="Contact Us" />
             </div>
+            <ContactUsModal
+              modalIsOpen={modalIsOpen}
+              onClose={() => {
+                setModalOpen(false);
+              }}
+            />
           </div>
           <div className="flex flex-col gap-[12px] w-[250px]">
             <div className="w-full h-[19px] text-[16px] leading-[19.2px] text-[#0D0A0B]">
               How we send products?
             </div>
-            <div>
+            <Link href={"/OurShipping"}>
               <DoubleBtn theme="blue" text="Shipping" />
-            </div>
+            </Link>
           </div>
         </div>
         <div className="w-[350px] md:mt-0 md:ml-0 ml-[15px] mt-[230px]">

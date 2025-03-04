@@ -5,11 +5,11 @@ import Link from "next/link";
 const CatalogSect = () => {
   return (
     <section className="flex items-center justify-center relative w-full">
-      <div className="min-h-[50vh] sm:min-h-[60vh]">
+      <div className="h-[50vh] sm:h-[70vh] md:h-[100vh] overflow-hidden">
         <img
           src="/images/Landing-Catalog.svg"
           alt="catalog"
-          className="h-full object-cover"
+          className=" object-contain"
         />
       </div>
       <div className="flex sm:flex-row flex-col gap-3 sm:gap-8 md:gap-[90px] w-full justify-center sm:items-end absolute bottom-0 backdrop-blur-md bg-gradient-to-b from-ucWhite/0 to-ucWhite rounded-3xl px-6  pt-2 sm:pt-5 md:pt-8 lg:pr-[205px] pb-8 md:pb-16 lg:pl-24">
