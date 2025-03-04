@@ -2,20 +2,133 @@
   "blogs": [
     {
       "id": 1,
-      "title": "How to take care of caviar?",
-      "date": "2021-01-01",
-      "intro": "How to take care of caviar How to take care of caviar How to take care of caviar How to take care of caviar How to take care of caviar How to take care of caviar How to take care of caviar How to take care of caviar How to take care of caviar How to take care of caviar How to take care of caviar How to take care of caviar...",
+      "title": "Development of Sturgeon Fish Farming in Iran",
+      "date": "2025-04-03",
+      "intro": "Sturgeon fish farming is one of the profitable sectors in aquaculture, attracting many investors due to the high global demand for caviar. Below, we review the key steps and important considerations in sturgeon farming.",
       "description": [
         {
-          "title": "section1 title",
-          "paragraph": "section1 paragraph"
+          "title": "1. Choosing the Right Species",
+          "paragraph": [
+            "The selection of the appropriate species for farming directly impacts the success of the project. Various sturgeon species include Beluga, Persian sturgeon (Caspian sturgeon), Russian sturgeon (Chalbash), Ship, and Ossetra (Suroga). Each of these species has specific characteristics that must align with environmental conditions and the goals of the farmer."
+          ]
         },
         {
-          "title": "section2 title",
-          "paragraph": "section2 paragraph"
+          "title": "2. Suitable Environmental Conditions",
+          "paragraph": [
+            "• Temperature: The optimal temperature for sturgeon farming ranges from 14 to 26 degrees Celsius. Below 14 degrees, metabolism and growth of the fish decrease, while above 27 degrees, feeding becomes unprofitable.",
+            "• Water Quality: The suitable dissolved oxygen level for sturgeon farming is between 6 to 8 mg per liter. Additionally, the appropriate pH of the water should be between 7 to 8.5, and salinity should be between 4 to 10 grams per liter."
+          ]
+        },
+        {
+          "title": "3. Farming Systems",
+          "paragraph": [
+            "• Concrete Ponds: Concrete ponds with a one-way water flow system are one of the common methods for sturgeon farming. These systems allow for better water quality control and optimal management.",
+            "• Fiberglass Ponds: Using appropriately sized fiberglass ponds, especially for the early stages of farming (from larvae to fingerlings), is recommended. These ponds prevent skin abrasions on the fish due to their smooth surfaces."
+          ]
+        },
+        {
+          "title": "4. Feeding",
+          "paragraph": [
+            "Proper and balanced feeding plays a crucial role in the growth and health of sturgeon. The diet should include proteins, fats, vitamins, and essential minerals. The quantity and type of feed should be adjusted based on the age, weight, and environmental conditions."
+          ]
+        },
+        {
+          "title": "5. Investment and Profitability",
+          "paragraph": [
+            "Establishing a sturgeon farm requires a significant initial investment. However, due to the high value of caviar in domestic and foreign markets, this industry can yield high returns. For instance, in Iran, there are over 116 active farms across more than 21 provinces, with a production capacity of 6,332 tons of meat and over 95 tons of caviar."
+          ]
+        },
+        {
+          "title": "Conclusion",
+          "paragraph": [
+            "Sturgeon farming, with adherence to suitable environmental conditions, selection of compatible species, and optimal management, can be considered a profitable investment opportunity. Given the high global demand for caviar and existing capacities in the country, the development of this industry can contribute to economic improvement and job creation."
+          ]
         }
       ],
-      "picture": "https://media-hosting.imagekit.io//c119209c4f1542c1/1.jpg?Expires=1833797386&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=zFEy1y7GD9FP9~c2Am7BUzehB3xs2GJwtaA8HQa9vjEOKStH8OGtULquAMcKET1qdp2im1jFNecJOF8Lxo3QTR~309DQbxI9Q1LyyKCs6RdqaNZa5~HNcRDJdHbCKqAuvRbEmbPgoCtQhSCD0WImoaBMpG~WzPPYJH3n2hFzHarNJB2Z7t9-NYWRXAgyKUQwANSQwxpFQA0CwiPRNo~tifPXK0pgHZma31WHGTB9cXToB55603HiNh58cFrzk98-6Zj4cLqSHfsda4vbaYBOi1jK2fkS-yxh7s9eQAsMN-OIozHkRs8n-j-zy7GtWUYsvamVLAdC5eUKG~aCr4oozw__"
+      "picture": "https://uccaviar.com/blog-02.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Comprehensive Guide to Caviar Farming",
+      "date": "2025-04-03",
+      "intro": "Caviar farming has seen significant growth in recent years as one of the most profitable sectors in aquaculture. Caviar, derived from the eggs of sturgeon fish, holds high nutritional and economic value. This article examines the main stages of caviar farming, the necessary conditions, and the challenges faced by this industry.",
+      "description": [
+        {
+          "title": "1. Choosing the Right Species",
+          "paragraph": [
+            "Sturgeon fish (Acipenseridae) include multiple species, some of which are more suitable for caviar production. The most important farmed species include:",
+            "• Beluga Sturgeon (Huso huso): Produces Beluga caviar (the most expensive type of caviar).",
+            "• Persian Sturgeon (Acipenser persicus): Produces high-quality golden caviar.",
+            "• Russian Sturgeon (Acipenser gueldenstaedtii): Produces Ossetra caviar.",
+            "• Ship Sturgeon (Acipenser nudiventris): Produces Ship caviar.",
+            "• Stellate Sturgeon (Acipenser stellatus): Produces Sevruga caviar.",
+            "The choice of species depends on climatic conditions, water resources, and the commercial goals of the farmer."
+          ]
+        },
+        {
+          "title": "2. Necessary Conditions for Sturgeon Farming",
+          "paragraph": [
+            " • Optimal Temperature: 15 to 25 degrees Celsius.",
+            "A) Water Conditions",
+            "• Water Quality: Must have sufficient oxygen (at least 5 mg per liter).",
+            "• Suitable pH: Between 6.5 to 8.",
+            "• Water Salinity: Depending on the species, some thrive in saltwater while others grow in freshwater.",
+            "B) Farming Ponds",
+            "• Concrete Ponds: Allow for better water quality control.",
+            "• Cages in Lakes and Rivers: Suitable for large-scale production.",
+            "• Recirculating Aquaculture Systems (RAS): Minimize water consumption and provide precise environmental control."
+          ]
+        },
+        {
+          "title": "3. Feeding Sturgeon Fish",
+          "paragraph": [
+            "Sturgeon fish grow slowly and require high-quality feed. Their diet should include:",
+            "• Protein (40-50%): Sourced from fish and soy.",
+            "• Healthy Fats: To enhance growth and caviar quality.",
+            "• Minerals and Vitamins: To maintain fish health.",
+            "Sturgeon fish have varying nutritional needs at different ages, and their diet must be adjusted based on their age and weight."
+          ]
+        },
+        {
+          "title": "4. Caviar Extraction Process",
+          "paragraph": [
+            "A) Determining Gender and Maturity of Fish",
+            "• The gender of the fish is typically identified between 3 to 5 years using ultrasound.",
+            "• Female fish reach maturity and are ready for caviar extraction around 7 to 15 years of age.",
+            "B) Methods of Caviar Extraction",
+            "1. Traditional Method (Killing the Fish): The fish is sacrificed, and caviar is extracted from its body.",
+            "2. Modern Method (Non-lethal Extraction): Using hormonal methods and massage, caviar is harvested without harming the fish."
+          ]
+        },
+        {
+          "title": "5. Packaging and Selling Caviar",
+          "paragraph": [
+            "After extraction, caviar must be processed, salted, and packaged. Proper packaging preserves quality and extends shelf life. Target markets for selling caviar include:",
+            "• Exporting to European and Asian countries.",
+            "• Selling in domestic markets and luxury hotels.",
+            "• Online sales and small packaging for general consumers."
+          ]
+        },
+        {
+          "title": "6. Challenges and Opportunities in Caviar Farming",
+          "paragraph": [
+            "• High initial costs.",
+            "• Long time to profitability (7-15 years).",
+            "• Need for precise management of water quality and feeding.",
+            "Opportunities:",
+            "• High global demand for caviar.",
+            "• Potential for export and high profitability.",
+            "• Innovative technologies to increase efficiency and reduce costs."
+          ]
+        },
+        {
+          "title": "Conclusion",
+          "paragraph": [
+            "Caviar farming is a long-term investment but can be highly profitable. By selecting the right species, managing the farming environment effectively, and employing scientific methods, success in this industry can be achieved."
+          ]
+        }
+      ],
+      "picture": "https://uccaviar.com/blog-03.jpg"
     }
   ]
 }

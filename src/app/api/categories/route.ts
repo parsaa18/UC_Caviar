@@ -13,7 +13,12 @@ export const GET = async () => {
   const jsonData = fs.readFileSync(dataFilePath, "utf8");
   const { categories } = JSON.parse(jsonData);
   return new Response(JSON.stringify(categories), {
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type",
+    },
     status: 200,
   });
 };
@@ -30,13 +35,23 @@ export const POST = async (req: Request) => {
     return new Response(
       JSON.stringify({ message: "Category added successfully" }),
       {
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET, OPTIONS",
+          "Access-Control-Allow-Headers": "Content-Type",
+        },
         status: 201,
       }
     );
   } catch (error: any) {
     return new Response(JSON.stringify({ error: error.message }), {
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type",
+      },
       status: 500,
     });
   }

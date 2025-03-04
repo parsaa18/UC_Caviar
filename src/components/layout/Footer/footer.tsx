@@ -103,7 +103,7 @@ const FooterNav: FC<INavProps> = ({ title, pages }) => {
 const SocialMediaIcons: FC<ISMIconsProps> = ({ links, icons }) => {
   return (
     <Magnetic>
-      <Link href={links}>
+      <Link href={links} target="_blank">
         <motion.div
           initial="initial"
           whileHover="hovered"

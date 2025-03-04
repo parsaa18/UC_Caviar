@@ -14,7 +14,12 @@ export const GET = async () => {
   const { blogs } = JSON.parse(jsonData);
 
   return new Response(JSON.stringify(blogs), {
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type",
+    },
     status: 200,
   });
 };
@@ -33,7 +38,12 @@ export const POST = async (request: Request) => {
   fs.writeFileSync(dataFilePath, JSON.stringify(data, null, 2));
 
   return new Response(JSON.stringify(newBlog), {
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type",
+    },
     status: 201,
   });
 };

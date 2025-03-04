@@ -16,9 +16,9 @@ const BlogCard: FC<IProps> = ({ date, picture, shortDesc, title, id }) => {
   return (
     <Link
       href={"/blogs/" + id}
-      className="flex-col justify-between flex w-full bg-ucGray h-full max-h-full rounded-[40px]"
+      className="flex-col justify-between flex w-full bg-ucGray h-full max-h-full rounded-[40px] gap-6"
     >
-      <div className="flex flex-col  gap-4 p-8 ">
+      <div className="flex flex-col  gap-4 px-8 pt-8 ">
         <div className="flex justify-between items-center w-full">
           <h4 className="font-bold font-montrealBold text-xl">{title}</h4>
           <div className="flex items-center gap-1 text-ucBlack">
@@ -42,7 +42,7 @@ const BlogCard: FC<IProps> = ({ date, picture, shortDesc, title, id }) => {
         <img
           src={picture}
           alt={title}
-          className=" flex w-full h-[30vh] object-cover"
+          className=" flex w-full h-[28vh] object-cover"
         />
       </div>
     </Link>

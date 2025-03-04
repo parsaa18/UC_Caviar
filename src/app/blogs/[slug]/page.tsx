@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 interface Feature {
   title: string;
-  paragraph: string;
+  paragraph: string[];
 }
 interface BlogDetails {
   title: string;
@@ -66,12 +66,12 @@ function page() {
         </div>
       </div>
 
-      <div
+      <h2
         className="flex mx-auto mt-[56px] text-[20px] leading-[24px] text-[#0D0A0B] 
   w-auto md:w-[924px] max-w-full h-auto px-4 md:px-0 text-center md:text-left"
       >
         {details?.intro}
-      </div>
+      </h2>
 
       <div className="w-full md:w-[1238px] h-auto rounded-[32px]  mt-[56px] mx-auto">
         <img
@@ -93,7 +93,13 @@ function page() {
               {feature.title}
             </div>
             <div className=" md:mx-0 mx-auto text-[20px] leading-[24px] text-ucBlack ">
-              {feature.paragraph}
+              {feature?.paragraph?.map((p, i) => {
+                return (
+                  <p key={i} className="p-4 px-8">
+                    {p}
+                  </p>
+                );
+              })}
             </div>
           </div>
         ))}
