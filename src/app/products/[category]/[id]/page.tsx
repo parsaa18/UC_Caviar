@@ -75,7 +75,7 @@ function page() {
             </div>
           </div>
         </div>
-        <div className="w-[350px] md:mt-0 md:ml-0 ml-[50px] mt-[230px]">
+        <div className="w-[350px] md:mt-0 md:ml-0 ml-[15px] mt-[230px]">
           <Slider />
         </div>
         <div className="w-[350px]">
@@ -109,7 +109,7 @@ function page() {
               </div>
             </div>
           </div>
-          <div className="text-[16px] mt-[26px] leading-[19.2px] w-full md:ml-0 ml-[32px] h-[57px] text-[#000000]">
+          <div className="text-[16px] mt-[26px] leading-[19.2px] w-[300px] md:ml-0 ml-[32px] h-[57px] text-[#000000]">
             {details?.details}
           </div>
         </div>
@@ -135,7 +135,7 @@ function page() {
         </div>
       </div>
 
-      <div className=" md:hidden flex justify-center items-center mt-[202px]  ml-[32px]  gap-[24px] w-[400px] h-[100px] ">
+      <div className=" md:hidden flex justify-center items-center mt-[242px]  ml-[32px]  gap-[14px] w-[400px] h-[100px] ">
         <div className=" flex flex-col gap-[12px] w-[250px] ">
           <div className="w-[105px] h-[24px] text-[20px] leading-[24px] text-[#0D0A0B] font-montrealBold ">
             Order Now

@@ -99,8 +99,8 @@ const Slider = () => {
             <img
               src={details.picture[index]}
               alt="Product Image"
-              width={300}
-              height={300}
+              width={250}
+              height={250}
               className="object-cover"
             />
           </motion.div>
