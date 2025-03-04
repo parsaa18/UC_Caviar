@@ -31,7 +31,7 @@ const Contact: FC<IProps> = ({ phoneNumber, languages, whatsAppLink }) => {
             return React.cloneElement(lan, { key: idx });
           })}
         </div>
-        <p className="text-xl">{phoneNumber}</p>
+        <p className="text-lg sm:text-xl text-nowrap">{phoneNumber}</p>
       </motion.div>
       <ArrowUpRight03Icon color="#fafafa" />
     </Link>

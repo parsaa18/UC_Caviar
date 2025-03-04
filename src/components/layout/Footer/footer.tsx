@@ -45,12 +45,12 @@ const socialMediaList = [
   },
   {
     name: "whatsapp",
-    link: ".",
+    link: "https://wa.me/+34661348478",
     icon: <WhatsappIcon color="#fafafa" />,
   },
   {
     name: "instagram",
-    link: ".",
+    link: "https://www.instagram.com/uniquecaspiancaviar?igsh=MWc2bTFxcGZra2UyNw==",
     icon: <InstagramIcon color="#fafafa" />,
   },
   {

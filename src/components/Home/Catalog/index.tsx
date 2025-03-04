@@ -1,12 +1,13 @@
 import DoubleBtn from "@/components/common/DoubleButton";
 import SignIcon from "@/components/common/motion/Sign";
+import Link from "next/link";
 
 const CatalogSect = () => {
   return (
     <section className="flex items-center justify-center relative w-full">
       <div className="min-h-[50vh] sm:min-h-[60vh]">
         <img
-          src="/images/test-catalog.svg"
+          src="/images/Landing-Catalog.svg"
           alt="catalog"
           className="h-full object-cover"
         />
@@ -25,7 +26,9 @@ const CatalogSect = () => {
             Catalog
           </span>
         </h5>
-        <DoubleBtn text="Download" theme="blue" />
+        <Link target="_blank" href={"https://uccaviar.com/Catalog.pdf"}>
+          <DoubleBtn text="Download" theme="blue" />
+        </Link>
       </div>
     </section>
   );

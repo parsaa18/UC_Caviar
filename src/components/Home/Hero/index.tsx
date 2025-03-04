@@ -23,7 +23,7 @@ const SocialMediaIcons: FC<ISMIconsProps> = ({ links, icons }) => {
         <motion.div
           initial="initial"
           whileHover="hovered"
-          className="p-2 border-white/10 rounded-full bg-black/40 sm:bg-white/20 backdrop-blur-md"
+          className="p-2 border-white/10 rounded-full bg-white/20 backdrop-blur-md"
         >
           {icons}
         </motion.div>
@@ -40,12 +40,12 @@ const Hero = () => {
     },
     {
       name: "whatsapp",
-      link: ".",
+      link: "https://wa.me/+34661348478",
       icon: <WhatsappIcon color={"#fafafa"} />,
     },
     {
       name: "instagram",
-      link: ".",
+      link: "https://www.instagram.com/uniquecaspiancaviar?igsh=MWc2bTFxcGZra2UyNw==",
       icon: <InstagramIcon color={"#fafafa"} />,
     },
     {

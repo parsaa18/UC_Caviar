@@ -6,9 +6,27 @@ import { useQueryState } from "nuqs";
 
 const ListBar = () => {
   const [isModalOpen, setModalOpen] = useState<boolean>(false);
-  const [_search, setSearch] = useQueryState("search");
-  const [_packType, setPackType] = useQueryState("pack-type");
-  const [_weight, setWeight] = useQueryState("weight");
+  const [search, setSearch] = useQueryState("search");
+  const [packType, setPackType] = useQueryState("pack-type");
+  const [weight, setWeight] = useQueryState("weight");
+
+  const CancelAll = () => {
+    if (search || packType || weight) {
+      return (
+        <div
+          onClick={() => {
+            setSearch("");
+            setPackType("");
+            setWeight("");
+          }}
+          className="text-xs text-ucRed cursor-pointer flex items-center"
+        >
+          <Cancel01Icon width={16} height={16} />
+          Cancel All
+        </div>
+      );
+    }
+  };
   return (
     <div className="flex items-center justify-between w-full">
       <div
@@ -23,19 +41,7 @@ const ListBar = () => {
         width={466}
         theme="white"
         onClose={() => setModalOpen(false)}
-        titleExtra={
-          <div
-            onClick={() => {
-              setSearch("");
-              setPackType("");
-              setWeight("");
-            }}
-            className="text-xs text-ucRed cursor-pointer flex items-center"
-          >
-            <Cancel01Icon width={16} height={16} />
-            Cancel All
-          </div>
-        }
+        titleExtra={<CancelAll />}
         title="ّFilter"
       >
         <FilterModal

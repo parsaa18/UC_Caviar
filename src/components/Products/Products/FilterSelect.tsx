@@ -31,15 +31,17 @@ const FilterSelect: FC<IProps> = ({
     <div className="w-full flex flex-col gap-3">
       <div className="w-full flex justify-between items-center">
         <h4 className="text-sm ">{filterName}</h4>
-        <div
-          onClick={() => {
-            setState("");
-          }}
-          className="text-xs cursor-pointer text-ucRed flex items-center"
-        >
-          <Cancel01Icon width={16} height={16} />
-          Cancel
-        </div>
+        {value && (
+          <div
+            onClick={() => {
+              setState("");
+            }}
+            className="text-xs cursor-pointer text-ucRed flex items-center"
+          >
+            <Cancel01Icon width={16} height={16} />
+            Cancel
+          </div>
+        )}
       </div>
       <Select
         labelRender={labelRender}
