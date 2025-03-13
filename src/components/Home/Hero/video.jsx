@@ -16,6 +16,7 @@ const HeroVideo = () => {
     alt="Hero"
     className="rounded-[40px] w-full h-full object-cover "
   /> */}
+        <div className="absolute inset-0 bg-ucBlack/15"></div>
         <video
           autoPlay
           muted={muted}

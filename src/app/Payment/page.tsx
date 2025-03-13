@@ -74,7 +74,10 @@ const Page = () => {
             cost (Incoterms 2020)and export conditions to the destination
             country when ordering.
           </div>
-          <div className=" font-montrealBold text-white text-lg sm:text-xl md:text-2xl leading-relaxed  sm:">
+          <div
+            id="legal-point5"
+            className=" font-montrealBold text-white text-lg sm:text-xl md:text-2xl leading-relaxed  sm:"
+          >
             {" "}
             Point 5: Prices are calculated based on glass packaging. For metal
             can packaging, the price is different. (To be inquired)

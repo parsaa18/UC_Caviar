@@ -26,7 +26,7 @@ const packList = [
       </div>
     ),
     description:
-      "We can package your premium and popular caviar in luxurious glass and metal (DESJARDIN) containers.",
+      "Our packaging method complies with international standards and uses the highest quality packaging containers.\nThis type of packaging is exclusively for customers who intend to purchase in bulk. It is available in various weights of 500 grams, 1,000 grams, and 2,000 grams.",
   },
   {
     id: 2,

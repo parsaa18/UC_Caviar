@@ -30,11 +30,11 @@ const pagesLink: linkType[] = [
   { link: "/about-us", name: "About Us" },
 ];
 const legalLinks: linkType[] = [
-  { link: "/Payment#payment", name: "Payment" },
-  { link: "/Payment#legal-point1", name: "Legal Point 1" },
-  { link: "/Payment#legal-point2", name: "Legal Point 2" },
-  { link: "/Payment#legal-point3", name: "Legal Point 3" },
-  { link: "/Payment#legal-point4", name: "Legal Point 4" },
+  { link: "/Payment#legal-point1", name: "1. DELIVERY METHOD" },
+  { link: "/Payment#legal-point2", name: "2. MINIMUM ORDER" },
+  { link: "/Payment#legal-point3", name: "3. NECESSARY FOR THE BUYER" },
+  { link: "/Payment#legal-point4", name: "4. RULES DESTINATION" },
+  { link: "/Payment#legal-point5", name: "5. FREE PACKING" },
 ];
 
 const socialMediaList = [
