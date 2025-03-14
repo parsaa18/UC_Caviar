@@ -11,7 +11,7 @@ const Page = () => {
     setTimeout(() => {
       setActive(null);
       console.log("yes");
-    }, 3000);
+    }, 6000);
   }, []);
 
   return (
@@ -20,11 +20,11 @@ const Page = () => {
         <img
           src="/images/payment.png"
           alt="Logo"
-          className="object-cover w-[90%] max-w-[580.81px] h-auto"
+          className="object-cover w-[90%] max-w-[560.81px] h-auto"
         />
       </div>
-      <section className="px-64 flex flex-col gap-24">
-        <div className="flex items-start pt-20 gap-[106px]">
+      <section className="lg:px-64 md:px-10 px-8 flex flex-col gap-24">
+        <div className="flex items-start pt-20 gap-8 md:gap-[106px] md:flex-row flex-col">
           <h3 className="min-w-32">Payment</h3>
           <div className="flex flex-col gap-10 text-2xl font-bold">
             <p>
@@ -47,15 +47,18 @@ const Page = () => {
         </div>
 
         <div className="flex flex-col gap-0">
-          <div id="legal-point1" className="flex items-start pt-20 gap-[106px]">
+          <div
+            id="legal-point1"
+            className="flex items-start pt-20 gap-8 md:gap-[106px] md:flex-row flex-col"
+          >
             <h3 className="min-w-32">Delivery Method</h3>
             <div
-              className={`flex flex-col transition-all duration-150 gap-10 text-2xl ${
+              className={`flex flex-col transition-all duration-500 gap-10 text-2xl ${
                 active === "legal-point1"
                   ? "font-extrabold  text-3xl drop-shadow-md"
                   : active === null
                   ? "opacity-100"
-                  : "opacity-80"
+                  : "opacity-60"
               } font-bold`}
             >
               <p>
@@ -64,15 +67,18 @@ const Page = () => {
               </p>
             </div>
           </div>
-          <div id="legal-point2" className="flex items-start pt-20 gap-[106px]">
+          <div
+            id="legal-point2"
+            className="flex items-start pt-20 gap-8 md:gap-[106px] md:flex-row flex-col"
+          >
             <h3 className="min-w-32">MINIMUM ORDER</h3>
             <div
-              className={`flex flex-col transition-all duration-150 gap-10 text-2xl ${
+              className={`flex flex-col transition-all duration-500 gap-10 text-2xl ${
                 active === "legal-point2"
                   ? "font-extrabold  text-3xl drop-shadow-md"
                   : active === null
                   ? "opacity-100"
-                  : "opacity-80"
+                  : "opacity-60"
               } font-bold`}
             >
               <p>
@@ -82,15 +88,18 @@ const Page = () => {
               </p>
             </div>
           </div>
-          <div id="legal-point3" className="flex items-start pt-20 gap-[106px]">
+          <div
+            id="legal-point3"
+            className="flex items-start pt-20 gap-8 md:gap-[106px] md:flex-row flex-col"
+          >
             <h3 className="min-w-32">NECESSARY FOR THE BUYER</h3>
             <div
-              className={`flex flex-col transition-all duration-150 gap-10 text-2xl ${
+              className={`flex flex-col transition-all duration-500 gap-10 text-2xl ${
                 active === "legal-point3"
                   ? "font-extrabold  text-3xl drop-shadow-md"
                   : active === null
                   ? "opacity-100"
-                  : "opacity-80"
+                  : "opacity-60"
               } font-bold`}
             >
               <p>
@@ -102,15 +111,18 @@ const Page = () => {
               </p>
             </div>
           </div>
-          <div id="legal-point4" className="flex items-start pt-20 gap-[106px]">
+          <div
+            id="legal-point4"
+            className="flex items-start pt-20 gap-8 md:gap-[106px] md:flex-row flex-col"
+          >
             <h3 className="min-w-32">RULES DESTINATION</h3>
             <div
-              className={`flex flex-col transition-all duration-150 gap-10 text-2xl ${
+              className={`flex flex-col transition-all duration-500 gap-10 text-2xl ${
                 active === "legal-point4"
                   ? "font-extrabold  text-3xl drop-shadow-md"
                   : active === null
                   ? "opacity-100"
-                  : "opacity-80"
+                  : "opacity-60"
               } font-bold`}
             >
               <p>
@@ -120,15 +132,18 @@ const Page = () => {
               </p>
             </div>
           </div>
-          <div id="legal-point5" className="flex items-start pt-20 gap-[106px]">
+          <div
+            id="legal-point5"
+            className="flex items-start pt-20 gap-8 md:gap-[106px] md:flex-row flex-col"
+          >
             <h3 className="min-w-32">FREE PACKING</h3>
             <div
-              className={`flex flex-col transition-all duration-150 gap-10 text-2xl ${
+              className={`flex flex-col transition-all duration-500 gap-10 text-2xl ${
                 active === "legal-point5"
                   ? "font-extrabold  text-3xl drop-shadow-md"
                   : active === null
                   ? "opacity-100"
-                  : "opacity-80"
+                  : "opacity-60"
               } font-bold`}
             >
               <p>
