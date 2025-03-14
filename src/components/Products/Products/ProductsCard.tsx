@@ -38,13 +38,13 @@ const ProductsCard: FC<IProps> = ({
                 Packaging Type
               </h6>
               <div className="flex items-center justify-start w-full">
-                <p>{packType}</p>
+                <p className="text-nowrap">{packType}</p>
               </div>
             </div>
             <div className="w-full flex justify-between gap-8 items-center">
               <h6 className="text-ucBlack/50 w-full text-nowrap">Weight </h6>
               <div className="flex items-center justify-start w-full">
-                <p>{weight}g</p>
+                <p className="text-nowrap">{weight}</p>
               </div>
             </div>
           </div>

@@ -8,35 +8,50 @@
         {
           "id": 1,
           "name": "Baerii",
-          "picture": [
-            "https://uccaviar.com/BAERII-01.png",
-            "https://uccaviar.com/BAERII-02.png"
-          ],
+          "picture": ["https://uccaviar.com/BAERII-01.png"],
           "rate": 5,
-          "weight": 100,
+          "weight": "10, 15, 20, 25, 30, 50, 100, 150, 250",
           "packing-type": "Desjardins"
         },
         {
           "id": 2,
           "name": "Beluga Imperial",
-          "picture": [
-            "https://uccaviar.com/Beluga-Imperial-01.png",
-            "https://uccaviar.com/Beluga-Imperial-02.png"
-          ],
+          "picture": ["https://uccaviar.com/Beluga-Imperial-01.png"],
           "rate": 5,
-          "weight": 100,
+          "weight": "10, 15, 20, 25, 30, 50, 100, 150, 250",
           "packing-type": "Desjardins"
         },
         {
           "id": 3,
           "name": "Beluga Imperial Top",
-          "picture": [
-            "https://uccaviar.com/Beluga-Imperial-Top-01.png",
-            "https://uccaviar.com/Beluga-Imperial-Top-02.png"
-          ],
+          "picture": ["https://uccaviar.com/Beluga-Imperial-Top-01.png"],
           "rate": 4.5,
-          "weight": 50,
+          "weight": "10, 15, 20, 25, 30, 50, 100, 150, 250",
           "packing-type": "Desjardins"
+        },
+        {
+          "id": 8,
+          "name": "Baerii",
+          "picture": ["https://uccaviar.com/BAERII-02.png"],
+          "rate": 5,
+          "weight": "25, 50, 100",
+          "packing-type": "Jar with Metal Cap"
+        },
+        {
+          "id": 9,
+          "name": "Beluga Imperial",
+          "picture": ["https://uccaviar.com/Beluga-Imperial-02.png"],
+          "rate": 5,
+          "weight": "25, 50, 100",
+          "packing-type": "Jar With Metal Cap"
+        },
+        {
+          "id": 10,
+          "name": "Beluga Imperial Top",
+          "picture": ["https://uccaviar.com/Beluga-Imperial-Top-02.png"],
+          "rate": 4.5,
+          "weight": "25, 50, 100",
+          "packing-type": "Jar With Metal Cap"
         }
       ]
     },
@@ -96,12 +111,9 @@
     {
       "id": 1,
       "name": "Baerii",
-      "picture": [
-        "https://uccaviar.com/BAERII-01.png",
-        "https://uccaviar.com/BAERII-02.png"
-      ],
+      "picture": ["https://uccaviar.com/BAERII-01.png"],
       "rate": 5,
-      "weight": 100,
+      "weight": "10, 15, 20, 25, 30, 50, 100, 150, 250",
       "packing-type": "Desjardins",
       "details": "Dark gray to almost black in color, size 2.5 mm and above, with a buttery taste, a distinctive marine flavor, an exceptionally delicious silky and velvety texture, and a unique salty taste.",
       "feature": [
@@ -113,12 +125,9 @@
     {
       "id": 2,
       "name": "Beluga Imperial",
-      "picture": [
-        "https://uccaviar.com/Beluga-Imperial-01.png",
-        "https://uccaviar.com/Beluga-Imperial-02.png"
-      ],
+      "picture": ["https://uccaviar.com/Beluga-Imperial-01.png"],
       "rate": 5,
-      "weight": 100,
+      "weight": "10, 15, 20, 25, 30, 50, 100, 150, 250",
       "packing-type": "Desjardins",
       "details": "Dark gray in color, with a size of 3.1 to 3.2 mm, a delicious marine flavor, buttery grains, a signature velvety texture, and a unique salty taste.",
       "categoryId": "caviar",
@@ -130,13 +139,52 @@
     {
       "id": 3,
       "name": "Beluga Imperial Top",
-      "picture": [
-        "https://uccaviar.com/Beluga-Imperial-Top-01.png",
-        "https://uccaviar.com/Beluga-Imperial-Top-02.png"
-      ],
+      "picture": ["https://uccaviar.com/Beluga-Imperial-Top-01.png"],
       "rate": 4.5,
-      "weight": 50,
+      "weight": "10, 15, 20, 25, 30, 50, 100, 150, 250",
       "packing-type": "Desjardins",
+      "details": " Dark gray in color, with a size of 3.3 mm, a distinctive buttery taste, a mild yet delicious marine flavor, an exceptionally velvety texture, and a signature sea salt taste.",
+      "categoryId": "caviar",
+      "feature": [
+        { "title": "color", "value": "Dark Gray" },
+        { "title": "size", "value": "3.3 mm" }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Baerii",
+      "picture": ["https://uccaviar.com/BAERII-02.png"],
+      "rate": 5,
+      "weight": "25, 50, 100",
+      "packing-type": "Jar with Metal Cap",
+      "details": "Dark gray to almost black in color, size 2.5 mm and above, with a buttery taste, a distinctive marine flavor, an exceptionally delicious silky and velvety texture, and a unique salty taste.",
+      "feature": [
+        { "title": "color", "value": "Dark Gray" },
+        { "title": "size", "value": "2.5 mm <= Up" }
+      ],
+      "categoryId": "caviar"
+    },
+    {
+      "id": 9,
+      "name": "Beluga Imperial",
+      "picture": ["https://uccaviar.com/Beluga-Imperial-02.png"],
+      "rate": 5,
+      "weight": "25, 50, 100",
+      "packing-type": "Jar With Metal Cap",
+      "details": "Dark gray in color, with a size of 3.1 to 3.2 mm, a delicious marine flavor, buttery grains, a signature velvety texture, and a unique salty taste.",
+      "categoryId": "caviar",
+      "feature": [
+        { "title": "color", "value": "Dark Gray" },
+        { "title": "size", "value": "3.2 to 3.3 mm" }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Beluga Imperial Top",
+      "picture": ["https://uccaviar.com/Beluga-Imperial-Top-02.png"],
+      "rate": 4.5,
+      "weight": "25, 50, 100",
+      "packing-type": "Jar With Metal Cap",
       "details": " Dark gray in color, with a size of 3.3 mm, a distinctive buttery taste, a mild yet delicious marine flavor, an exceptionally velvety texture, and a signature sea salt taste.",
       "categoryId": "caviar",
       "feature": [

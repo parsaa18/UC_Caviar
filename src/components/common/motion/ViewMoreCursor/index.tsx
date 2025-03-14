@@ -9,7 +9,7 @@ import {
 import Magnetic from "../Magnet";
 
 const cursorClassName =
-  "w-[90px] h-[90px] rounded-[50%] bg-ucNavyBlue2 text-ucWhite absolute z-40 flex items-center justify-center text-sm ";
+  "w-[90px] h-[90px] rounded-[50%] bg-ucNavyBlue2 text-ucWhite absolute z-40 hidden md:flex items-center justify-center text-sm ";
 
 export const ViewCursor: FC<IViewCursorProps> = ({ cursorObj }) => {
   const { isActive, index } = cursorObj;

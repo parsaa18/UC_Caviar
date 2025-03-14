@@ -71,13 +71,21 @@ const Hero = () => {
     <section className="h-[calc(100dvh-32px)] min-h-[640px] max-h-[720px] w-full  md:rounded-[32px]  relative pt-32">
       <HeroVideo />
       <div className="flex flex-col xl:flex-row gap-6 md:gap-10 lg:gap-16 mx-6 md:mx-16">
-        <div className="xl:ml-4">
+        <div className="xl:ml-4 flex flex-col gap-8">
           <h1 className="text-nowrap text-2xl sm:text-3xl md:text-4xl lg:text-5xl  text-white font-bold font-montrealBold">
             Caspian Caviar,
             <br /> the Taste of <br /> the Sea in Every Pearl.
           </h1>
+          <div className="flex flex-col gap-2">
+            <h5 className="text-ucWhite ">Social Media</h5>
+            <div className="flex items-center gap-2">
+              {socialMediaList?.map((sm, idx) => (
+                <SocialMediaIcons key={idx} icons={sm.icon} links={sm.link} />
+              ))}
+            </div>
+          </div>
         </div>
-        <div className="flex gap-20">
+        {/* <div className="flex gap-20">
           <div className="flex flex-col gap-4 items-start">
             <p className="text-justify max-w-[477px] leading-5 text-ucWhite">
               We are a leading company specializing in the export of premium
@@ -105,7 +113,7 @@ const Hero = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <AnimatePresence mode="wait">

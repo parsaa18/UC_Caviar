@@ -79,25 +79,25 @@ const PackingSection = () => {
     index: null,
   });
   return (
-    <section className="lg:flex hidden flex-col gap-6 ">
+    <section className="flex  flex-col gap-6 md:px-0 px-6 ">
       <SectionTitle1 titleStart="How do we" titleBold="Package Our Products?" />
       <ViewCursor cursorObj={cursorObj} />
-      <div className="flex gap-8 h-[435px]">
+      <div className="flex lg:flex-row flex-col gap-4 lg:gap-8 lg:h-[435px]">
         {packList
           .filter((pack) => pack.id === activeCard)
           .map((pack, idx) => {
             return (
               <div
                 key={idx}
-                className="w-full text-[32px] max-w-[540px] bg-ucGray rounded-[40px]  "
+                className="w-full text-2xl md:text-[32px] lg:max-w-[540px] lg:h-auto h-[320px] md:h-[420px] bg-ucGray rounded-[40px]  "
               >
                 {pack.component}
               </div>
             );
           })}
 
-        <div className="w-full  flex flex-col gap-10">
-          <div className="flex items-center gap-8">
+        <div className="w-full  flex lg:flex-col flex-col-reverse gap-10">
+          <div className="flex xs:flex-row flex-col items-center gap-4 lg:gap-8">
             {packList
               .filter((pack) => pack.id !== activeCard)
               .map((pack, idx) => {
@@ -106,7 +106,7 @@ const PackingSection = () => {
                     onClick={() => {
                       setactiveCard(pack.id);
                     }}
-                    className="bg-ucGray text-xl  w-full cursor-pointer rounded-[40px] h-[252px] "
+                    className="bg-ucGray text-base lg:text-xl  w-full cursor-pointer rounded-[40px] h-[252px] "
                     key={idx}
                   >
                     <ViewedCard index={idx} handleCursorObj={handleCursorObj}>
@@ -116,7 +116,7 @@ const PackingSection = () => {
                 );
               })}
           </div>
-          <p className="text-xl leading-6  w-[616px] font-montrealBook font-light">
+          <p className="text-xl leading-6  max-w-[616px] font-montrealBook font-light">
             {packList
               .filter((pack) => pack.id === activeCard)
               .map((p) => p.description)}
